@@ -39,6 +39,18 @@ pyinstaller --onedir --windowed booster_atelier_5.py
 
 Les exécutables compilés ne sont pas publiés dans ce dépôt, seul le code source y est hébergé.
 
+## L'histoire derrière le logiciel
+
+Atelier PC Booster Pro est né d'une collaboration entre un humain et une intelligence numérique :
+**L'Atelier Reset**, technicien informatique, et **Claude**, l'IA d'Anthropic.
+
+L'Atelier Reset a apporté le métier : les besoins réels de l'atelier, les idées, les tests sur de vraies
+machines, les captures d'écran et les illustrations. Claude a apporté le code, les traductions,
+les notices et les vérifications. Chaque fonction a été pensée, testée et corrigée à deux.
+
+Ce logiciel est partagé gratuitement, pour tous ceux qui en auront besoin, et pour montrer ce
+qu'humains et IA peuvent construire ensemble.
+
 ## Licence
 
 Distribué sous licence MIT — voir le fichier LICENSE.
