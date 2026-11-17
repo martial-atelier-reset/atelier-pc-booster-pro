@@ -105,9 +105,6 @@ def charger_banniere(hauteur=60):
 # --- Drapeaux dessinés par le code (les emoji drapeaux s'affichent en lettres sous Windows) ---
 from PIL import ImageDraw
 
-def _ss(w, h, k=4):
-    return Image.new("RGBA", (w*k, h*k), (0,0,0,0)), k
-
 def _vstripes(d, W, H, cols):
     n = len(cols)
     for i, c in enumerate(cols):
@@ -281,8 +278,8 @@ def charger_config_contact():
 # --- DICTIONNAIRE DE TRADUCTION COMPLET (FR / EN) ---
 TRADUCTIONS = {
     "fr": {
-        "app_title": "Atelier PC Booster Pro v5.0.0",
-        "header_title": "⚡ OPTIMISATION, MAINTENANCE & RÉCUPÉRATION ATELIER (V5.0.0)",
+        "app_title": "Atelier PC Booster Pro v5.1.0",
+        "header_title": "⚡ OPTIMISATION, MAINTENANCE & RÉCUPÉRATION ATELIER (V5.1.0)",
         "btn_notice": "📖 Notice & Aide",
         "btn_contact": "💬 Contact & Feedback",
         "btn_contact_tt": "Cliquez ici pour envoyer vos retours d'expérience et suggestions par e-mail.",
@@ -319,7 +316,7 @@ TRADUCTIONS = {
         "task_dns_tt": "Vide le cache de résolution DNS local pour résoudre\nles problèmes d'accès aux sites web.",
         "btn_run_maintenance": "🚀 Lancer la Maintenance",
         "log_header": "📜 Journal d'exécution :",
-        "log_start_ready": "Système v5.0.0 prêt.",
+        "log_start_ready": "Système v5.1.0 prêt.",
 
         "btn_scan_sys": "🔍 Analyser le Matériel & Composants",
         "btn_hw_report": "📄 Exporter Rapport Matériel HTML",
@@ -354,14 +351,6 @@ TRADUCTIONS = {
         "net_frame_title": "🌐 Gestion des Serveurs DNS (IPv4 & IPv6)",
         "dns_select_profile": "🎯 Sélectionnez le profil DNS à appliquer :",
         "btn_apply_dns": "⚡ Appliquer DNS (IPv4 + IPv6) & Vider Cache",
-        "btn_open_ncpa": "🌐 Ouvrir Connexions Réseau (ncpa.cpl)",
-        "ipv6_title": "💡 Valeurs IPv6 à renseigner :",
-        "ipv6_pref": "• Serveur Préféré : 2606:4700:4700::1111",
-        "ipv6_aux": "• Serveur Auxiliaire : 2606:4700:4700::1001",
-        "win10_title": "🖥️ NOTICE WINDOWS 10",
-        "win10_text": "1. Cliquez sur le bouton 'Ouvrir Connexions Réseau (ncpa.cpl)' ci-dessus.\n2. Faites un clic droit sur la carte active (Wi-Fi / Ethernet) ➔ **Propriétés**.\n3. Double-cliquez sur **'Protocole Internet version 6 (TCP/IPv6)'**.\n4. Cochez 'Utiliser l'adresse de serveur DNS suivante' et renseignez les valeurs ci-dessus.",
-        "win11_title": "⚙️ NOTICE WINDOWS 11",
-        "win11_text": "1. Ouvrez les **Paramètres** (Touches Windows + I) ➔ **Réseau et Internet**.\n2. Cliquez sur **Wi-Fi** ou **Ethernet** (selon votre connexion active).\n3. Faites défiler et cherchez la section **'Attribution de serveur DNS'**.\n4. Cliquez sur 'Modifier', passez en mode **Manuel**, activez **IPv6** et renseignez les adresses.",
 
         "rec_step1_title": "📦 Étape 1 : Analyse du disque et sauvegarde des dossiers",
         "rec_lbl_drive": "💾 Lecteur :",
@@ -404,6 +393,7 @@ TRADUCTIONS = {
         "u10_desc": "Gestionnaire des tâches avancé : arbre des processus, DLL utilisées, vérification VirusTotal.",
         "u11_desc": "Connexions réseau ouvertes en temps réel et programme qui les utilise.",
         "u12_desc": "Créer, redimensionner, fusionner ou formater des partitions (gestion avancée des disques).",
+        "u13_desc": "Analyse les minidumps des écrans bleus (BSOD) et pointe le pilote .sys probablement responsable du plantage.",
 
         "gamers_frame_title": "🎮 Bibliothèques, Runtimes & Launchers de Jeux",
         "runtimes_section_essential": "📦 Runtimes Système & Arcade (Essentiels)",
@@ -417,8 +407,8 @@ TRADUCTIONS = {
         "dns_google": "Google Public DNS",
     },
     "en": {
-        "app_title": "Atelier PC Booster Pro v5.0.0",
-        "header_title": "⚡ WORKSHOP OPTIMIZATION, MAINTENANCE & RECOVERY (V5.0.0)",
+        "app_title": "Atelier PC Booster Pro v5.1.0",
+        "header_title": "⚡ WORKSHOP OPTIMIZATION, MAINTENANCE & RECOVERY (V5.1.0)",
         "btn_notice": "📖 Manual & Help",
         "btn_contact": "💬 Contact & Feedback",
         "btn_contact_tt": "Click here to send your feedback and suggestions via email.",
@@ -455,7 +445,7 @@ TRADUCTIONS = {
         "task_dns_tt": "Flushes the local DNS resolution cache to resolve\nwebsite connectivity issues.",
         "btn_run_maintenance": "🚀 Run Maintenance",
         "log_header": "📜 Execution Log:",
-        "log_start_ready": "System v5.0.0 ready.",
+        "log_start_ready": "System v5.1.0 ready.",
 
         "btn_scan_sys": "🔍 Scan Hardware & Components",
         "btn_hw_report": "📄 Export Hardware HTML Report",
@@ -490,14 +480,6 @@ TRADUCTIONS = {
         "net_frame_title": "🌐 DNS Server Management (IPv4 & IPv6)",
         "dns_select_profile": "🎯 Select DNS Profile to Apply:",
         "btn_apply_dns": "⚡ Apply DNS (IPv4 + IPv6) & Flush Cache",
-        "btn_open_ncpa": "🌐 Open Network Connections (ncpa.cpl)",
-        "ipv6_title": "💡 IPv6 Values to enter:",
-        "ipv6_pref": "• Preferred Server: 2606:4700:4700::1111",
-        "ipv6_aux": "• Alternate Server: 2606:4700:4700::1001",
-        "win10_title": "🖥️ WINDOWS 10 INSTRUCTIONS",
-        "win10_text": "1. Click 'Open Network Connections (ncpa.cpl)' above.\n2. Right-click your active connection (Wi-Fi / Ethernet) ➔ **Properties**.\n3. Double-click **'Internet Protocol Version 6 (TCP/IPv6)'**.\n4. Check 'Use the following DNS server addresses' and enter the values above.",
-        "win11_title": "⚙️ WINDOWS 11 INSTRUCTIONS",
-        "win11_text": "1. Open **Settings** (Win + I) ➔ **Network & Internet**.\n2. Click **Wi-Fi** or **Ethernet** (depending on active connection).\n3. Scroll down to **'DNS server assignment'**.\n4. Click 'Edit', switch to **Manual**, enable **IPv6**, and enter the IP addresses.",
 
         "rec_step1_title": "📦 Step 1: Disk Analysis & Folder Selection",
         "rec_lbl_drive": "💾 Drive:",
@@ -540,6 +522,7 @@ TRADUCTIONS = {
         "u10_desc": "Advanced task manager: process tree, DLLs in use, VirusTotal check.",
         "u11_desc": "Real-time open network connections and the program using them.",
         "u12_desc": "Create, resize, merge or format partitions (advanced disk management).",
+        "u13_desc": "Reads blue-screen (BSOD) minidumps and points to the .sys driver most likely responsible for the crash.",
 
         "gamers_frame_title": "🎮 Libraries, Runtimes & Gaming Launchers",
         "runtimes_section_essential": "📦 System & Arcade Runtimes (Essential)",
@@ -553,8 +536,8 @@ TRADUCTIONS = {
         "dns_google": "Google Public DNS",
     },
     "de": {
-        "app_title": "Atelier PC Booster Pro v5.0.0",
-        "header_title": "⚡ WERKSTATT: OPTIMIERUNG, WARTUNG & DATENRETTUNG (V5.0.0)",
+        "app_title": "Atelier PC Booster Pro v5.1.0",
+        "header_title": "⚡ WERKSTATT: OPTIMIERUNG, WARTUNG & DATENRETTUNG (V5.1.0)",
         "btn_notice": "📖 Handbuch & Hilfe",
         "btn_contact": "💬 Kontakt & Feedback",
         "btn_contact_tt": "Klicken Sie hier, um Ihre Erfahrungen und Vorschläge per E-Mail zu senden.",
@@ -591,7 +574,7 @@ TRADUCTIONS = {
         "task_dns_tt": "Leert den lokalen DNS-Auflösungscache, um Probleme\nbeim Zugriff auf Websites zu beheben.",
         "btn_run_maintenance": "🚀 Wartung starten",
         "log_header": "📜 Ausführungsprotokoll:",
-        "log_start_ready": "System v5.0.0 bereit.",
+        "log_start_ready": "System v5.1.0 bereit.",
 
         "btn_scan_sys": "🔍 Hardware & Komponenten analysieren",
         "btn_hw_report": "📄 Hardwarebericht exportieren",
@@ -626,14 +609,6 @@ TRADUCTIONS = {
         "net_frame_title": "🌐 DNS-Server-Verwaltung (IPv4 & IPv6)",
         "dns_select_profile": "🎯 DNS-Profil zum Anwenden auswählen:",
         "btn_apply_dns": "⚡ DNS (IPv4 + IPv6) anwenden & Cache leeren",
-        "btn_open_ncpa": "🌐 Netzwerkverbindungen öffnen (ncpa.cpl)",
-        "ipv6_title": "💡 Einzutragende IPv6-Werte:",
-        "ipv6_pref": "• Bevorzugter Server: 2606:4700:4700::1111",
-        "ipv6_aux": "• Alternativer Server: 2606:4700:4700::1001",
-        "win10_title": "🖥️ ANLEITUNG WINDOWS 10",
-        "win10_text": "1. Klicken Sie oben auf die Schaltfläche 'Netzwerkverbindungen öffnen (ncpa.cpl)'.\n2. Klicken Sie mit der rechten Maustaste auf den aktiven Adapter (WLAN / Ethernet) ➔ **Eigenschaften**.\n3. Doppelklicken Sie auf **'Internetprotokoll, Version 6 (TCP/IPv6)'**.\n4. Aktivieren Sie 'Folgende DNS-Serveradressen verwenden' und tragen Sie die obigen Werte ein.",
-        "win11_title": "⚙️ ANLEITUNG WINDOWS 11",
-        "win11_text": "1. Öffnen Sie die **Einstellungen** (Windows-Taste + I) ➔ **Netzwerk & Internet**.\n2. Klicken Sie auf **WLAN** oder **Ethernet** (je nach aktiver Verbindung).\n3. Scrollen Sie nach unten zum Abschnitt **'DNS-Serverzuweisung'**.\n4. Klicken Sie auf 'Bearbeiten', wechseln Sie zu **Manuell**, aktivieren Sie **IPv6** und tragen Sie die Adressen ein.",
 
         "rec_step1_title": "📦 Schritt 1: Laufwerksanalyse und Ordnersicherung",
         "rec_lbl_drive": "💾 Laufwerk:",
@@ -676,6 +651,7 @@ TRADUCTIONS = {
         "u10_desc": "Erweiterter Task-Manager: Prozessbaum, verwendete DLLs, VirusTotal-Prüfung.",
         "u11_desc": "Offene Netzwerkverbindungen in Echtzeit und das Programm, das sie nutzt.",
         "u12_desc": "Partitionen erstellen, vergrößern, zusammenführen oder formatieren (erweiterte Laufwerksverwaltung).",
+        "u13_desc": "Liest die Minidumps von Bluescreens (BSOD) und nennt den .sys-Treiber, der den Absturz wahrscheinlich verursacht hat.",
 
         "gamers_frame_title": "🎮 Bibliotheken, Runtimes & Spiele-Launcher",
         "runtimes_section_essential": "📦 System- & Arcade-Runtimes (Unverzichtbar)",
@@ -689,8 +665,8 @@ TRADUCTIONS = {
         "dns_google": "Google Public DNS",
     },
     "es": {
-        "app_title": "Atelier PC Booster Pro v5.0.0",
-        "header_title": "⚡ TALLER: OPTIMIZACIÓN, MANTENIMIENTO Y RECUPERACIÓN DE DATOS (V5.0.0)",
+        "app_title": "Atelier PC Booster Pro v5.1.0",
+        "header_title": "⚡ TALLER: OPTIMIZACIÓN, MANTENIMIENTO Y RECUPERACIÓN DE DATOS (V5.1.0)",
         "btn_notice": "📖 Manual y Ayuda",
         "btn_contact": "💬 Contacto y Opiniones",
         "btn_contact_tt": "Haga clic aquí para enviar por correo sus comentarios y sugerencias.",
@@ -727,7 +703,7 @@ TRADUCTIONS = {
         "task_dns_tt": "Vacía la caché local de resolución DNS para solucionar los problemas\nde acceso a sitios web.",
         "btn_run_maintenance": "🚀 Iniciar mantenimiento",
         "log_header": "📜 Registro de ejecución:",
-        "log_start_ready": "Sistema v5.0.0 listo.",
+        "log_start_ready": "Sistema v5.1.0 listo.",
 
         "btn_scan_sys": "🔍 Analizar hardware y componentes",
         "btn_hw_report": "📄 Exportar informe de hardware en HTML",
@@ -762,14 +738,6 @@ TRADUCTIONS = {
         "net_frame_title": "🌐 Gestión de servidores DNS (IPv4 e IPv6)",
         "dns_select_profile": "🎯 Seleccione el perfil DNS que desea aplicar:",
         "btn_apply_dns": "⚡ Aplicar DNS (IPv4 + IPv6) y vaciar caché",
-        "btn_open_ncpa": "🌐 Abrir conexiones de red (ncpa.cpl)",
-        "ipv6_title": "💡 Valores IPv6 que debe introducir:",
-        "ipv6_pref": "• Servidor preferido: 2606:4700:4700::1111",
-        "ipv6_aux": "• Servidor alternativo: 2606:4700:4700::1001",
-        "win10_title": "🖥️ GUÍA PARA WINDOWS 10",
-        "win10_text": "1. Haga clic arriba en el botón 'Abrir conexiones de red (ncpa.cpl)'.\n2. Haga clic con el botón derecho en el adaptador activo (Wi-Fi / Ethernet) ➔ **Propiedades**.\n3. Haga doble clic en **'Protocolo de Internet versión 6 (TCP/IPv6)'**.\n4. Marque 'Usar las siguientes direcciones de servidor DNS' e introduzca los valores indicados arriba.",
-        "win11_title": "⚙️ GUÍA PARA WINDOWS 11",
-        "win11_text": "1. Abra **Configuración** (tecla Windows + I) ➔ **Red e Internet**.\n2. Haga clic en **Wi-Fi** o **Ethernet** (según su conexión activa).\n3. Desplácese hasta la sección **'Asignación de servidor DNS'**.\n4. Haga clic en 'Editar', cambie a **Manual**, active **IPv6** e introduzca las direcciones.",
 
         "rec_step1_title": "📦 Paso 1: Análisis del disco y copia de carpetas",
         "rec_lbl_drive": "💾 Unidad:",
@@ -812,6 +780,7 @@ TRADUCTIONS = {
         "u10_desc": "Administrador de tareas avanzado: árbol de procesos, DLL en uso, comprobación en VirusTotal.",
         "u11_desc": "Conexiones de red abiertas en tiempo real y el programa que las usa.",
         "u12_desc": "Crear, redimensionar, fusionar o formatear particiones (gestión avanzada de discos).",
+        "u13_desc": "Analiza los minivolcados de los pantallazos azules (BSOD) e indica el controlador .sys probablemente responsable del fallo.",
 
         "gamers_frame_title": "🎮 Bibliotecas, Runtimes y lanzadores de juegos",
         "runtimes_section_essential": "📦 Runtimes del sistema y Arcade (indispensables)",
@@ -825,8 +794,8 @@ TRADUCTIONS = {
         "dns_google": "Google Public DNS",
     },
     "it": {
-        "app_title": "Atelier PC Booster Pro v5.0.0",
-        "header_title": "⚡ LABORATORIO: OTTIMIZZAZIONE, MANUTENZIONE E RECUPERO DATI (V5.0.0)",
+        "app_title": "Atelier PC Booster Pro v5.1.0",
+        "header_title": "⚡ LABORATORIO: OTTIMIZZAZIONE, MANUTENZIONE E RECUPERO DATI (V5.1.0)",
         "btn_notice": "📖 Manuale e Guida",
         "btn_contact": "💬 Contatti e Feedback",
         "btn_contact_tt": "Fai clic qui per inviare per e-mail le tue impressioni e i tuoi suggerimenti.",
@@ -863,7 +832,7 @@ TRADUCTIONS = {
         "task_dns_tt": "Svuota la cache locale di risoluzione DNS per risolvere i problemi\ndi accesso ai siti web.",
         "btn_run_maintenance": "🚀 Avvia manutenzione",
         "log_header": "📜 Registro di esecuzione:",
-        "log_start_ready": "Sistema v5.0.0 pronto.",
+        "log_start_ready": "Sistema v5.1.0 pronto.",
 
         "btn_scan_sys": "🔍 Analizza hardware e componenti",
         "btn_hw_report": "📄 Esporta report hardware in HTML",
@@ -898,14 +867,6 @@ TRADUCTIONS = {
         "net_frame_title": "🌐 Gestione dei server DNS (IPv4 e IPv6)",
         "dns_select_profile": "🎯 Seleziona il profilo DNS da applicare:",
         "btn_apply_dns": "⚡ Applica DNS (IPv4 + IPv6) e svuota cache",
-        "btn_open_ncpa": "🌐 Apri connessioni di rete (ncpa.cpl)",
-        "ipv6_title": "💡 Valori IPv6 da inserire:",
-        "ipv6_pref": "• Server preferito: 2606:4700:4700::1111",
-        "ipv6_aux": "• Server alternativo: 2606:4700:4700::1001",
-        "win10_title": "🖥️ GUIDA PER WINDOWS 10",
-        "win10_text": "1. Fai clic in alto sul pulsante 'Apri connessioni di rete (ncpa.cpl)'.\n2. Fai clic con il pulsante destro sulla scheda attiva (Wi-Fi / Ethernet) ➔ **Proprietà**.\n3. Fai doppio clic su **'Protocollo Internet versione 6 (TCP/IPv6)'**.\n4. Seleziona 'Utilizza i seguenti indirizzi server DNS' e inserisci i valori indicati sopra.",
-        "win11_title": "⚙️ GUIDA PER WINDOWS 11",
-        "win11_text": "1. Apri le **Impostazioni** (tasto Windows + I) ➔ **Rete e Internet**.\n2. Fai clic su **Wi-Fi** o **Ethernet** (a seconda della connessione attiva).\n3. Scorri fino alla sezione **'Assegnazione server DNS'**.\n4. Fai clic su 'Modifica', passa a **Manuale**, attiva **IPv6** e inserisci gli indirizzi.",
 
         "rec_step1_title": "📦 Passo 1: Analisi del disco e copia delle cartelle",
         "rec_lbl_drive": "💾 Unità:",
@@ -948,6 +909,7 @@ TRADUCTIONS = {
         "u10_desc": "Gestione attività avanzato: albero dei processi, DLL in uso, verifica su VirusTotal.",
         "u11_desc": "Connessioni di rete aperte in tempo reale e programma che le usa.",
         "u12_desc": "Creare, ridimensionare, unire o formattare le partizioni (gestione avanzata dei dischi).",
+        "u13_desc": "Analizza i minidump delle schermate blu (BSOD) e indica il driver .sys probabilmente responsabile del crash.",
 
         "gamers_frame_title": "🎮 Librerie, Runtime e launcher di giochi",
         "runtimes_section_essential": "📦 Runtime di sistema e Arcade (indispensabili)",
@@ -1034,11 +996,11 @@ def degrade_titre_notice(largeur, hauteur=58):
 
 
 NOTICE_DIAGNOSTIC = {
-    'fr': "🩺 Onglet 9 : Diagnostic Pro (Diagnostiquer, Documenter, Rendre un rapport propre)\n════════════════════════════════════════════════════════════════════════════\n\n1. À quoi ça sert exactement ? (Le problème et la solution)\n\n  • Le problème : un client apporte un PC « qui rame » ou « qui plante ». Sans méthode, on passe du temps à fouiller Windows, et à la fin on n'a rien de propre à lui remettre ni de trace de ce qui a été fait.\n\n  • La solution : cet onglet rassemble les contrôles essentiels d'un diagnostic (santé de Windows, plantages, mémoire, disque), puis produit un rapport client en une page et garde un journal de toutes vos interventions.\n\n------------------------------------------------------------------------------------\n\n2. Le dossier client (les trois champs du haut)\n\n  • 👤 Nom du client : apparaît en tête du rapport et dans le journal.\n  • 🎫 N° de ticket : votre numéro d'intervention, pour retrouver facilement un dossier.\n  • 📝 Remarques du technicien : votre commentaire libre, recopié tel quel dans le rapport client.\n  • Tous les résultats s'affichent dans la grande zone de texte en bas de l'onglet.\n\n------------------------------------------------------------------------------------\n\n3. Les outils, un par un\n\nA. 🩺 Santé de Windows\n  • Qu'est-ce que c'est ? Un contrôle général : activation de Windows, antivirus, pare-feu, mises à jour disponibles, redémarrage en attente, chiffrement BitLocker et espace libre sur le disque système.\n  • Comment lire le résultat ? Chaque ligne est marquée : ✅ tout va bien, ⚠ à surveiller, ❌ problème à traiter.\n  • À savoir : la recherche de mises à jour peut durer jusqu'à une minute. L'outil reste utilisable pendant ce temps.\n\nB. 💥 Analyse des plantages\n  • Qu'est-ce que c'est ? Un examen des 30 derniers jours : écrans bleus, arrêts brutaux (coupure ou plantage), erreurs de disque ou de matériel et applications qui se ferment toutes seules.\n  • Comment lire le résultat ? Les erreurs graves (par exemple un disque qui signale un défaut) sont séparées des simples avertissements de communication, qui sont fréquents et rarement inquiétants. L'outil termine par des pistes probables (disque, mémoire, pilote, alimentation).\n  • Pourquoi c'est utile ? Cela permet de savoir où chercher au lieu de changer des pièces au hasard.\n\nC. 🧠 Test mémoire (RAM)\n  • Qu'est-ce que c'est ? Lance le diagnostic mémoire intégré à Windows.\n  • À savoir : le PC doit redémarrer pour faire le test. Le résultat s'affiche au retour sur le bureau. Pensez à prévenir le client.\n\nD. 🛟 Point de restauration\n  • Qu'est-ce que c'est ? Crée tout de suite un point de restauration Windows, une photo de l'état du système à laquelle on peut revenir en cas de problème.\n  • Conseil : faites-le avant toute réparation ou installation importante.\n\n------------------------------------------------------------------------------------\n\n4. Les contrôles de disque CHKDSK\n\n  • Le menu « C: » sert à choisir le lecteur à contrôler.\n\n  • 🔍 CHKDSK : scan (lecture seule) : analyse le lecteur sans rien modifier. Sans risque, à utiliser en premier.\n\n  • 🛠️ CHKDSK : réparer (/f /r) : corrige les erreurs et tente de récupérer les secteurs défectueux. Sur le disque système, la réparation se fait au prochain redémarrage et peut durer longtemps.\n\n  • Conseil : si le scan signale des erreurs, sauvegardez d'abord les données du client avant de lancer la réparation.\n\n------------------------------------------------------------------------------------\n\n5. Le journal et le rapport client\n\nA. 📒 Enregistrer au journal\n  • Ajoute l'intervention en cours (client, ticket, actions réalisées) au journal de l'atelier.\n  • Fichier : C:\\Rapport_HDD\\journal_interventions.jsonl\n\nB. 📖 Voir le journal\n  • Affiche la liste de vos interventions passées pour retrouver ce qui a été fait, quand, et pour qui.\n\nC. 🧾 Créer le rapport client\n  • Génère une page HTML propre : travaux réalisés, santé de Windows, disques, matériel et vos remarques. Elle s'ouvre dans le navigateur et s'imprime en PDF avec Ctrl+P.\n  • Pour un rapport complet, lancez d'abord les contrôles dont vous voulez voir le résultat (santé, plantages, etc.).\n\nD. 📂 Dossier des rapports\n  • Ouvre le dossier C:\\Rapport_HDD\\Rapports_Clients où sont rangés tous les rapports.\n\n------------------------------------------------------------------------------------\n\n6. Les options liées dans l'onglet Optimisation\n\n  • Dans l'onglet 1, vous trouvez aussi un profil d'intervention, une action de fin de traitement (par exemple éteindre ou redémarrer le PC) et la création automatique d'un point de restauration avant de commencer.\n  • Ces réglages travaillent avec le journal : ce qui est fait dans l'onglet 1 est noté pour le rapport.",
-    'en': '🩺 Tab 9: Pro Diagnostics (Diagnose, Document, Hand Over a Clean Report)\n════════════════════════════════════════════════════════════════════════════\n\n1. What is it for, exactly? (The problem and the solution)\n\n  • The problem: a customer brings in a PC that is "slow" or "keeps crashing". Without a method you spend time digging through Windows, and in the end you have nothing clean to hand over and no record of what was done.\n\n  • The solution: this tab gathers the essential checks of a diagnosis (Windows health, crashes, memory, disk), then produces a one-page customer report and keeps a log of all your jobs.\n\n------------------------------------------------------------------------------------\n\n2. The customer file (the three fields at the top)\n\n  • 👤 Customer name: shown at the top of the report and in the log.\n  • 🎫 Ticket no.: your job number, to find a file easily later.\n  • 📝 Technician notes: your free comment, copied as-is into the customer report.\n  • All results appear in the large text area at the bottom of the tab.\n\n------------------------------------------------------------------------------------\n\n3. The tools, one by one\n\nA. 🩺 Windows health\n  • What is it? A general check: Windows activation, antivirus, firewall, available updates, pending restart, BitLocker encryption and free space on the system drive.\n  • How to read the result? Each line is marked: ✅ all good, ⚠ keep an eye on it, ❌ problem to fix.\n  • Good to know: the update search can take up to a minute. The tool stays usable meanwhile.\n\nB. 💥 Crash analysis\n  • What is it? A review of the last 30 days: blue screens, hard shutdowns (power loss or crash), disk or hardware errors and applications that close by themselves.\n  • How to read the result? Serious errors (for example a disk reporting a fault) are kept apart from simple communication warnings, which are common and rarely worrying. The tool ends with likely leads (disk, memory, driver, power supply).\n  • Why is it useful? It tells you where to look instead of replacing parts at random.\n\nC. 🧠 Memory test (RAM)\n  • What is it? Starts the memory diagnostic built into Windows.\n  • Good to know: the PC must restart to run the test. The result shows when you are back on the desktop. Warn the customer.\n\nD. 🛟 Restore point\n  • What is it? Creates a Windows restore point right now, a snapshot of the system you can go back to if something goes wrong.\n  • Tip: do it before any important repair or installation.\n\n------------------------------------------------------------------------------------\n\n4. The CHKDSK disk checks\n\n  • The "C:" menu chooses which drive to check.\n\n  • 🔍 CHKDSK: scan (read-only): scans the drive without changing anything. Risk-free, use it first.\n\n  • 🛠️ CHKDSK: repair (/f /r): fixes errors and tries to recover bad sectors. On the system drive the repair runs at the next restart and can take a long time.\n\n  • Tip: if the scan reports errors, back up the customer\'s data first before launching the repair.\n\n------------------------------------------------------------------------------------\n\n5. The log and the customer report\n\nA. 📒 Save to log\n  • Adds the current job (customer, ticket, actions done) to the workshop log.\n  • File: C:\\Rapport_HDD\\journal_interventions.jsonl\n\nB. 📖 View the log\n  • Shows the list of your past jobs so you can find what was done, when and for whom.\n\nC. 🧾 Create customer report\n  • Generates a clean HTML page: work done, Windows health, drives, hardware and your notes. It opens in the browser and prints to PDF with Ctrl+P.\n  • For a complete report, first run the checks whose results you want to see (health, crashes, etc.).\n\nD. 📂 Reports folder\n  • Opens the folder C:\\Rapport_HDD\\Rapports_Clients where all the reports are stored.\n\n------------------------------------------------------------------------------------\n\n6. Related options in the Optimization tab\n\n  • In tab 1 you will also find a job profile, an end-of-job action (for example shut down or restart the PC) and the automatic creation of a restore point before starting.\n  • These settings work together with the log: what is done in tab 1 is noted for the report.',
-    'de': '🩺 Reiter 9: Pro-Diagnose (Diagnostizieren, Dokumentieren, sauberen Bericht übergeben)\n════════════════════════════════════════════════════════════════════════════\n\n1. Wozu dient das genau? (Das Problem und die Lösung)\n\n  • Das Problem: Ein Kunde bringt einen PC, der „langsam“ ist oder „ständig abstürzt“. Ohne Methode verbringt man Zeit mit der Suche in Windows und hat am Ende weder etwas Sauberes zum Übergeben noch eine Spur davon, was gemacht wurde.\n\n  • Die Lösung: Dieser Reiter bündelt die wichtigsten Prüfungen einer Diagnose (Windows-Zustand, Abstürze, Speicher, Laufwerk), erstellt dann einen einseitigen Kundenbericht und führt ein Protokoll all Ihrer Aufträge.\n\n------------------------------------------------------------------------------------\n\n2. Die Kundenakte (die drei Felder oben)\n\n  • 👤 Kundenname: erscheint oben im Bericht und im Protokoll.\n  • 🎫 Ticket-Nr.: Ihre Auftragsnummer, um eine Akte später leicht wiederzufinden.\n  • 📝 Hinweise des Technikers: Ihr freier Kommentar, wörtlich in den Kundenbericht übernommen.\n  • Alle Ergebnisse erscheinen im großen Textfeld unten im Reiter.\n\n------------------------------------------------------------------------------------\n\n3. Die Werkzeuge, eins nach dem anderen\n\nA. 🩺 Windows-Zustand\n  • Was ist das? Eine allgemeine Prüfung: Windows-Aktivierung, Virenschutz, Firewall, verfügbare Updates, ausstehender Neustart, BitLocker-Verschlüsselung und freier Speicher auf dem Systemlaufwerk.\n  • Wie liest man das Ergebnis? Jede Zeile ist markiert: ✅ alles in Ordnung, ⚠ im Auge behalten, ❌ Problem, das behoben werden muss.\n  • Gut zu wissen: Die Update-Suche kann bis zu einer Minute dauern. Das Werkzeug bleibt dabei bedienbar.\n\nB. 💥 Absturzanalyse\n  • Was ist das? Eine Auswertung der letzten 30 Tage: Bluescreens, harte Abschaltungen (Stromausfall oder Absturz), Laufwerks- oder Hardwarefehler und Anwendungen, die sich von selbst schließen.\n  • Wie liest man das Ergebnis? Schwere Fehler (zum Beispiel ein Laufwerk, das einen Defekt meldet) werden von einfachen Kommunikationswarnungen getrennt, die häufig und selten besorgniserregend sind. Am Ende nennt das Werkzeug wahrscheinliche Spuren (Laufwerk, Speicher, Treiber, Netzteil).\n  • Wozu ist das nützlich? So wissen Sie, wo Sie suchen müssen, statt Teile auf Verdacht auszutauschen.\n\nC. 🧠 Speichertest (RAM)\n  • Was ist das? Startet die in Windows integrierte Speicherdiagnose.\n  • Gut zu wissen: Der PC muss für den Test neu starten. Das Ergebnis erscheint nach der Rückkehr auf den Desktop. Informieren Sie den Kunden.\n\nD. 🛟 Wiederherstellungspunkt\n  • Was ist das? Erstellt sofort einen Windows-Wiederherstellungspunkt, eine Momentaufnahme des Systems, zu der man bei Problemen zurückkehren kann.\n  • Tipp: Tun Sie es vor jeder wichtigen Reparatur oder Installation.\n\n------------------------------------------------------------------------------------\n\n4. Die CHKDSK-Laufwerksprüfungen\n\n  • Das Menü „C:“ wählt das zu prüfende Laufwerk.\n\n  • 🔍 CHKDSK: Scan (nur lesend): prüft das Laufwerk, ohne etwas zu verändern. Risikofrei, zuerst verwenden.\n\n  • 🛠️ CHKDSK: reparieren (/f /r): behebt Fehler und versucht defekte Sektoren zu retten. Auf dem Systemlaufwerk läuft die Reparatur beim nächsten Neustart und kann lange dauern.\n\n  • Tipp: Meldet der Scan Fehler, sichern Sie zuerst die Daten des Kunden, bevor Sie die Reparatur starten.\n\n------------------------------------------------------------------------------------\n\n5. Das Protokoll und der Kundenbericht\n\nA. 📒 Im Protokoll speichern\n  • Fügt den aktuellen Auftrag (Kunde, Ticket, durchgeführte Aktionen) dem Werkstattprotokoll hinzu.\n  • Datei: C:\\Rapport_HDD\\journal_interventions.jsonl\n\nB. 📖 Protokoll anzeigen\n  • Zeigt die Liste Ihrer früheren Aufträge, damit Sie sehen, was wann und für wen gemacht wurde.\n\nC. 🧾 Kundenbericht erstellen\n  • Erzeugt eine saubere HTML-Seite: durchgeführte Arbeiten, Windows-Zustand, Laufwerke, Hardware und Ihre Hinweise. Sie öffnet sich im Browser und wird mit Strg+P als PDF gedruckt.\n  • Für einen vollständigen Bericht starten Sie zuerst die Prüfungen, deren Ergebnis Sie sehen möchten (Zustand, Abstürze usw.).\n\nD. 📂 Berichtsordner\n  • Öffnet den Ordner C:\\Rapport_HDD\\Rapports_Clients, in dem alle Berichte abgelegt sind.\n\n------------------------------------------------------------------------------------\n\n6. Verwandte Optionen im Reiter Optimierung\n\n  • In Reiter 1 finden Sie außerdem ein Auftragsprofil, eine Abschlussaktion (zum Beispiel PC herunterfahren oder neu starten) und die automatische Erstellung eines Wiederherstellungspunkts vor dem Start.\n  • Diese Einstellungen arbeiten mit dem Protokoll zusammen: Was in Reiter 1 gemacht wird, wird für den Bericht notiert.',
-    'es': '🩺 Pestaña 9: Diagnóstico Pro (Diagnosticar, Documentar, Entregar un informe limpio)\n════════════════════════════════════════════════════════════════════════════\n\n1. ¿Para qué sirve exactamente? (El problema y la solución)\n\n  • El problema: un cliente trae un PC que va «lento» o «se cuelga». Sin método, se pierde tiempo rebuscando en Windows y al final no hay nada limpio que entregar ni rastro de lo que se hizo.\n\n  • La solución: esta pestaña reúne las comprobaciones esenciales de un diagnóstico (estado de Windows, fallos, memoria, disco), genera un informe para el cliente de una página y guarda un diario de todas sus intervenciones.\n\n------------------------------------------------------------------------------------\n\n2. La ficha del cliente (los tres campos de arriba)\n\n  • 👤 Nombre del cliente: aparece al principio del informe y en el diario.\n  • 🎫 N.º de ticket: su número de intervención, para encontrar un expediente fácilmente.\n  • 📝 Observaciones del técnico: su comentario libre, copiado tal cual en el informe para el cliente.\n  • Todos los resultados aparecen en la gran zona de texto de la parte inferior de la pestaña.\n\n------------------------------------------------------------------------------------\n\n3. Las herramientas, una por una\n\nA. 🩺 Estado de Windows\n  • ¿Qué es? Una comprobación general: activación de Windows, antivirus, cortafuegos, actualizaciones disponibles, reinicio pendiente, cifrado BitLocker y espacio libre en la unidad del sistema.\n  • ¿Cómo leer el resultado? Cada línea va marcada: ✅ todo bien, ⚠ a vigilar, ❌ problema que tratar.\n  • Conviene saber: la búsqueda de actualizaciones puede tardar hasta un minuto. La herramienta sigue siendo utilizable mientras tanto.\n\nB. 💥 Análisis de fallos\n  • ¿Qué es? Un repaso de los últimos 30 días: pantallazos azules, apagados bruscos (corte de corriente o cuelgue), errores de disco o de hardware y aplicaciones que se cierran solas.\n  • ¿Cómo leer el resultado? Los errores graves (por ejemplo un disco que señala un fallo) se separan de los simples avisos de comunicación, que son frecuentes y rara vez preocupantes. La herramienta termina con pistas probables (disco, memoria, controlador, fuente de alimentación).\n  • ¿Por qué es útil? Permite saber dónde buscar en vez de cambiar piezas al azar.\n\nC. 🧠 Prueba de memoria (RAM)\n  • ¿Qué es? Inicia el diagnóstico de memoria integrado en Windows.\n  • Conviene saber: el PC debe reiniciarse para hacer la prueba. El resultado aparece al volver al escritorio. Avise al cliente.\n\nD. 🛟 Punto de restauración\n  • ¿Qué es? Crea ahora mismo un punto de restauración de Windows, una instantánea del sistema a la que se puede volver si algo sale mal.\n  • Consejo: hágalo antes de cualquier reparación o instalación importante.\n\n------------------------------------------------------------------------------------\n\n4. Las comprobaciones de disco CHKDSK\n\n  • El menú «C:» sirve para elegir la unidad que se comprobará.\n\n  • 🔍 CHKDSK: análisis (solo lectura): analiza la unidad sin modificar nada. Sin riesgo, úselo primero.\n\n  • 🛠️ CHKDSK: reparar (/f /r): corrige errores e intenta recuperar sectores defectuosos. En la unidad del sistema, la reparación se hace en el próximo reinicio y puede tardar mucho.\n\n  • Consejo: si el análisis señala errores, haga primero una copia de los datos del cliente antes de lanzar la reparación.\n\n------------------------------------------------------------------------------------\n\n5. El diario y el informe para el cliente\n\nA. 📒 Guardar en el diario\n  • Añade la intervención actual (cliente, ticket, acciones realizadas) al diario del taller.\n  • Archivo: C:\\Rapport_HDD\\journal_interventions.jsonl\n\nB. 📖 Ver el diario\n  • Muestra la lista de sus intervenciones pasadas para encontrar qué se hizo, cuándo y para quién.\n\nC. 🧾 Crear informe para el cliente\n  • Genera una página HTML limpia: trabajos realizados, estado de Windows, discos, hardware y sus observaciones. Se abre en el navegador y se imprime en PDF con Ctrl+P.\n  • Para un informe completo, ejecute antes las comprobaciones cuyo resultado quiera ver (estado, fallos, etc.).\n\nD. 📂 Carpeta de informes\n  • Abre la carpeta C:\\Rapport_HDD\\Rapports_Clients donde se guardan todos los informes.\n\n------------------------------------------------------------------------------------\n\n6. Opciones relacionadas en la pestaña Optimización\n\n  • En la pestaña 1 también encontrará un perfil de intervención, una acción de fin de trabajo (por ejemplo apagar o reiniciar el PC) y la creación automática de un punto de restauración antes de empezar.\n  • Estos ajustes trabajan junto con el diario: lo que se hace en la pestaña 1 queda anotado para el informe.',
-    'it': "🩺 Scheda 9: Diagnosi Pro (Diagnosticare, Documentare, Consegnare un report pulito)\n════════════════════════════════════════════════════════════════════════════\n\n1. A cosa serve esattamente? (Il problema e la soluzione)\n\n  • Il problema: un cliente porta un PC « lento » o « che si blocca ». Senza un metodo si perde tempo a frugare in Windows e alla fine non c'è nulla di pulito da consegnare né traccia di ciò che è stato fatto.\n\n  • La soluzione: questa scheda riunisce i controlli essenziali di una diagnosi (stato di Windows, crash, memoria, disco), poi produce un report per il cliente di una pagina e tiene un giornale di tutti i suoi interventi.\n\n------------------------------------------------------------------------------------\n\n2. La scheda cliente (i tre campi in alto)\n\n  • 👤 Nome del cliente: compare in testa al report e nel giornale.\n  • 🎫 N. ticket: il suo numero di intervento, per ritrovare facilmente una pratica.\n  • 📝 Note del tecnico: il suo commento libero, copiato così com'è nel report per il cliente.\n  • Tutti i risultati appaiono nella grande area di testo in fondo alla scheda.\n\n------------------------------------------------------------------------------------\n\n3. Gli strumenti, uno per uno\n\nA. 🩺 Stato di Windows\n  • Cos'è? Un controllo generale: attivazione di Windows, antivirus, firewall, aggiornamenti disponibili, riavvio in sospeso, crittografia BitLocker e spazio libero sull'unità di sistema.\n  • Come leggere il risultato? Ogni riga è contrassegnata: ✅ tutto bene, ⚠ da tenere d'occhio, ❌ problema da risolvere.\n  • Da sapere: la ricerca degli aggiornamenti può richiedere fino a un minuto. Lo strumento resta utilizzabile nel frattempo.\n\nB. 💥 Analisi dei crash\n  • Cos'è? Un esame degli ultimi 30 giorni: schermate blu, spegnimenti bruschi (mancanza di corrente o blocco), errori di disco o hardware e applicazioni che si chiudono da sole.\n  • Come leggere il risultato? Gli errori gravi (per esempio un disco che segnala un guasto) sono separati dai semplici avvisi di comunicazione, frequenti e raramente preoccupanti. Lo strumento termina con le piste probabili (disco, memoria, driver, alimentatore).\n  • Perché è utile? Permette di capire dove cercare invece di sostituire pezzi a caso.\n\nC. 🧠 Test memoria (RAM)\n  • Cos'è? Avvia la diagnostica della memoria integrata in Windows.\n  • Da sapere: il PC deve riavviarsi per eseguire il test. Il risultato appare al ritorno sul desktop. Avvisi il cliente.\n\nD. 🛟 Punto di ripristino\n  • Cos'è? Crea subito un punto di ripristino di Windows, un'istantanea del sistema a cui tornare in caso di problemi.\n  • Consiglio: lo faccia prima di qualsiasi riparazione o installazione importante.\n\n------------------------------------------------------------------------------------\n\n4. I controlli del disco CHKDSK\n\n  • Il menu « C: » serve a scegliere l'unità da controllare.\n\n  • 🔍 CHKDSK: scansione (sola lettura): analizza l'unità senza modificare nulla. Senza rischi, da usare per primo.\n\n  • 🛠️ CHKDSK: ripara (/f /r): corregge gli errori e tenta di recuperare i settori danneggiati. Sull'unità di sistema la riparazione avviene al prossimo riavvio e può richiedere molto tempo.\n\n  • Consiglio: se la scansione segnala errori, faccia prima una copia dei dati del cliente prima di avviare la riparazione.\n\n------------------------------------------------------------------------------------\n\n5. Il giornale e il report per il cliente\n\nA. 📒 Salva nel giornale\n  • Aggiunge l'intervento in corso (cliente, ticket, azioni eseguite) al giornale del laboratorio.\n  • File: C:\\Rapport_HDD\\journal_interventions.jsonl\n\nB. 📖 Vedi il giornale\n  • Mostra l'elenco dei suoi interventi passati per ritrovare cosa è stato fatto, quando e per chi.\n\nC. 🧾 Crea il report per il cliente\n  • Genera una pagina HTML pulita: lavori eseguiti, stato di Windows, dischi, hardware e le sue note. Si apre nel browser e si stampa in PDF con Ctrl+P.\n  • Per un report completo, esegua prima i controlli di cui vuole vedere il risultato (stato, crash, ecc.).\n\nD. 📂 Cartella dei report\n  • Apre la cartella C:\\Rapport_HDD\\Rapports_Clients dove sono conservati tutti i report.\n\n------------------------------------------------------------------------------------\n\n6. Opzioni collegate nella scheda Ottimizzazione\n\n  • Nella scheda 1 trova anche un profilo di intervento, un'azione di fine lavoro (per esempio spegnere o riavviare il PC) e la creazione automatica di un punto di ripristino prima di iniziare.\n  • Queste impostazioni lavorano insieme al giornale: ciò che si fa nella scheda 1 viene annotato per il report.",
+    'fr': "🩺 Onglet 9 : Diagnostic Pro (Diagnostiquer, Documenter, Rendre un rapport propre)\n════════════════════════════════════════════════════════════════════════════\n\n1. À quoi ça sert exactement ? (Le problème et la solution)\n\n  • Le problème : un client apporte un PC « qui rame » ou « qui plante ». Sans méthode, on passe du temps à fouiller Windows, et à la fin on n'a rien de propre à lui remettre ni de trace de ce qui a été fait.\n\n  • La solution : cet onglet rassemble tous les contrôles d'un diagnostic (santé de Windows, plantages, mémoire, disque, pilotes, clé Windows), produit un rapport client en une page et garde un journal de toutes vos interventions.\n\n  • Nouveau : la page est maintenant organisée en accordéon, plus aérée. Le dossier client, le gros bouton « Tout analyser » et la console de résultats restent toujours visibles ; les outils sont rangés dans trois sections qui se déplient (une seule ouverte à la fois).\n\n------------------------------------------------------------------------------------\n\n2. Le dossier client (les trois champs du haut)\n\n  • 👤 Nom du client : apparaît en tête du rapport et dans le journal.\n  • 🎫 N° de ticket : votre numéro d'intervention, pour retrouver facilement un dossier.\n  • 📝 Remarques du technicien : votre commentaire libre, recopié tel quel dans le rapport client.\n  • Tous les résultats s'affichent dans la console, en bas de l'onglet.\n\n------------------------------------------------------------------------------------\n\n3. 🚀 Tout analyser et 💡 Recommandations (les deux boutons du haut, toujours visibles)\n\n  • Qu'est-ce que c'est ? Le bouton principal. Il enchaîne tout seul la santé de Windows, les plantages, les pilotes & latences, la clé OEM et les recommandations, puis ouvre directement le rapport client.\n  • Quand l'utiliser ? Pour un diagnostic complet en un seul clic. Les trois sections ci-dessous servent à lancer un outil précis quand vous en avez besoin.\n  • 💡 Recommandations (bouton violet, à droite) : analyse les problèmes détectés et propose les actions et les outils adaptés (sauvegarde, remplacement de disque, BlueScreenView, test mémoire…). Ces conseils sont aussi repris dans le rapport client.\n\n------------------------------------------------------------------------------------\n\n4. Section « 🔎 Diagnostic détaillé »\n\nA. 🩺 Santé de Windows\n  • Qu'est-ce que c'est ? Un contrôle général : activation de Windows, antivirus, pare-feu, mises à jour disponibles, redémarrage en attente, chiffrement BitLocker et espace libre sur le disque système.\n  • Comment lire le résultat ? Chaque ligne est marquée : ✅ tout va bien, ⚠ à surveiller, ❌ problème à traiter.\n  • À savoir : la recherche de mises à jour peut durer jusqu'à une minute. L'outil reste utilisable pendant ce temps.\n\nB. 💥 Analyse des plantages\n  • Qu'est-ce que c'est ? Un examen des 30 derniers jours : écrans bleus, arrêts brutaux (coupure ou plantage), erreurs de disque ou de matériel et applications qui se ferment toutes seules.\n  • Comment lire le résultat ? Les erreurs graves (par exemple un disque qui signale un défaut) sont séparées des simples avertissements de communication, qui sont fréquents et rarement inquiétants. L'outil termine par des pistes probables (disque, mémoire, pilote, alimentation).\n  • Pourquoi c'est utile ? Cela permet de savoir où chercher au lieu de changer des pièces au hasard.\n\nC. 🧠 Test mémoire (RAM)\n  • Qu'est-ce que c'est ? Lance le diagnostic mémoire intégré à Windows.\n  • À savoir : le PC doit redémarrer pour faire le test. Le résultat s'affiche au retour sur le bureau. Pensez à prévenir le client.\n\nD. 🛟 Point de restauration\n  • Qu'est-ce que c'est ? Crée tout de suite un point de restauration Windows, une photo de l'état du système à laquelle on peut revenir en cas de problème.\n  • Conseil : faites-le avant toute réparation ou installation importante.\n\n------------------------------------------------------------------------------------\n\n5. Section « 💽 Disque & réparation »\n\n  • Le menu « C: » sert à choisir le lecteur à contrôler.\n\nA. 🔍 CHKDSK : scan (lecture seule)\n  • Analyse le lecteur sans rien modifier. Sans risque, à utiliser en premier.\n\nB. 🛠️ CHKDSK : réparer (/f /r)\n  • Corrige les erreurs et tente de récupérer les secteurs défectueux. Sur le disque système, la réparation se fait au prochain redémarrage et peut durer longtemps.\n  • Conseil : si le scan signale des erreurs, sauvegardez d'abord les données du client avant de lancer la réparation.\n\nC. ⚙️ Pilotes & latences\n  • Qu'est-ce que c'est ? Un bilan complet : périphériques en erreur, pilotes non signés ou anciens, latences DPC/ISR (responsables des grésillements audio et des micro-saccades), temps de démarrage de Windows, programmes lancés au démarrage, et l'état des disques.\n  • À savoir (important) : l'usure ne concerne que les SSD (cycles d'écriture). Sur un disque dur, « 0 % d'usure » ne veut PAS dire « bonne santé ». Ce sont les erreurs de lecture non corrigées qui signalent des secteurs défectueux, sur tout type de disque : c'est l'alerte à prendre au sérieux.\n\nD. 🔑 Clé Windows (OEM)\n  • Qu'est-ce que c'est ? Récupère la clé de licence Windows gravée dans la carte mère (BIOS/UEFI). Elle sert à réactiver Windows après une réinstallation, et elle est reprise dans le rapport client.\n  • À savoir : rien ne s'affiche si le PC n'a pas de clé OEM intégrée (PC assemblé, licence Retail ou numérique).\n\nE. 📦 Exporter les pilotes\n  • Qu'est-ce que c'est ? Sauvegarde tous les pilotes tiers du PC dans un dossier de votre choix.\n  • Quand l'utiliser ? Avant une réinstallation de Windows, pour pouvoir remettre les bons pilotes ensuite.\n\nF. 📥 Importer les pilotes\n  • Qu'est-ce que c'est ? Réinstalle en une fois tous les pilotes d'un dossier de sauvegarde (le dossier créé par « Exporter les pilotes »).\n  • À savoir : à utiliser après une réinstallation, en binôme avec l'export. Droits administrateur requis, et un redémarrage est conseillé à la fin.\n\n------------------------------------------------------------------------------------\n\n6. Section « 🧾 Rapport & journal »\n\nA. 🧾 Créer le rapport client\n  • Génère une page HTML propre : travaux réalisés, santé de Windows, disques, pilotes & performances, clé OEM, matériel et vos remarques. Elle s'ouvre dans le navigateur et s'imprime en PDF avec Ctrl+P.\n  • Pour un rapport complet, lancez d'abord les contrôles dont vous voulez voir le résultat (ou utilisez simplement « Tout analyser »).\n\nB. 📂 Dossier des rapports\n  • Ouvre le dossier C:\\Rapport_HDD\\Rapports_Clients où sont rangés tous les rapports.\n\nC. 📒 Enregistrer au journal\n  • Ajoute l'intervention en cours (client, ticket, actions réalisées) au journal de l'atelier.\n  • Fichier : C:\\Rapport_HDD\\journal_interventions.jsonl\n\nD. 📖 Voir le journal\n  • Affiche la liste de vos interventions passées pour retrouver ce qui a été fait, quand, et pour qui.\n\n------------------------------------------------------------------------------------\n\n7. Les options liées dans l'onglet Optimisation\n\n  • Dans l'onglet 1, vous trouvez aussi un profil d'intervention, une action de fin de traitement (par exemple éteindre ou redémarrer le PC) et la création automatique d'un point de restauration avant de commencer.\n  • Ces réglages travaillent avec le journal : ce qui est fait dans l'onglet 1 est noté pour le rapport.",
+    'en': '🩺 Tab 9: Pro Diagnostics (Diagnose, Document, Hand Over a Clean Report)\n════════════════════════════════════════════════════════════════════════════\n\n1. What is it for, exactly? (The problem and the solution)\n\n  • The problem: a customer brings in a PC that is "slow" or "keeps crashing". Without a method you spend time digging through Windows, and in the end you have nothing clean to hand over and no record of what was done.\n\n  • The solution: this tab gathers all the checks of a diagnosis (Windows health, crashes, memory, disk, drivers, Windows key), produces a one-page customer report and keeps a log of all your jobs.\n\n  • New: the page is now laid out as an accordion, less cluttered. The customer file, the big "Analyze everything" button and the results console stay visible at all times; the tools are grouped in three sections that fold open (one at a time).\n\n------------------------------------------------------------------------------------\n\n2. The customer file (the three fields at the top)\n\n  • 👤 Customer name: shown at the top of the report and in the log.\n  • 🎫 Ticket no.: your job number, to find a file easily later.\n  • 📝 Technician notes: your free comment, copied as-is into the customer report.\n  • All results appear in the console at the bottom of the tab.\n\n------------------------------------------------------------------------------------\n\n3. 🚀 Analyze everything and 💡 Recommendations (the two top buttons, always visible)\n\n  • What is it? The main button. It automatically runs Windows health, crashes, drivers & latency, the OEM key and the recommendations, then opens the customer report directly.\n  • When to use it? For a full diagnosis in a single click. The three sections below are for running a specific tool when you need it.\n  • 💡 Recommendations (purple button, on the right): analyzes the detected problems and suggests the right actions and tools (backup, drive replacement, BlueScreenView, memory test…). These tips are also included in the customer report.\n\n------------------------------------------------------------------------------------\n\n4. Section "🔎 Detailed diagnostic"\n\nA. 🩺 Windows health\n  • What is it? A general check: Windows activation, antivirus, firewall, available updates, pending restart, BitLocker encryption and free space on the system drive.\n  • How to read the result? Each line is marked: ✅ all good, ⚠ keep an eye on it, ❌ problem to fix.\n  • Good to know: the update search can take up to a minute. The tool stays usable meanwhile.\n\nB. 💥 Crash analysis\n  • What is it? A review of the last 30 days: blue screens, hard shutdowns (power loss or crash), disk or hardware errors and applications that close by themselves.\n  • How to read the result? Serious errors (for example a disk reporting a fault) are kept apart from simple communication warnings, which are common and rarely worrying. The tool ends with likely leads (disk, memory, driver, power supply).\n  • Why is it useful? It tells you where to look instead of replacing parts at random.\n\nC. 🧠 Memory test (RAM)\n  • What is it? Starts the memory diagnostic built into Windows.\n  • Good to know: the PC must restart to run the test. The result shows when you are back on the desktop. Warn the customer.\n\nD. 🛟 Restore point\n  • What is it? Creates a Windows restore point right now, a snapshot of the system you can go back to if something goes wrong.\n  • Tip: do it before any important repair or installation.\n\n------------------------------------------------------------------------------------\n\n5. Section "💽 Disk & repair"\n\n  • The "C:" menu chooses which drive to check.\n\nA. 🔍 CHKDSK: scan (read-only)\n  • Scans the drive without changing anything. Risk-free, use it first.\n\nB. 🛠️ CHKDSK: repair (/f /r)\n  • Fixes errors and tries to recover bad sectors. On the system drive the repair runs at the next restart and can take a long time.\n  • Tip: if the scan reports errors, back up the customer\'s data first before launching the repair.\n\nC. ⚙️ Drivers & latency\n  • What is it? A full review: devices in error, unsigned or old drivers, DPC/ISR latency (the cause of audio crackle and stutters), Windows boot time, programs launched at startup, and the state of the disks.\n  • Good to know (important): wear only applies to SSDs (write cycles). On a hard drive, "0% wear" does NOT mean "healthy". It is the uncorrected read errors that indicate bad sectors, on any drive type: that is the alert to take seriously.\n\nD. 🔑 Windows key (OEM)\n  • What is it? Recovers the Windows license key embedded in the motherboard (BIOS/UEFI). It reactivates Windows after a reinstall, and it is included in the customer report.\n  • Good to know: nothing shows if the PC has no embedded OEM key (custom PC, Retail or digital license).\n\nE. 📦 Export drivers\n  • What is it? Saves all the PC\'s third-party drivers to a folder of your choice.\n  • When to use it? Before reinstalling Windows, so you can put the right drivers back afterwards.\n\nF. 📥 Import drivers\n  • What is it? Reinstalls all the drivers from a backup folder in one go (the folder created by "Export drivers").\n  • Good to know: use it after a reinstall, as a pair with the export. Administrator rights required, and a restart is recommended at the end.\n\n------------------------------------------------------------------------------------\n\n6. Section "🧾 Report & log"\n\nA. 🧾 Create customer report\n  • Generates a clean HTML page: work done, Windows health, drives, drivers & performance, OEM key, hardware and your notes. It opens in the browser and prints to PDF with Ctrl+P.\n  • For a complete report, first run the checks whose results you want to see (or simply use "Analyze everything").\n\nB. 📂 Reports folder\n  • Opens the folder C:\\Rapport_HDD\\Rapports_Clients where all the reports are stored.\n\nC. 📒 Save to log\n  • Adds the current job (customer, ticket, actions done) to the workshop log.\n  • File: C:\\Rapport_HDD\\journal_interventions.jsonl\n\nD. 📖 View the log\n  • Shows the list of your past jobs so you can find what was done, when and for whom.\n\n------------------------------------------------------------------------------------\n\n7. Related options in the Optimization tab\n\n  • In tab 1 you will also find a job profile, an end-of-job action (for example shut down or restart the PC) and the automatic creation of a restore point before starting.\n  • These settings work together with the log: what is done in tab 1 is noted for the report.',
+    'de': '🩺 Reiter 9: Pro-Diagnose (Diagnostizieren, Dokumentieren, einen sauberen Bericht übergeben)\n════════════════════════════════════════════════════════════════════════════\n\n1. Wozu dient das genau? (Das Problem und die Lösung)\n\n  • Das Problem: Ein Kunde bringt einen PC, der „langsam ist" oder „ständig abstürzt". Ohne Methode verliert man Zeit beim Durchsuchen von Windows und hat am Ende nichts Sauberes zum Übergeben und keine Spur dessen, was getan wurde.\n\n  • Die Lösung: Dieser Reiter vereint alle Prüfungen einer Diagnose (Windows-Zustand, Abstürze, Speicher, Laufwerk, Treiber, Windows-Schlüssel), erstellt einen einseitigen Kundenbericht und führt ein Protokoll aller Aufträge.\n\n  • Neu: Die Seite ist jetzt als Akkordeon aufgebaut, übersichtlicher. Die Kundendaten, die große Schaltfläche „Alles analysieren" und die Ergebnis-Konsole bleiben immer sichtbar; die Werkzeuge sind in drei aufklappbaren Bereichen gruppiert (immer nur einer offen).\n\n------------------------------------------------------------------------------------\n\n2. Die Kundendaten (die drei Felder oben)\n\n  • 👤 Kundenname: erscheint oben im Bericht und im Protokoll.\n  • 🎫 Ticket-Nr.: Ihre Auftragsnummer, um einen Vorgang später leicht zu finden.\n  • 📝 Hinweise des Technikers: Ihr freier Kommentar, unverändert in den Kundenbericht übernommen.\n  • Alle Ergebnisse erscheinen in der Konsole unten im Reiter.\n\n------------------------------------------------------------------------------------\n\n3. 🚀 Alles analysieren und 💡 Empfehlungen (die beiden oberen Schaltflächen, immer sichtbar)\n\n  • Was ist das? Die Hauptschaltfläche. Sie führt automatisch Windows-Zustand, Abstürze, Treiber & Latenz, den OEM-Schlüssel und die Empfehlungen aus und öffnet dann direkt den Kundenbericht.\n  • Wann verwenden? Für eine vollständige Diagnose mit einem Klick. Die drei Bereiche darunter dienen dazu, bei Bedarf ein bestimmtes Werkzeug zu starten.\n  • 💡 Empfehlungen (violette Schaltfläche, rechts): analysiert die erkannten Probleme und schlägt passende Aktionen und Werkzeuge vor (Datensicherung, Laufwerkstausch, BlueScreenView, Speichertest …). Diese Hinweise erscheinen auch im Kundenbericht.\n\n------------------------------------------------------------------------------------\n\n4. Bereich „🔎 Detaildiagnose"\n\nA. 🩺 Windows-Zustand\n  • Was ist das? Eine allgemeine Prüfung: Windows-Aktivierung, Virenschutz, Firewall, verfügbare Updates, ausstehender Neustart, BitLocker-Verschlüsselung und freier Speicher auf dem Systemlaufwerk.\n  • Wie liest man das Ergebnis? Jede Zeile ist markiert: ✅ alles in Ordnung, ⚠ im Auge behalten, ❌ zu behebendes Problem.\n  • Gut zu wissen: Die Update-Suche kann bis zu einer Minute dauern. Das Werkzeug bleibt in dieser Zeit nutzbar.\n\nB. 💥 Absturzanalyse\n  • Was ist das? Eine Durchsicht der letzten 30 Tage: Bluescreens, harte Abschaltungen (Stromausfall oder Absturz), Laufwerks- oder Hardwarefehler und Anwendungen, die sich von selbst schließen.\n  • Wie liest man das Ergebnis? Schwere Fehler (zum Beispiel ein Laufwerk, das einen Defekt meldet) werden von einfachen Kommunikationswarnungen getrennt, die häufig und selten beunruhigend sind. Das Werkzeug endet mit wahrscheinlichen Spuren (Laufwerk, Speicher, Treiber, Netzteil).\n  • Warum ist das nützlich? Es zeigt, wo man suchen muss, statt wahllos Teile zu tauschen.\n\nC. 🧠 Speichertest (RAM)\n  • Was ist das? Startet die in Windows integrierte Speicherdiagnose.\n  • Gut zu wissen: Der PC muss für den Test neu starten. Das Ergebnis erscheint nach der Rückkehr zum Desktop. Weisen Sie den Kunden darauf hin.\n\nD. 🛟 Wiederherstellungspunkt\n  • Was ist das? Erstellt sofort einen Windows-Wiederherstellungspunkt, eine Momentaufnahme des Systems, zu der man bei Problemen zurückkehren kann.\n  • Tipp: Machen Sie das vor jeder wichtigen Reparatur oder Installation.\n\n------------------------------------------------------------------------------------\n\n5. Bereich „💽 Laufwerk & Reparatur"\n\n  • Das Menü „C:" wählt das zu prüfende Laufwerk.\n\nA. 🔍 CHKDSK: Scan (nur lesend)\n  • Prüft das Laufwerk, ohne etwas zu verändern. Risikofrei, zuerst verwenden.\n\nB. 🛠️ CHKDSK: reparieren (/f /r)\n  • Behebt Fehler und versucht, defekte Sektoren wiederherzustellen. Auf dem Systemlaufwerk läuft die Reparatur beim nächsten Neustart und kann lange dauern.\n  • Tipp: Wenn der Scan Fehler meldet, sichern Sie zuerst die Daten des Kunden, bevor Sie die Reparatur starten.\n\nC. ⚙️ Treiber & Latenz\n  • Was ist das? Eine vollständige Bilanz: Geräte mit Fehler, unsignierte oder alte Treiber, DPC/ISR-Latenz (Ursache für Audio-Knistern und Ruckler), Windows-Startzeit, beim Start geladene Programme und der Zustand der Laufwerke.\n  • Gut zu wissen (wichtig): Verschleiß betrifft nur SSDs (Schreibzyklen). Bei einer Festplatte bedeutet „0 % Verschleiß" NICHT „gesund". Es sind die nicht korrigierten Lesefehler, die defekte Sektoren anzeigen, bei jedem Laufwerkstyp: das ist der ernst zu nehmende Alarm.\n\nD. 🔑 Windows-Schlüssel (OEM)\n  • Was ist das? Liest den im Mainboard hinterlegten Windows-Lizenzschlüssel (BIOS/UEFI) aus. Er reaktiviert Windows nach einer Neuinstallation und wird in den Kundenbericht übernommen.\n  • Gut zu wissen: Es wird nichts angezeigt, wenn der PC keinen eingebetteten OEM-Schlüssel hat (Eigenbau-PC, Retail- oder digitale Lizenz).\n\nE. 📦 Treiber exportieren\n  • Was ist das? Sichert alle Treiber von Drittanbietern des PCs in einen Ordner Ihrer Wahl.\n  • Wann verwenden? Vor einer Windows-Neuinstallation, um die richtigen Treiber danach wieder einspielen zu können.\n\nF. 📥 Treiber importieren\n  • Was ist das? Installiert alle Treiber aus einem Sicherungsordner in einem Durchgang neu (der von „Treiber exportieren" erstellte Ordner).\n  • Gut zu wissen: Nach einer Neuinstallation verwenden, als Gegenstück zum Export. Administratorrechte erforderlich, ein Neustart wird am Ende empfohlen.\n\n------------------------------------------------------------------------------------\n\n6. Bereich „🧾 Bericht & Protokoll"\n\nA. 🧾 Kundenbericht erstellen\n  • Erzeugt eine saubere HTML-Seite: ausgeführte Arbeiten, Windows-Zustand, Laufwerke, Treiber & Leistung, OEM-Schlüssel, Hardware und Ihre Hinweise. Sie öffnet sich im Browser und wird mit Strg+P als PDF gedruckt.\n  • Für einen vollständigen Bericht führen Sie zuerst die Prüfungen aus, deren Ergebnis Sie sehen möchten (oder nutzen Sie einfach „Alles analysieren").\n\nB. 📂 Berichtsordner\n  • Öffnet den Ordner C:\\Rapport_HDD\\Rapports_Clients, in dem alle Berichte abgelegt sind.\n\nC. 📒 Im Protokoll speichern\n  • Fügt den aktuellen Auftrag (Kunde, Ticket, ausgeführte Aktionen) dem Werkstattprotokoll hinzu.\n  • Datei: C:\\Rapport_HDD\\journal_interventions.jsonl\n\nD. 📖 Protokoll anzeigen\n  • Zeigt die Liste Ihrer vergangenen Aufträge, um zu finden, was wann und für wen getan wurde.\n\n------------------------------------------------------------------------------------\n\n7. Verknüpfte Optionen im Reiter Optimierung\n\n  • In Reiter 1 finden Sie außerdem ein Auftragsprofil, eine Abschlussaktion (zum Beispiel PC herunterfahren oder neu starten) und die automatische Erstellung eines Wiederherstellungspunkts vor dem Start.\n  • Diese Einstellungen arbeiten mit dem Protokoll zusammen: Was in Reiter 1 getan wird, wird für den Bericht vermerkt.',
+    'es': '🩺 Pestaña 9: Diagnóstico Pro (Diagnosticar, Documentar, Entregar un informe limpio)\n════════════════════════════════════════════════════════════════════════════\n\n1. ¿Para qué sirve exactamente? (El problema y la solución)\n\n  • El problema: un cliente trae un PC que «va lento» o «se bloquea». Sin un método se pierde tiempo hurgando en Windows y, al final, no hay nada limpio que entregar ni rastro de lo que se hizo.\n\n  • La solución: esta pestaña reúne todos los controles de un diagnóstico (estado de Windows, fallos, memoria, disco, controladores, clave de Windows), genera un informe para el cliente de una página y mantiene un diario de todas sus intervenciones.\n\n  • Novedad: la página ahora está organizada en acordeón, más despejada. Los datos del cliente, el gran botón «Analizar todo» y la consola de resultados permanecen siempre visibles; las herramientas se agrupan en tres secciones que se despliegan (solo una abierta a la vez).\n\n------------------------------------------------------------------------------------\n\n2. Los datos del cliente (los tres campos de arriba)\n\n  • 👤 Nombre del cliente: aparece al principio del informe y en el diario.\n  • 🎫 N.º de ticket: su número de intervención, para encontrar fácilmente un expediente.\n  • 📝 Observaciones del técnico: su comentario libre, copiado tal cual en el informe del cliente.\n  • Todos los resultados aparecen en la consola, en la parte inferior de la pestaña.\n\n------------------------------------------------------------------------------------\n\n3. 🚀 Analizar todo y 💡 Recomendaciones (los dos botones de arriba, siempre visibles)\n\n  • ¿Qué es? El botón principal. Ejecuta por sí solo el estado de Windows, los fallos, los controladores y latencia, la clave OEM y las recomendaciones, y luego abre directamente el informe del cliente.\n  • ¿Cuándo usarlo? Para un diagnóstico completo con un solo clic. Las tres secciones de abajo sirven para lanzar una herramienta concreta cuando la necesite.\n  • 💡 Recomendaciones (botón violeta, a la derecha): analiza los problemas detectados y propone las acciones y herramientas adecuadas (copia de seguridad, sustitución del disco, BlueScreenView, prueba de memoria…). Estos consejos también aparecen en el informe del cliente.\n\n------------------------------------------------------------------------------------\n\n4. Sección «🔎 Diagnóstico detallado»\n\nA. 🩺 Estado de Windows\n  • ¿Qué es? Un control general: activación de Windows, antivirus, cortafuegos, actualizaciones disponibles, reinicio pendiente, cifrado BitLocker y espacio libre en la unidad del sistema.\n  • ¿Cómo leer el resultado? Cada línea está marcada: ✅ todo bien, ⚠ a vigilar, ❌ problema a resolver.\n  • A tener en cuenta: la búsqueda de actualizaciones puede durar hasta un minuto. La herramienta sigue utilizable mientras tanto.\n\nB. 💥 Análisis de fallos\n  • ¿Qué es? Un examen de los últimos 30 días: pantallazos azules, apagados bruscos (corte de corriente o bloqueo), errores de disco o de hardware y aplicaciones que se cierran solas.\n  • ¿Cómo leer el resultado? Los errores graves (por ejemplo un disco que señala un defecto) se separan de los simples avisos de comunicación, frecuentes y rara vez preocupantes. La herramienta termina con las pistas probables (disco, memoria, controlador, fuente de alimentación).\n  • ¿Por qué es útil? Permite saber dónde buscar en lugar de cambiar piezas al azar.\n\nC. 🧠 Prueba de memoria (RAM)\n  • ¿Qué es? Inicia el diagnóstico de memoria integrado en Windows.\n  • A tener en cuenta: el PC debe reiniciarse para hacer la prueba. El resultado aparece al volver al escritorio. Avise al cliente.\n\nD. 🛟 Punto de restauración\n  • ¿Qué es? Crea ahora mismo un punto de restauración de Windows, una foto del estado del sistema a la que se puede volver si algo va mal.\n  • Consejo: hágalo antes de cualquier reparación o instalación importante.\n\n------------------------------------------------------------------------------------\n\n5. Sección «💽 Disco y reparación»\n\n  • El menú «C:» sirve para elegir la unidad a controlar.\n\nA. 🔍 CHKDSK: análisis (solo lectura)\n  • Analiza la unidad sin modificar nada. Sin riesgo, úselo primero.\n\nB. 🛠️ CHKDSK: reparar (/f /r)\n  • Corrige los errores e intenta recuperar los sectores defectuosos. En la unidad del sistema la reparación se hace en el próximo reinicio y puede durar mucho.\n  • Consejo: si el análisis señala errores, haga primero una copia de los datos del cliente antes de lanzar la reparación.\n\nC. ⚙️ Controladores y latencia\n  • ¿Qué es? Un balance completo: dispositivos con error, controladores no firmados o antiguos, latencia DPC/ISR (causa de crujidos de audio y microcortes), tiempo de arranque de Windows, programas lanzados al inicio y el estado de los discos.\n  • A tener en cuenta (importante): el desgaste solo afecta a los SSD (ciclos de escritura). En un disco duro, «0 % de desgaste» NO significa «buena salud». Son los errores de lectura no corregidos los que indican sectores defectuosos, en cualquier tipo de disco: esa es la alerta importante.\n\nD. 🔑 Clave de Windows (OEM)\n  • ¿Qué es? Recupera la clave de licencia de Windows grabada en la placa base (BIOS/UEFI). Sirve para reactivar Windows tras una reinstalación y se incluye en el informe del cliente.\n  • A tener en cuenta: no aparece nada si el PC no tiene clave OEM integrada (PC ensamblado, licencia Retail o digital).\n\nE. 📦 Exportar controladores\n  • ¿Qué es? Guarda todos los controladores de terceros del PC en una carpeta de su elección.\n  • ¿Cuándo usarlo? Antes de reinstalar Windows, para poder volver a poner los controladores correctos después.\n\nF. 📥 Importar controladores\n  • ¿Qué es? Reinstala de una vez todos los controladores de una carpeta de copia (la carpeta creada por «Exportar controladores»).\n  • A tener en cuenta: úselo tras una reinstalación, en pareja con la exportación. Requiere derechos de administrador y se recomienda reiniciar al final.\n\n------------------------------------------------------------------------------------\n\n6. Sección «🧾 Informe y diario»\n\nA. 🧾 Crear informe para el cliente\n  • Genera una página HTML limpia: trabajos realizados, estado de Windows, discos, controladores y rendimiento, clave OEM, hardware y sus observaciones. Se abre en el navegador y se imprime en PDF con Ctrl+P.\n  • Para un informe completo, ejecute primero los controles cuyo resultado quiere ver (o use simplemente «Analizar todo»).\n\nB. 📂 Carpeta de informes\n  • Abre la carpeta C:\\Rapport_HDD\\Rapports_Clients donde se guardan todos los informes.\n\nC. 📒 Guardar en el diario\n  • Añade la intervención en curso (cliente, ticket, acciones realizadas) al diario del taller.\n  • Archivo: C:\\Rapport_HDD\\journal_interventions.jsonl\n\nD. 📖 Ver el diario\n  • Muestra la lista de sus intervenciones pasadas para encontrar qué se hizo, cuándo y para quién.\n\n------------------------------------------------------------------------------------\n\n7. Las opciones relacionadas en la pestaña Optimización\n\n  • En la pestaña 1 también encontrará un perfil de intervención, una acción de fin de trabajo (por ejemplo apagar o reiniciar el PC) y la creación automática de un punto de restauración antes de empezar.\n  • Estos ajustes trabajan junto con el diario: lo que se hace en la pestaña 1 se anota para el informe.',
+    'it': "🩺 Scheda 9: Diagnosi Pro (Diagnosticare, Documentare, Consegnare un report pulito)\n════════════════════════════════════════════════════════════════════════════\n\n1. A cosa serve esattamente? (Il problema e la soluzione)\n\n  • Il problema: un cliente porta un PC « lento » o « che si blocca ». Senza un metodo si perde tempo a frugare in Windows e alla fine non c'è nulla di pulito da consegnare né traccia di ciò che è stato fatto.\n\n  • La soluzione: questa scheda riunisce tutti i controlli di una diagnosi (stato di Windows, crash, memoria, disco, driver, chiave di Windows), produce un report per il cliente di una pagina e tiene un giornale di tutti i suoi interventi.\n\n  • Novità: la pagina è ora organizzata ad accordéon, più ariosa. I dati del cliente, il grande pulsante « Analizza tutto » e la console dei risultati restano sempre visibili; gli strumenti sono raggruppati in tre sezioni che si aprono (una sola aperta per volta).\n\n------------------------------------------------------------------------------------\n\n2. I dati del cliente (i tre campi in alto)\n\n  • 👤 Nome del cliente: compare in testa al report e nel giornale.\n  • 🎫 N. ticket: il suo numero di intervento, per ritrovare facilmente una pratica.\n  • 📝 Note del tecnico: il suo commento libero, copiato così com'è nel report per il cliente.\n  • Tutti i risultati appaiono nella console, in fondo alla scheda.\n\n------------------------------------------------------------------------------------\n\n3. 🚀 Analizza tutto e 💡 Raccomandazioni (i due pulsanti in alto, sempre visibili)\n\n  • Cos'è? Il pulsante principale. Esegue da solo lo stato di Windows, i crash, i driver e latenza, la chiave OEM e le raccomandazioni, poi apre direttamente il report per il cliente.\n  • Quando usarlo? Per una diagnosi completa con un solo clic. Le tre sezioni qui sotto servono ad avviare uno strumento preciso quando serve.\n  • 💡 Raccomandazioni (pulsante viola, a destra): analizza i problemi rilevati e propone le azioni e gli strumenti adatti (backup, sostituzione del disco, BlueScreenView, test di memoria…). Questi consigli compaiono anche nel report per il cliente.\n\n------------------------------------------------------------------------------------\n\n4. Sezione « 🔎 Diagnostica dettagliata »\n\nA. 🩺 Stato di Windows\n  • Cos'è? Un controllo generale: attivazione di Windows, antivirus, firewall, aggiornamenti disponibili, riavvio in sospeso, crittografia BitLocker e spazio libero sull'unità di sistema.\n  • Come leggere il risultato? Ogni riga è contrassegnata: ✅ tutto bene, ⚠ da tenere d'occhio, ❌ problema da risolvere.\n  • Da sapere: la ricerca degli aggiornamenti può richiedere fino a un minuto. Lo strumento resta utilizzabile nel frattempo.\n\nB. 💥 Analisi dei crash\n  • Cos'è? Un esame degli ultimi 30 giorni: schermate blu, spegnimenti bruschi (mancanza di corrente o blocco), errori di disco o hardware e applicazioni che si chiudono da sole.\n  • Come leggere il risultato? Gli errori gravi (per esempio un disco che segnala un guasto) sono separati dai semplici avvisi di comunicazione, frequenti e raramente preoccupanti. Lo strumento termina con le piste probabili (disco, memoria, driver, alimentatore).\n  • Perché è utile? Permette di capire dove cercare invece di sostituire pezzi a caso.\n\nC. 🧠 Test memoria (RAM)\n  • Cos'è? Avvia la diagnostica della memoria integrata in Windows.\n  • Da sapere: il PC deve riavviarsi per eseguire il test. Il risultato appare al ritorno sul desktop. Avvisi il cliente.\n\nD. 🛟 Punto di ripristino\n  • Cos'è? Crea subito un punto di ripristino di Windows, un'istantanea del sistema a cui tornare in caso di problemi.\n  • Consiglio: lo faccia prima di qualsiasi riparazione o installazione importante.\n\n------------------------------------------------------------------------------------\n\n5. Sezione « 💽 Disco e riparazione »\n\n  • Il menu « C: » serve a scegliere l'unità da controllare.\n\nA. 🔍 CHKDSK: scansione (sola lettura)\n  • Analizza l'unità senza modificare nulla. Senza rischi, da usare per primo.\n\nB. 🛠️ CHKDSK: ripara (/f /r)\n  • Corregge gli errori e tenta di recuperare i settori danneggiati. Sull'unità di sistema la riparazione avviene al prossimo riavvio e può richiedere molto tempo.\n  • Consiglio: se la scansione segnala errori, faccia prima una copia dei dati del cliente prima di avviare la riparazione.\n\nC. ⚙️ Driver e latenza\n  • Cos'è? Un bilancio completo: dispositivi in errore, driver non firmati o vecchi, latenza DPC/ISR (causa di fruscii audio e microscatti), tempo di avvio di Windows, programmi lanciati all'avvio e lo stato dei dischi.\n  • Da sapere (importante): l'usura riguarda solo gli SSD (cicli di scrittura). Su un disco rigido, « 0 % di usura » NON significa « in salute ». Sono gli errori di lettura non corretti a indicare settori danneggiati, su qualsiasi tipo di disco: è questo l'allarme da prendere sul serio.\n\nD. 🔑 Chiave Windows (OEM)\n  • Cos'è? Recupera la chiave di licenza Windows incisa nella scheda madre (BIOS/UEFI). Serve a riattivare Windows dopo una reinstallazione ed è ripresa nel report per il cliente.\n  • Da sapere: non appare nulla se il PC non ha una chiave OEM integrata (PC assemblato, licenza Retail o digitale).\n\nE. 📦 Esporta i driver\n  • Cos'è? Salva tutti i driver di terze parti del PC in una cartella a sua scelta.\n  • Quando usarlo? Prima di una reinstallazione di Windows, per poter rimettere i driver giusti dopo.\n\nF. 📥 Importa i driver\n  • Cos'è? Reinstalla in una volta tutti i driver di una cartella di backup (la cartella creata da « Esporta i driver »).\n  • Da sapere: da usare dopo una reinstallazione, in coppia con l'esportazione. Richiede i diritti di amministratore e si consiglia un riavvio alla fine.\n\n------------------------------------------------------------------------------------\n\n6. Sezione « 🧾 Report e giornale »\n\nA. 🧾 Crea il report per il cliente\n  • Genera una pagina HTML pulita: lavori eseguiti, stato di Windows, dischi, driver e prestazioni, chiave OEM, hardware e le sue note. Si apre nel browser e si stampa in PDF con Ctrl+P.\n  • Per un report completo, esegua prima i controlli di cui vuole vedere il risultato (o usi semplicemente « Analizza tutto »).\n\nB. 📂 Cartella dei report\n  • Apre la cartella C:\\Rapport_HDD\\Rapports_Clients dove sono conservati tutti i report.\n\nC. 📒 Salva nel giornale\n  • Aggiunge l'intervento in corso (cliente, ticket, azioni eseguite) al giornale del laboratorio.\n  • File: C:\\Rapport_HDD\\journal_interventions.jsonl\n\nD. 📖 Vedi il giornale\n  • Mostra l'elenco dei suoi interventi passati per ritrovare cosa è stato fatto, quando e per chi.\n\n------------------------------------------------------------------------------------\n\n7. Opzioni collegate nella scheda Ottimizzazione\n\n  • Nella scheda 1 trova anche un profilo di intervento, un'azione di fine lavoro (per esempio spegnere o riavviare il PC) e la creazione automatica di un punto di ripristino prima di iniziare.\n  • Queste impostazioni lavorano insieme al giornale: ciò che si fa nella scheda 1 viene annotato per il report.",
 }
 
 
@@ -1049,11 +1011,11 @@ class NoticeWindow(ctk.CTkToplevel):
         self.lang = lang
         
         title_text = choisir(lang,
-                             "📖 Notice & Aide — Atelier PC Booster Pro v5.0.0",
-                             "📖 Manual & Help — Atelier PC Booster Pro v5.0.0",
-                             "📖 Handbuch & Hilfe — Atelier PC Booster Pro v5.0.0",
-                             "📖 Manual y Ayuda — Atelier PC Booster Pro v5.0.0",
-                             "📖 Manuale e Guida — Atelier PC Booster Pro v5.0.0")
+                             "📖 Notice & Aide — Atelier PC Booster Pro v5.1.0",
+                             "📖 Manual & Help — Atelier PC Booster Pro v5.1.0",
+                             "📖 Handbuch & Hilfe — Atelier PC Booster Pro v5.1.0",
+                             "📖 Manual y Ayuda — Atelier PC Booster Pro v5.1.0",
+                             "📖 Manuale e Guida — Atelier PC Booster Pro v5.1.0")
         self.title(title_text)
         self.resizable(False, True)
 
@@ -2028,16 +1990,7 @@ class NoticeWindow(ctk.CTkToplevel):
                 "The tab also lets you install in a single click the market's major platforms according to the customer's needs:\n"
                 "  • Steam, EA App, Roblox, Discord: To centralize online games and voice communication.\n"
                 "  • Epic Games Launcher: Epic Games' launcher. Installing it also provides the Unreal Engine 4 prerequisites that many games need.\n"
-                "  • DS4Windows: An essential utility that lets PlayStation controllers (PS4 / PS5) be recognized and configured perfectly on a Windows PC, by emulating Xbox commands if the game does not support them natively.\n"
-                "\n"
-                "------------------------------------------------------------------------------------\n"
-                "\n"
-                "4. The Local Arcade Pack (The Workshop Specialty)\n"
-                "  • What is it for, exactly? When you prepare CoinOps-type setups or sophisticated arcade cabinets, some game systems (such as TeknoParrot-type emulators or Taito Type X arcade games) require very specific license or configuration files placed in strategic locations of the main drive (C:\\) before they agree to start.\n"
-                "\n"
-                "  • What happens when it is activated? The tool automatically extracts the contents of the embedded assets_arcade folder, copies for example the essential license file TypeX3Temp.dat directly to the root of the C:\\ drive, and deploys the required silent installation utilities.\n"
-                "\n"
-                "  • What are the advantages for the technician? It is a considerable time-saver in the workshop: no more need to manually place the configuration files one by one on each arcade cabinet being prepared; everything is automated in one click!"
+                "  • DS4Windows: An essential utility that lets PlayStation controllers (PS4 / PS5) be recognized and configured perfectly on a Windows PC, by emulating Xbox commands if the game does not support them natively."
             )
 
         elif self.lang == "de":
@@ -2549,16 +2502,7 @@ class NoticeWindow(ctk.CTkToplevel):
                 "Der Tab erlaubt es außerdem, mit einem einzigen Klick die großen Plattformen des Marktes je nach Bedarf des Kunden zu installieren:\n"
                 "  • Steam, EA App, Roblox, Discord: Um Online-Spiele und Sprachkommunikation zu bündeln.\n"
                 "  • Epic Games Launcher: Der Launcher von Epic Games. Seine Installation liefert auch die Unreal-Engine-4-Voraussetzungen, die viele Spiele brauchen.\n"
-                "  • DS4Windows: Ein unverzichtbares Hilfsprogramm, mit dem PlayStation-Controller (PS4 / PS5) auf einem Windows-PC einwandfrei erkannt und konfiguriert werden, indem es Xbox-Befehle emuliert, falls das Spiel sie nicht nativ unterstützt.\n"
-                "\n"
-                "------------------------------------------------------------------------------------\n"
-                "\n"
-                "4. Das lokale Arcade-Paket (Die Spezialität der Werkstatt)\n"
-                "  • Wofür ist das genau gut? Wenn Sie Setups vom Typ CoinOps oder anspruchsvolle Arcade-Automaten vorbereiten, verlangen manche Spielsysteme (wie Emulatoren vom Typ TeknoParrot oder die Arcade-Spiele Taito Type X) ganz bestimmte Lizenz- oder Konfigurationsdateien, die an strategischen Stellen des Hauptlaufwerks (C:\\) liegen müssen, damit sie überhaupt starten.\n"
-                "\n"
-                "  • Was passiert, wenn man es aktiviert? Das Tool extrahiert automatisch den Inhalt des eingebetteten Ordners assets_arcade, kopiert zum Beispiel die unverzichtbare Lizenzdatei TypeX3Temp.dat direkt in das Stammverzeichnis des Laufwerks C:\\ und installiert die erforderlichen Hilfsprogramme für die stille Installation.\n"
-                "\n"
-                "  • Welche Vorteile hat der Techniker? Es ist ein erheblicher Zeitgewinn in der Werkstatt: Die Konfigurationsdateien müssen nicht mehr einzeln von Hand auf jedem gerade vorbereiteten Arcade-Automaten abgelegt werden; alles wird mit einem Klick automatisiert!"
+                "  • DS4Windows: Ein unverzichtbares Hilfsprogramm, mit dem PlayStation-Controller (PS4 / PS5) auf einem Windows-PC einwandfrei erkannt und konfiguriert werden, indem es Xbox-Befehle emuliert, falls das Spiel sie nicht nativ unterstützt."
             )
 
         elif self.lang == "es":
@@ -3070,16 +3014,7 @@ class NoticeWindow(ctk.CTkToplevel):
                 "La pestaña también permite instalar con un solo clic las grandes plataformas del mercado según las necesidades del cliente:\n"
                 "  • Steam, EA App, Roblox, Discord: para centralizar los juegos en línea y la comunicación por voz.\n"
                 "  • Epic Games Launcher: el lanzador de Epic Games. Al instalarlo también se obtienen los requisitos de Unreal Engine 4 que necesitan muchos juegos.\n"
-                "  • DS4Windows: una utilidad indispensable que permite reconocer y configurar perfectamente los mandos de PlayStation (PS4 / PS5) en un PC con Windows, emulando los controles de Xbox si el juego no los admite de forma nativa.\n"
-                "\n"
-                "------------------------------------------------------------------------------------\n"
-                "\n"
-                "4. El Paquete Arcade local (la especialidad del taller)\n"
-                "  • ¿Para qué sirve exactamente? Cuando prepara configuraciones de tipo CoinOps o máquinas recreativas sofisticadas, algunos sistemas de juegos (como los emuladores de tipo TeknoParrot o los juegos recreativos Taito Type X) exigen archivos de licencia o de configuración muy precisos, colocados en lugares estratégicos del disco principal (C:\\) para aceptar iniciarse.\n"
-                "\n"
-                "  • ¿Qué ocurre al activarlo? La herramienta extrae automáticamente el contenido de la carpeta integrada assets_arcade, copia por ejemplo el archivo de licencia indispensable TypeX3Temp.dat directamente en la raíz del disco C:\\ y despliega las utilidades de instalación silenciosa necesarias.\n"
-                "\n"
-                "  • ¿Qué ventajas tiene para el técnico? Es un ahorro de tiempo considerable en el taller: ya no hace falta colocar manualmente los archivos de configuración uno a uno en cada máquina recreativa que se está preparando; ¡todo se automatiza con un clic!"
+                "  • DS4Windows: una utilidad indispensable que permite reconocer y configurar perfectamente los mandos de PlayStation (PS4 / PS5) en un PC con Windows, emulando los controles de Xbox si el juego no los admite de forma nativa."
             )
 
         elif self.lang == "it":
@@ -3591,16 +3526,7 @@ class NoticeWindow(ctk.CTkToplevel):
                 "La scheda permette inoltre di installare con un solo clic le grandi piattaforme del mercato in base alle esigenze del cliente:\n"
                 "  • Steam, EA App, Roblox, Discord: per centralizzare i giochi online e la comunicazione vocale.\n"
                 "  • Epic Games Launcher: il launcher di Epic Games. L'installazione fornisce anche i prerequisiti di Unreal Engine 4 di cui molti giochi hanno bisogno.\n"
-                "  • DS4Windows: un'utility indispensabile che permette di far riconoscere e configurare alla perfezione i controller PlayStation (PS4 / PS5) su un PC Windows, emulando i comandi Xbox se il gioco non li supporta in modo nativo.\n"
-                "\n"
-                "------------------------------------------------------------------------------------\n"
-                "\n"
-                "4. Il Pacchetto Arcade locale (la specialità del laboratorio)\n"
-                "  • A cosa serve esattamente? Quando prepari configurazioni di tipo CoinOps o cabinati arcade sofisticati, alcuni sistemi di gioco (come gli emulatori di tipo TeknoParrot o i giochi arcade Taito Type X) richiedono file di licenza o di configurazione molto precisi, collocati in punti strategici del disco principale (C:\\) per accettare di avviarsi.\n"
-                "\n"
-                "  • Cosa succede quando lo si attiva? Lo strumento estrae automaticamente il contenuto della cartella incorporata assets_arcade, copia ad esempio il file di licenza indispensabile TypeX3Temp.dat direttamente nella radice del disco C:\\ e distribuisce le utility di installazione silenziosa necessarie.\n"
-                "\n"
-                "  • Quali sono i vantaggi per il tecnico? Un notevole risparmio di tempo in laboratorio: non serve più collocare manualmente i file di configurazione uno per uno su ogni cabinato arcade in preparazione; tutto è automatizzato con un clic!"
+                "  • DS4Windows: un'utility indispensabile che permette di far riconoscere e configurare alla perfezione i controller PlayStation (PS4 / PS5) su un PC Windows, emulando i comandi Xbox se il gioco non li supporta in modo nativo."
             )
 
         else:
@@ -3937,12 +3863,7 @@ class NoticeWindow(ctk.CTkToplevel):
                 "L'onglet permet également d'installer d'un seul clic les grandes plateformes du marché selon les besoins du client :\n"
                 "  • Steam, EA App, Roblox, Discord : Pour centraliser les jeux en ligne et la communication vocale.\n"
                 "  • Epic Games Launcher : Le lanceur des jeux Epic Games. Son installation fournit aussi les prérequis d'Unreal Engine 4 dont de nombreux jeux ont besoin.\n"
-                "  • DS4Windows : Un utilitaire indispensable qui permet de faire reconnaître et de configurer parfaitement les manettes de PlayStation (PS4 / PS5) sur un PC Windows, en émulant les commandes Xbox si le jeu ne les prend pas en charge nativement.\n\n"
-                "------------------------------------------------------------------------------------\n\n"
-                "4. Le Pack Local Arcade (La Spécificité Atelier)\n"
-                "  • À quoi ça sert exactement ? Lorsque vous préparez des configurations de type CoinOps ou des bornes d'arcade sophistiquées, certains systèmes de jeux (comme les émulateurs de type TeknoParrot ou les jeux d'arcade Taito Type X) exigent des fichiers de licence ou de configuration très précis placés à des endroits stratégiques du disque principal (C:\\) pour accepter de démarrer.\n\n"
-                "  • Que se passe-t-il quand on l'active ? L'outil extrait automatiquement le contenu du dossier embarqué assets_arcade, copie par exemple le fichier de licence indispensable TypeX3Temp.dat directement à la racine du disque C:\\, et déploie les utilitaires d'installation silencieuse requis.\n\n"
-                "  • Quels sont les avantages pour le technicien ? Il s'agit d'un gain de temps considérable en atelier : plus besoin de placer manuellement les fichiers de configuration un par un sur chaque borne d'arcade en cours de préparation ; tout est automatisé en un clic !"
+                "  • DS4Windows : Un utilitaire indispensable qui permet de faire reconnaître et de configurer parfaitement les manettes de PlayStation (PS4 / PS5) sur un PC Windows, en émulant les commandes Xbox si le jeu ne les prend pas en charge nativement."
             )
 
         self.txt_9.insert("1.0", NOTICE_DIAGNOSTIC.get(self.lang, NOTICE_DIAGNOSTIC["en"]))
@@ -4279,7 +4200,6 @@ RUNTIMES_NOMS = {
         "ue4prereq": "Epic Games Launcher (includes the Unreal Engine 4 prerequisites)",
         "physx": "NVIDIA PhysX System Software",
         "dotnet_desktop_8": ".NET Desktop Runtime 8.0 (x64)",
-        "arcade_assets": "📦 Local Arcade Pack (Fix TypeX3Temp.dat & Utilities)",
         "steam": "Steam (Valve Gaming Platform)",
         "ea_app": "EA App (EA / Origin Client for EA Games)",
         "roblox": "Roblox (Online Gaming Platform)",
@@ -4296,7 +4216,6 @@ RUNTIMES_NOMS = {
         "ue4prereq": "Epic Games Launcher (enthält die Unreal-Engine-4-Voraussetzungen)",
         "physx": "NVIDIA PhysX System Software",
         "dotnet_desktop_8": ".NET Desktop Runtime 8.0 (x64)",
-        "arcade_assets": "📦 Lokales Arcade-Paket (Fix TypeX3Temp.dat & Hilfsprogramme)",
         "steam": "Steam (Spieleplattform von Valve)",
         "ea_app": "EA App (EA-Anwendung / Origin für EA-Spiele)",
         "roblox": "Roblox (Online-Spieleplattform)",
@@ -4313,7 +4232,6 @@ RUNTIMES_NOMS = {
         "ue4prereq": "Epic Games Launcher (incluye los requisitos de Unreal Engine 4)",
         "physx": "NVIDIA PhysX System Software",
         "dotnet_desktop_8": ".NET Desktop Runtime 8.0 (x64)",
-        "arcade_assets": "📦 Paquete Arcade local (Fix TypeX3Temp.dat y utilidades)",
         "steam": "Steam (plataforma de juegos de Valve)",
         "ea_app": "EA App (cliente de EA / Origin para juegos de EA)",
         "roblox": "Roblox (plataforma de juegos en línea)",
@@ -4330,7 +4248,6 @@ RUNTIMES_NOMS = {
         "ue4prereq": "Epic Games Launcher (include i prerequisiti di Unreal Engine 4)",
         "physx": "NVIDIA PhysX System Software",
         "dotnet_desktop_8": ".NET Desktop Runtime 8.0 (x64)",
-        "arcade_assets": "📦 Pacchetto Arcade locale (Fix TypeX3Temp.dat e utility)",
         "steam": "Steam (piattaforma di gioco di Valve)",
         "ea_app": "EA App (client EA / Origin per i giochi EA)",
         "roblox": "Roblox (piattaforma di gioco online)",
@@ -4376,8 +4293,6 @@ BLOATWARE_LIST = [
     {"name": "Windows Tips", "package": "*Getstarted*"},
 ]
 
-EPIC_INSTALLER = "EpicInstaller-20.3.3-unrealEngine.exe"
-
 RUNTIMES_LIST = [
     {"section_key": "runtimes_section_essential"},
     {"id": "vcredist_aio", "name": "Visual C++ All-In-One (2005 à 2022 x86/x64 Complet)", "winget_id": "abbodi1406.vcredist", "default": True},
@@ -4386,7 +4301,6 @@ RUNTIMES_LIST = [
     {"id": "openal", "name": "OpenAL (Audio 3D pour jeux & émulateurs - oalinst)", "winget_id": "CreativeTechnology.OpenAL", "default": True},
     {"id": "physx", "name": "NVIDIA PhysX System Software", "winget_id": "Nvidia.PhysX", "default": True},
     {"id": "dotnet_desktop_8", "name": ".NET Desktop Runtime 8.0 (x64)", "winget_id": "Microsoft.DotNet.DesktopRuntime.8", "default": True},
-    {"id": "arcade_assets", "name": "📦 Pack Local Arcade (Fix TypeX3Temp.dat & Utilitaires)", "winget_id": "LOCAL_ASSETS", "default": False},
     {"section_key": "runtimes_section_optional"},
     {"id": "steam", "name": "Steam (Plateforme de jeux Valve)", "winget_id": "Valve.Steam", "default": False},
     {"id": "ea_app", "name": "EA App (Application EA / Origin pour les jeux EA)", "winget_id": "ElectronicArts.EAApp", "default": False},
@@ -4458,11 +4372,12 @@ UTILITIES_LIST = [
     {"name": "WirelessKeyView (NirSoft)", "filename": os.path.join("WirelessKeyView", "WirelessKeyView.exe"), "desc_key": "u9_desc", "icon": "🔑"},
     {"name": "Process Explorer (Sysinternals)", "filename": os.path.join("ProcessExplorer", "procexp64.exe"), "desc_key": "u10_desc", "icon": "📊"},
     {"name": "TCPView (Sysinternals)", "filename": os.path.join("tcpview", "tcpview64.exe"), "desc_key": "u11_desc", "icon": "📡"},
-    {"name": "MiniTool Partition Wizard", "filename": os.path.join("MiniTool Partition Magic", "partitionwizard.exe"), "desc_key": "u12_desc", "icon": "🧩"}
+    {"name": "MiniTool Partition Wizard", "filename": os.path.join("MiniTool Partition Magic", "partitionwizard.exe"), "desc_key": "u12_desc", "icon": "🧩"},
+    {"name": "BlueScreenView (NirSoft)", "filename": os.path.join("BlueScreenView", "BlueScreenView.exe"), "desc_key": "u13_desc", "icon": "💥"}
 ]
 
 
-APP_VERSION = "v5.0.0"
+APP_VERSION = "v5.1.0"
 
 # ==========================================================
 #  V5 : DIAGNOSTIC PRO, SÉCURITÉ ET TRAÇABILITÉ
@@ -4488,21 +4403,37 @@ def definir_fenetre_principale(fenetre):
     _fenetre_principale_ref = fenetre
 
 
+# Taille de la console par rapport à la fenêtre principale : on ne la recouvre pas entièrement,
+# pour que les onglets (en haut) et la barre d'avancement / le statut (en bas) restent visibles.
+CONSOLE_RATIO_LARGEUR = 0.75
+CONSOLE_RATIO_HAUTEUR = 0.60
+CONSOLE_LARGEUR_MIN = 560
+CONSOLE_HAUTEUR_MIN = 360
+
+
 def _positionner_fenetre_console(titre, essais=40, delai=0.1):
     """Cherche la fenêtre console nouvellement ouverte par son titre (via le titre passé à "start",
-    qui devient le titre de la fenêtre) et la redimensionne/repositionne pour qu'elle se superpose
-    exactement par-dessus la fenêtre principale de l'application. Tourne dans un thread à part pour
-    ne pas bloquer l'attente de la commande elle-même ; abandonne sans rien casser si la fenêtre
-    principale n'est pas connue ou si la fenêtre console n'apparaît pas assez vite."""
+    qui devient le titre de la fenêtre) et la positionne/dimensionne pour qu'elle apparaisse CENTRÉE
+    par-dessus la fenêtre principale, mais en plus petit (voir CONSOLE_RATIO_*) — pour laisser visibles
+    les onglets en haut et la barre d'avancement/le statut en bas de l'application pendant que la
+    commande tourne. Tourne dans un thread à part pour ne pas bloquer l'attente de la commande
+    elle-même ; abandonne sans rien casser si la fenêtre principale n'est pas connue ou si la fenêtre
+    console n'apparaît pas assez vite."""
     if _fenetre_principale_ref is None:
         return
     try:
-        x = _fenetre_principale_ref.winfo_x()
-        y = _fenetre_principale_ref.winfo_y()
-        largeur = _fenetre_principale_ref.winfo_width()
-        hauteur = _fenetre_principale_ref.winfo_height()
+        x_app = _fenetre_principale_ref.winfo_x()
+        y_app = _fenetre_principale_ref.winfo_y()
+        largeur_app = _fenetre_principale_ref.winfo_width()
+        hauteur_app = _fenetre_principale_ref.winfo_height()
     except Exception:
         return
+    largeur = max(CONSOLE_LARGEUR_MIN, int(largeur_app * CONSOLE_RATIO_LARGEUR))
+    hauteur = max(CONSOLE_HAUTEUR_MIN, int(hauteur_app * CONSOLE_RATIO_HAUTEUR))
+    largeur = min(largeur, largeur_app)  # ne jamais dépasser la fenêtre principale elle-même
+    hauteur = min(hauteur, hauteur_app)
+    x = x_app + (largeur_app - largeur) // 2
+    y = y_app + (hauteur_app - hauteur) // 2
     user32 = ctypes.windll.user32
     hwnd = 0
     for _ in range(essais):
@@ -4514,7 +4445,7 @@ def _positionner_fenetre_console(titre, essais=40, delai=0.1):
         return
     try:
         # SWP_NOZORDER (0x0004) : on ne force pas la console au premier plan en continu,
-        # on se contente de la caler à la même place/taille que la fenêtre principale.
+        # on se contente de la centrer, en plus petit, par-dessus la fenêtre principale.
         user32.SetWindowPos(hwnd, 0, x, y, largeur, hauteur, 0x0004)
     except Exception:
         pass
@@ -5123,7 +5054,8 @@ def construire_rapport_html(d, tr, banniere_b64=""):
 
     # Santé / plantages
     for cle, titre_s in (("sante", tr("Santé de Windows", "Windows health", "Windows-Zustand", "Estado de Windows", "Stato di Windows")),
-                         ("plantages", tr("Stabilité (30 derniers jours)", "Stability (last 30 days)", "Stabilität (letzte 30 Tage)", "Estabilidad (últimos 30 días)", "Stabilità (ultimi 30 giorni)"))):
+                         ("plantages", tr("Stabilité (30 derniers jours)", "Stability (last 30 days)", "Stabilität (letzte 30 Tage)", "Estabilidad (últimos 30 días)", "Stabilità (ultimi 30 giorni)")),
+                         ("pilotes", tr("Pilotes & performances", "Drivers & performance", "Treiber & Leistung", "Controladores y rendimiento", "Driver e prestazioni"))):
         items = d.get(cle) or []
         if items:
             li = "".join(f'<li class="{e(n)}"><span class="ic">{ICONES_NIVEAU.get(n, "")}</span>{e(t)}</li>' for n, t in items if t != "")
@@ -5151,6 +5083,14 @@ def construire_rapport_html(d, tr, banniere_b64=""):
     if d.get("materiel"):
         section(tr("Configuration matérielle", "Hardware configuration", "Hardwarekonfiguration", "Configuración de hardware", "Configurazione hardware"), f'<pre>{e(d["materiel"])}</pre>')
 
+    # Licence Windows (OEM)
+    if d.get("oem"):
+        section(tr("Licence Windows", "Windows license", "Windows-Lizenz", "Licencia de Windows", "Licenza di Windows"),
+                '<table class="kv"><tr><th>' + e(tr("Clé OEM (BIOS/UEFI)", "OEM key (BIOS/UEFI)", "OEM-Schlüssel (BIOS/UEFI)", "Clave OEM (BIOS/UEFI)", "Chiave OEM (BIOS/UEFI)")) + '</th><td>' + e(d["oem"]) + '</td></tr></table>')
+    # Recommandations
+    if d.get("reco"):
+        li_r = "".join('<li class="' + e(n) + '"><span class="ic">' + ICONES_NIVEAU.get(n, "") + '</span>' + e(t) + '</li>' for n, t in d["reco"] if t != "")
+        section(tr("Recommandations", "Recommendations", "Empfehlungen", "Recomendaciones", "Raccomandazioni"), '<ul class="lines">' + li_r + '</ul>')
     logo = f'<img class="logo" src="data:image/jpeg;base64,{banniere_b64}">' if banniere_b64 else ""
     css = """
     :root{--navy:#0e2b4d;--blue:#2680d8;--or:#ee5a24}
@@ -5337,19 +5277,20 @@ class DiagnosticProMixin:
         self.dp_init_donnees()
         parent = self.tab_diag
 
+        # --- Bandeau guide
         self.banner_diag = ctk.CTkFrame(parent, fg_color="#12202F", corner_radius=6)
         self.banner_diag.pack(fill="x", padx=10, pady=(2, 5))
         ctk.CTkLabel(
             self.banner_diag,
-            text=tr("💡 Guide : diagnostiquez un PC en quelques clics (santé de Windows, plantages, mémoire, disque), puis remettez au client un rapport propre et gardez la trace de l'intervention.",
-                    "💡 Guide: diagnose a PC in a few clicks (Windows health, crashes, memory, disk), then hand the customer a clean report and keep a record of the job.",
-                    "💡 Tipp: Diagnostizieren Sie einen PC mit wenigen Klicks (Windows-Zustand, Abstürze, Speicher, Laufwerk), übergeben Sie dem Kunden einen sauberen Bericht und dokumentieren Sie den Auftrag.",
-                    "💡 Consejo: diagnostique un PC en pocos clics (estado de Windows, fallos, memoria, disco), entregue al cliente un informe limpio y conserve el registro de la intervención.",
-                    "💡 Suggerimento: diagnostica un PC in pochi clic (stato di Windows, crash, memoria, disco), consegna al cliente un report pulito e conserva la traccia dell'intervento."),
+            text=tr("ℹ\ufe0f Diagnostic en quelques clics : renseignez le client, lancez «\u00a0Tout analyser\u00a0», puis dépliez une section pour un outil précis. Le résultat s'affiche dans la console en bas.",
+                    "ℹ\ufe0f Diagnose in a few clicks: fill in the customer, run “Analyze all”, then open a section for a specific tool. Results appear in the console below.",
+                    "ℹ\ufe0f Diagnose mit wenigen Klicks: Kunden eintragen, „Alles analysieren“ starten, dann einen Bereich für ein bestimmtes Werkzeug öffnen. Ergebnisse erscheinen in der Konsole unten.",
+                    "ℹ\ufe0f Diagnóstico en pocos clics: rellene el cliente, ejecute «Analizar todo» y abra una sección para una herramienta concreta. El resultado aparece en la consola de abajo.",
+                    "ℹ\ufe0f Diagnosi in pochi clic: compila il cliente, avvia «Analizza tutto», poi apri una sezione per uno strumento preciso. Il risultato appare nella console in basso."),
             wraplength=FENETRE_LARGEUR - 120, justify="left", font=ctk.CTkFont(size=11), text_color="#7CC0FF", anchor="w",
         ).pack(anchor="w", padx=10, pady=5)
 
-        # --- Dossier client
+        # --- Dossier client (toujours visible)
         cli = ctk.CTkFrame(parent, fg_color="transparent")
         cli.pack(fill="x", padx=10, pady=(0, 4))
         self.diag_client = ctk.CTkEntry(cli, width=210, placeholder_text=tr("👤 Nom du client", "👤 Customer name", "👤 Kundenname", "👤 Nombre del cliente", "👤 Nome del cliente"))
@@ -5359,55 +5300,116 @@ class DiagnosticProMixin:
         self.diag_notes = ctk.CTkEntry(cli, placeholder_text=tr("📝 Remarques du technicien (apparaissent dans le rapport)", "📝 Technician notes (shown in the report)", "📝 Hinweise des Technikers (erscheinen im Bericht)", "📝 Observaciones del técnico (aparecen en el informe)", "📝 Note del tecnico (appaiono nel report)"))
         self.diag_notes.pack(side="left", fill="x", expand=True)
 
-        # --- Boutons
-        grille = ctk.CTkFrame(parent, fg_color="transparent")
-        grille.pack(fill="x", padx=10, pady=4)
-        for c in range(4):
-            grille.grid_columnconfigure(c, weight=1, uniform="dp")
-        police = ctk.CTkFont(size=12, weight="bold")
+        # --- Action principale (toujours visible)
+        hero = ctk.CTkFrame(parent, fg_color="transparent")
+        hero.pack(fill="x", padx=10, pady=(2, 4))
+        self.btn_dp_tout = ctk.CTkButton(
+            hero,
+            text=tr("🚀 Tout analyser puis générer le rapport", "🚀 Analyze everything + report", "🚀 Alles analysieren + Bericht", "🚀 Analizar todo + informe", "🚀 Analizza tutto + report"),
+            command=lambda: self.dp_lancer(self._dp_tout_analyser, self.btn_dp_tout),
+            fg_color=COUL_ORANGE, hover_color=COUL_ORANGE_H, font=ctk.CTkFont(size=14, weight="bold"), height=44)
+        hero.grid_columnconfigure(0, weight=3, uniform="hero")
+        hero.grid_columnconfigure(1, weight=1, uniform="hero")
+        self.btn_dp_tout.grid(row=0, column=0, sticky="ew", padx=(0, 4))
+        self.btn_dp_reco = ctk.CTkButton(
+            hero,
+            text=tr("💡 Recommandations", "💡 Recommendations", "💡 Empfehlungen", "💡 Recomendaciones", "💡 Raccomandazioni"),
+            command=lambda: self.dp_lancer(self._dp_recommandations, self.btn_dp_reco),
+            fg_color=COUL_VIOLET, hover_color=COUL_VIOLET_H, font=ctk.CTkFont(size=14, weight="bold"), height=44)
+        self.btn_dp_reco.grid(row=0, column=1, sticky="ew", padx=(4, 0))
+        ToolTip(self.btn_dp_reco, tr("Analyse les problèmes détectés et propose les actions et outils adaptés.",
+                                     "Scans detected problems and suggests the right actions and tools.",
+                                     "Analysiert erkannte Probleme und schlägt passende Aktionen und Werkzeuge vor.",
+                                     "Analiza los problemas detectados y propone las acciones y herramientas adecuadas.",
+                                     "Analizza i problemi rilevati e propone le azioni e gli strumenti adatti."))
+        ToolTip(self.btn_dp_tout, tr("Enchaîne santé, plantages, pilotes/latences, clé OEM et recommandations, puis ouvre le rapport client.",
+                                     "Runs health, crashes, drivers/latency, OEM key and recommendations, then opens the customer report.",
+                                     "Führt Zustand, Abstürze, Treiber/Latenz, OEM-Schlüssel und Empfehlungen aus und öffnet den Kundenbericht.",
+                                     "Ejecuta estado, fallos, controladores/latencias, clave OEM y recomendaciones, y abre el informe del cliente.",
+                                     "Esegue stato, crash, driver/latenze, chiave OEM e raccomandazioni, poi apre il report del cliente."))
 
-        def bouton(texte, cmd, couleur, survol, ligne, col, span=1, tip=None):
-            b = ctk.CTkButton(grille, text=texte, command=cmd, fg_color=couleur, hover_color=survol, font=police, height=34)
+        # --- Accordeon (une seule section ouverte a la fois)
+        police = ctk.CTkFont(size=12, weight="bold")
+        acc = ctk.CTkFrame(parent, fg_color="transparent")
+        acc.pack(fill="x", padx=10, pady=(0, 2))
+        self._dp_sections = []
+
+        def creer_section(titre):
+            cadre = ctk.CTkFrame(acc, fg_color=COUL_CARTE, corner_radius=6, border_width=1, border_color="#22344D")
+            cadre.pack(fill="x", pady=3)
+            entete = ctk.CTkButton(cadre, text="▸  " + titre, anchor="w", fg_color="transparent",
+                                   hover_color="#1C2A3D", text_color="#DCE6F2",
+                                   font=ctk.CTkFont(size=13, weight="bold"), height=38)
+            entete.pack(fill="x", padx=2, pady=2)
+            corps = ctk.CTkFrame(cadre, fg_color="transparent")
+            for col in range(4):
+                corps.grid_columnconfigure(col, weight=1, uniform="dp")
+            i = len(self._dp_sections)
+            entete.configure(command=lambda idx=i: self._dp_basculer_section(idx))
+            self._dp_sections.append({"titre": titre, "entete": entete, "corps": corps, "ouvert": False})
+            return corps
+
+        def action(corps, texte, cmd, couleur, survol, ligne, col, span=1, tip=None):
+            b = ctk.CTkButton(corps, text=texte, command=cmd, fg_color=couleur, hover_color=survol, font=police, height=34)
             b.grid(row=ligne, column=col, columnspan=span, sticky="ew", padx=3, pady=3)
             if tip:
                 ToolTip(b, tip)
             return b
 
-        self.btn_dp_sante = bouton(tr("🩺 Santé de Windows", "🩺 Windows health", "🩺 Windows-Zustand", "🩺 Estado de Windows", "🩺 Stato di Windows"),
-                                   lambda: self.dp_lancer(self._dp_sante, self.btn_dp_sante), COUL_BLEU, COUL_BLEU_H, 0, 0,
+        # Section 1 : Diagnostic detaille
+        s1 = creer_section(tr("🔎 Diagnostic détaillé", "🔎 Detailed diagnostic", "🔎 Detaildiagnose", "🔎 Diagnóstico detallado", "🔎 Diagnostica dettagliata"))
+        self.btn_dp_sante = action(s1, tr("🩺 Santé de Windows", "🩺 Windows health", "🩺 Windows-Zustand", "🩺 Estado de Windows", "🩺 Stato di Windows"),
+                                   lambda: self.dp_lancer(self._dp_sante, self.btn_dp_sante), COUL_BLEU, COUL_BLEU_H, 0, 0, span=2,
                                    tip=tr("Activation, antivirus, pare-feu, mises à jour, redémarrage en attente, BitLocker, espace libre.", "Activation, antivirus, firewall, updates, pending restart, BitLocker, free space.", "Aktivierung, Virenschutz, Firewall, Updates, ausstehender Neustart, BitLocker, freier Speicher.", "Activación, antivirus, cortafuegos, actualizaciones, reinicio pendiente, BitLocker, espacio libre.", "Attivazione, antivirus, firewall, aggiornamenti, riavvio in sospeso, BitLocker, spazio libero."))
-        self.btn_dp_crash = bouton(tr("💥 Analyse des plantages", "💥 Crash analysis", "💥 Absturzanalyse", "💥 Análisis de fallos", "💥 Analisi dei crash"),
-                                   lambda: self.dp_lancer(self._dp_plantages, self.btn_dp_crash), COUL_BLEU, COUL_BLEU_H, 0, 1,
+        self.btn_dp_crash = action(s1, tr("💥 Analyse des plantages", "💥 Crash analysis", "💥 Absturzanalyse", "💥 Análisis de fallos", "💥 Analisi dei crash"),
+                                   lambda: self.dp_lancer(self._dp_plantages, self.btn_dp_crash), COUL_BLEU, COUL_BLEU_H, 0, 2, span=2,
                                    tip=tr("Écrans bleus, arrêts brutaux, erreurs disque/matériel et applications qui plantent (30 jours).", "Blue screens, hard shutdowns, disk/hardware errors and crashing applications (30 days).", "Bluescreens, harte Abschaltungen, Laufwerks-/Hardwarefehler und abstürzende Anwendungen (30 Tage).", "Pantallazos azules, apagados bruscos, errores de disco/hardware y aplicaciones que fallan (30 días).", "Schermate blu, spegnimenti bruschi, errori di disco/hardware e applicazioni che vanno in crash (30 giorni)."))
-        self.btn_dp_mem = bouton(tr("🧠 Test mémoire (RAM)", "🧠 Memory test (RAM)", "🧠 Speichertest (RAM)", "🧠 Prueba de memoria (RAM)", "🧠 Test memoria (RAM)"),
-                                 self.dp_memoire, COUL_VIOLET, COUL_VIOLET_H, 0, 2,
+        self.btn_dp_mem = action(s1, tr("🧠 Test mémoire (RAM)", "🧠 Memory test (RAM)", "🧠 Speichertest (RAM)", "🧠 Prueba de memoria (RAM)", "🧠 Test memoria (RAM)"),
+                                 self.dp_memoire, COUL_VIOLET, COUL_VIOLET_H, 1, 0, span=2,
                                  tip=tr("Lance le diagnostic mémoire de Windows (redémarrage nécessaire).", "Starts the Windows memory diagnostic (restart required).", "Startet die Windows-Speicherdiagnose (Neustart erforderlich).", "Inicia el diagnóstico de memoria de Windows (requiere reinicio).", "Avvia la diagnostica memoria di Windows (richiede riavvio)."))
-        self.btn_dp_restore = bouton(tr("🛟 Point de restauration", "🛟 Restore point", "🛟 Wiederherstellungspunkt", "🛟 Punto de restauración", "🛟 Punto di ripristino"),
-                                     self.dp_bouton_restauration, COUL_BLEU, COUL_BLEU_H, 0, 3,
+        self.btn_dp_restore = action(s1, tr("🛟 Point de restauration", "🛟 Restore point", "🛟 Wiederherstellungspunkt", "🛟 Punto de restauración", "🛟 Punto di ripristino"),
+                                     self.dp_bouton_restauration, COUL_BLEU, COUL_BLEU_H, 1, 2, span=2,
                                      tip=tr("Crée tout de suite un point de restauration Windows.", "Creates a Windows restore point right now.", "Erstellt sofort einen Windows-Wiederherstellungspunkt.", "Crea ahora mismo un punto de restauración de Windows.", "Crea subito un punto di ripristino di Windows."))
 
+        # Section 2 : Disque & reparation
+        s2 = creer_section(tr("💽 Disque & réparation", "💽 Disk & repair", "💽 Laufwerk & Reparatur", "💽 Disco y reparación", "💽 Disco e riparazione"))
         lecteurs = [f"{c}:" for c in string.ascii_uppercase if os.path.exists(f"{c}:\\")] or ["C:"]
-        self.diag_drive_menu = ctk.CTkOptionMenu(grille, values=lecteurs, width=80, height=34, font=police)
+        self.diag_drive_menu = ctk.CTkOptionMenu(s2, values=lecteurs, width=80, height=34, font=police)
         self.diag_drive_menu.set(os.environ.get("SystemDrive", "C:") if os.environ.get("SystemDrive", "C:") in lecteurs else lecteurs[0])
-        self.diag_drive_menu.grid(row=1, column=0, sticky="ew", padx=3, pady=3)
-        self.btn_dp_chk_scan = bouton(tr("🔍 CHKDSK : scan (lecture seule)", "🔍 CHKDSK: scan (read-only)", "🔍 CHKDSK: Scan (nur lesend)", "🔍 CHKDSK: análisis (solo lectura)", "🔍 CHKDSK: scansione (sola lettura)"),
-                                      lambda: self.dp_lancer(self._dp_chkdsk_scan, self.btn_dp_chk_scan), COUL_BLEU, COUL_BLEU_H, 1, 1,
+        self.diag_drive_menu.grid(row=0, column=0, sticky="ew", padx=3, pady=3)
+        self.btn_dp_chk_scan = action(s2, tr("🔍 CHKDSK : scan", "🔍 CHKDSK: scan", "🔍 CHKDSK: Scan", "🔍 CHKDSK: análisis", "🔍 CHKDSK: scansione"),
+                                      lambda: self.dp_lancer(self._dp_chkdsk_scan, self.btn_dp_chk_scan), COUL_BLEU, COUL_BLEU_H, 0, 1, span=2,
                                       tip=tr("Analyse en ligne du lecteur choisi, sans rien modifier.", "Online scan of the chosen drive, nothing is modified.", "Online-Scan des gewählten Laufwerks, es wird nichts verändert.", "Análisis en línea de la unidad elegida, sin modificar nada.", "Scansione online dell'unità scelta, senza modificare nulla."))
-        self.btn_dp_chk_fix = bouton(tr("🛠️ CHKDSK : réparer (/f /r)", "🛠️ CHKDSK: repair (/f /r)", "🛠️ CHKDSK: reparieren (/f /r)", "🛠️ CHKDSK: reparar (/f /r)", "🛠️ CHKDSK: ripara (/f /r)"),
-                                     self.dp_chkdsk_reparer, COUL_VIOLET, COUL_VIOLET_H, 1, 2,
+        self.btn_dp_chk_fix = action(s2, tr("🛠\ufe0f CHKDSK : réparer (/f /r)", "🛠\ufe0f CHKDSK: repair (/f /r)", "🛠\ufe0f CHKDSK: reparieren (/f /r)", "🛠\ufe0f CHKDSK: reparar (/f /r)", "🛠\ufe0f CHKDSK: ripara (/f /r)"),
+                                     self.dp_chkdsk_reparer, COUL_VIOLET, COUL_VIOLET_H, 0, 3,
                                      tip=tr("Répare les erreurs et secteurs défectueux. Sur le disque système, s'exécute au prochain redémarrage.", "Repairs errors and bad sectors. On the system drive it runs at the next restart.", "Repariert Fehler und defekte Sektoren. Auf dem Systemlaufwerk beim nächsten Neustart.", "Repara errores y sectores defectuosos. En la unidad del sistema se ejecuta en el próximo reinicio.", "Ripara errori e settori danneggiati. Sull'unità di sistema viene eseguito al prossimo riavvio."))
-        self.btn_dp_journal_save = bouton(tr("📒 Enregistrer au journal", "📒 Save to log", "📒 Im Protokoll speichern", "📒 Guardar en el diario", "📒 Salva nel giornale"),
-                                          self.dp_enregistrer_journal, COUL_BLEU, COUL_BLEU_H, 1, 3,
-                                          tip=tr("Ajoute cette intervention (client, ticket, actions) au journal.", "Adds this job (customer, ticket, actions) to the log.", "Fügt diesen Auftrag (Kunde, Ticket, Aktionen) dem Protokoll hinzu.", "Añade esta intervención (cliente, ticket, acciones) al diario.", "Aggiunge questo intervento (cliente, ticket, azioni) al giornale."))
+        self.btn_dp_pil = action(s2, tr("⚙\ufe0f Pilotes & latences", "⚙\ufe0f Drivers & latency", "⚙\ufe0f Treiber & Latenz", "⚙\ufe0f Controladores y latencia", "⚙\ufe0f Driver e latenza"),
+                                 lambda: self.dp_lancer(self._dp_pilotes_latences, self.btn_dp_pil), COUL_BLEU, COUL_BLEU_H, 1, 0, span=2,
+                                 tip=tr("Pilotes en erreur/non signés/anciens, latences DPC-ISR, démarrage, usure SSD et erreurs de lecture.", "Faulty/unsigned/old drivers, DPC-ISR latency, startup, SSD wear and read errors.", "Fehlerhafte/unsignierte/alte Treiber, DPC-ISR-Latenz, Start, SSD-Verschleiß und Lesefehler.", "Controladores con error/no firmados/antiguos, latencia DPC-ISR, arranque, desgaste SSD y errores de lectura.", "Driver in errore/non firmati/vecchi, latenza DPC-ISR, avvio, usura SSD ed errori di lettura."))
+        self.btn_dp_oem = action(s2, tr("🔑 Clé Windows (OEM)", "🔑 Windows key (OEM)", "🔑 Windows-Schlüssel (OEM)", "🔑 Clave de Windows (OEM)", "🔑 Chiave Windows (OEM)"),
+                                 lambda: self.dp_lancer(self._dp_cle_oem, self.btn_dp_oem), COUL_BLEU, COUL_BLEU_H, 1, 2, span=2,
+                                 tip=tr("Récupère la clé de licence Windows gravée dans la carte mère (BIOS/UEFI).", "Recovers the Windows license key embedded in the motherboard (BIOS/UEFI).", "Liest den im Mainboard hinterlegten Windows-Lizenzschlüssel (BIOS/UEFI) aus.", "Recupera la clave de licencia de Windows grabada en la placa base (BIOS/UEFI).", "Recupera la chiave di licenza Windows incisa nella scheda madre (BIOS/UEFI)."))
+        self.btn_dp_drv = action(s2, tr("📦 Exporter les pilotes", "📦 Export drivers", "📦 Treiber exportieren", "📦 Exportar controladores", "📦 Esporta i driver"),
+                                 lambda: self._dp_dossier_puis_lancer("export"), COUL_BLEU, COUL_BLEU_H, 2, 0, span=2,
+                                 tip=tr("Sauvegarde tous les pilotes tiers dans un dossier, à réinjecter après réinstallation.", "Saves all third-party drivers to a folder, to reinstall after a fresh Windows.", "Sichert alle Treiber von Drittanbietern in einen Ordner, zum Wiedereinspielen nach Neuinstallation.", "Guarda todos los controladores de terceros en una carpeta, para reinyectar tras reinstalar.", "Salva tutti i driver di terze parti in una cartella, da reinserire dopo la reinstallazione."))
+        self.btn_dp_import = action(s2, tr("📥 Importer les pilotes", "📥 Import drivers", "📥 Treiber importieren", "📥 Importar controladores", "📥 Importa i driver"),
+                                    lambda: self._dp_dossier_puis_lancer("import"), COUL_VIOLET, COUL_VIOLET_H, 2, 2, span=2,
+                                    tip=tr("Réinstalle les pilotes d'un dossier de sauvegarde (pnputil /add-driver *.inf /subdirs /install). Redémarrage conseillé.", "Reinstalls drivers from a backup folder (pnputil /add-driver *.inf /subdirs /install). Restart recommended.", "Installiert Treiber aus einem Sicherungsordner neu (pnputil /add-driver *.inf /subdirs /install). Neustart empfohlen.", "Reinstala los controladores de una carpeta de copia (pnputil /add-driver *.inf /subdirs /install). Se recomienda reiniciar.", "Reinstalla i driver da una cartella di backup (pnputil /add-driver *.inf /subdirs /install). Riavvio consigliato."))
 
-        self.btn_dp_rapport = bouton(tr("🧾 Créer le rapport client", "🧾 Create customer report", "🧾 Kundenbericht erstellen", "🧾 Crear informe para el cliente", "🧾 Crea il report per il cliente"),
-                                     self.dp_rapport_client, COUL_ORANGE, COUL_ORANGE_H, 2, 0, span=2,
+        # Section 3 : Rapport & journal
+        s3 = creer_section(tr("🧾 Rapport & journal", "🧾 Report & log", "🧾 Bericht & Protokoll", "🧾 Informe y diario", "🧾 Report e giornale"))
+        self.btn_dp_rapport = action(s3, tr("🧾 Créer le rapport client", "🧾 Create customer report", "🧾 Kundenbericht erstellen", "🧾 Crear informe para el cliente", "🧾 Crea il report per il cliente"),
+                                     self.dp_rapport_client, COUL_ORANGE, COUL_ORANGE_H, 0, 0, span=2,
                                      tip=tr("Génère une page HTML propre (imprimable en PDF) : travaux réalisés, santé, disques, matériel.", "Generates a clean HTML page (printable to PDF): work done, health, drives, hardware.", "Erzeugt eine saubere HTML-Seite (als PDF druckbar): Arbeiten, Zustand, Laufwerke, Hardware.", "Genera una página HTML limpia (imprimible en PDF): trabajos, estado, discos, hardware.", "Genera una pagina HTML pulita (stampabile in PDF): lavori, stato, dischi, hardware."))
-        self.btn_dp_dossier = bouton(tr("📂 Dossier des rapports", "📂 Reports folder", "📂 Berichtsordner", "📂 Carpeta de informes", "📂 Cartella dei report"),
-                                     self.dp_ouvrir_dossier_rapports, "#1C2A3D", "#26384F", 2, 2)
-        self.btn_dp_journal_view = bouton(tr("📖 Voir le journal", "📖 View the log", "📖 Protokoll anzeigen", "📖 Ver el diario", "📖 Vedi il giornale"),
-                                          self.dp_voir_journal, "#1C2A3D", "#26384F", 2, 3)
+        self.btn_dp_dossier = action(s3, tr("📂 Dossier des rapports", "📂 Reports folder", "📂 Berichtsordner", "📂 Carpeta de informes", "📂 Cartella dei report"),
+                                     self.dp_ouvrir_dossier_rapports, "#1C2A3D", "#26384F", 0, 2, span=2)
+        self.btn_dp_journal_save = action(s3, tr("📒 Enregistrer au journal", "📒 Save to log", "📒 Im Protokoll speichern", "📒 Guardar en el diario", "📒 Salva nel giornale"),
+                                          self.dp_enregistrer_journal, COUL_BLEU, COUL_BLEU_H, 1, 0, span=2,
+                                          tip=tr("Ajoute cette intervention (client, ticket, actions) au journal.", "Adds this job (customer, ticket, actions) to the log.", "Fügt diesen Auftrag (Kunde, Ticket, Aktionen) dem Protokoll hinzu.", "Añade esta intervención (cliente, ticket, acciones) al diario.", "Aggiunge questo intervento (cliente, ticket, azioni) al giornale."))
+        self.btn_dp_journal_view = action(s3, tr("📖 Voir le journal", "📖 View the log", "📖 Protokoll anzeigen", "📖 Ver el diario", "📖 Vedi il giornale"),
+                                          self.dp_voir_journal, "#1C2A3D", "#26384F", 1, 2, span=2)
 
+        # --- Console (toujours visible)
         self.diag_textbox = ctk.CTkTextbox(parent, font=ctk.CTkFont(family="Consolas", size=12))
         self.diag_textbox.pack(fill="both", expand=True, padx=10, pady=(4, 8))
         self.diag_textbox.insert("end", tr("Choisissez un outil ci-dessus : les résultats s'affichent ici.\n",
@@ -5416,7 +5418,104 @@ class DiagnosticProMixin:
                                            "Elija una herramienta arriba: los resultados aparecen aquí.\n",
                                            "Scegli uno strumento qui sopra: i risultati appaiono qui.\n"))
 
-    # ------------------------------------------------------------------ outils
+        # Ouvre la premiere section par defaut
+        self._dp_basculer_section(0)
+
+    def _dp_dossier_puis_lancer(self, quoi):
+        """Choisit le dossier dans le fil principal (Tkinter), puis lance le travail en arriere-plan."""
+        tr = self.tr
+        if quoi == "import":
+            if not self._dp_avertir_si_pas_admin():
+                return
+            titre = tr("Dossier contenant les pilotes à réinstaller", "Folder containing the drivers to reinstall",
+                       "Ordner mit den neu zu installierenden Treibern", "Carpeta con los controladores a reinstalar",
+                       "Cartella con i driver da reinstallare")
+            fonction, bouton = self._dp_import_pilotes, self.btn_dp_import
+        else:
+            titre = tr("Dossier où exporter les pilotes", "Folder to export drivers to", "Ordner für den Treiberexport",
+                       "Carpeta donde exportar los controladores", "Cartella in cui esportare i driver")
+            fonction, bouton = self._dp_export_pilotes, self.btn_dp_drv
+        dossier = filedialog.askdirectory(parent=self, title=titre)
+        if dossier:
+            self.dp_lancer(lambda: fonction(dossier), bouton)
+
+    def _dp_basculer_section(self, idx):
+        """Accordeon : ouvre la section cliquee et referme les autres (une seule ouverte)."""
+        for i, sec in enumerate(getattr(self, "_dp_sections", [])):
+            ouvrir = (i == idx) and (not sec["ouvert"])
+            sec["ouvert"] = ouvrir
+            if ouvrir:
+                sec["entete"].configure(text="▾  " + sec["titre"])
+                sec["corps"].pack(fill="x", padx=6, pady=(0, 6))
+            else:
+                sec["entete"].configure(text="▸  " + sec["titre"])
+                sec["corps"].pack_forget()
+
+    def _dp_import_pilotes(self, dossier=None):
+        tr = self.tr
+        if not self._dp_avertir_si_pas_admin():
+            return
+        if dossier is None:
+            dossier = filedialog.askdirectory(parent=self, title=tr(
+            "Dossier contenant les pilotes à réinstaller", "Folder containing the drivers to reinstall",
+            "Ordner mit den neu zu installierenden Treibern", "Carpeta con los controladores a reinstalar",
+            "Cartella con i driver da reinstallare"))
+        if not dossier:
+            return
+        self.dp_ecrire("⏳ " + tr("Réinstallation des pilotes depuis le dossier (peut prendre un moment)...",
+                                      "Reinstalling drivers from the folder (may take a while)...",
+                                      "Treiber werden aus dem Ordner neu installiert (kann dauern)...",
+                                      "Reinstalando los controladores desde la carpeta (puede tardar)...",
+                                      "Reinstallazione dei driver dalla cartella (può richiedere tempo)..."), effacer=True)
+        chemin_inf = os.path.join(dossier, "*.inf")
+        try:
+            r = subprocess.run('pnputil /add-driver "' + chemin_inf + '" /subdirs /install',
+                               shell=True, capture_output=True, text=True, encoding=page_oem(), errors="ignore", creationflags=CREATE_NO_WINDOW)
+            sortie = (r.stdout or "") + (r.stderr or "")
+        except Exception as e:
+            self.dp_ecrire("❌ " + str(e))
+            return
+        bas = sortie.lower()
+        if "accès refusé" in bas or "access is denied" in bas or "zugriff verweigert" in bas or "acceso denegado" in bas or "accesso negato" in bas:
+            self.dp_ecrire(tr(
+                "❌ Accès refusé. Relancez le logiciel avec «\u00a0Exécuter en tant qu'administrateur\u00a0», puis réessayez.",
+                "❌ Access denied. Restart the software with “Run as administrator”, then try again.",
+                "❌ Zugriff verweigert. Starten Sie das Programm über „Als Administrator ausführen“ und versuchen Sie es erneut.",
+                "❌ Acceso denegado. Reinicie el programa con «Ejecutar como administrador» e inténtelo de nuevo.",
+                "❌ Accesso negato. Riavvia il programma con «Esegui come amministratore» e riprova."), effacer=True)
+            return
+        nb = len(re.findall(r"\.inf", sortie, re.IGNORECASE))
+        self.dp_ecrire("=== " + tr("IMPORT DES PILOTES", "DRIVER IMPORT", "TREIBERIMPORT", "IMPORTACIÓN DE CONTROLADORES", "IMPORTAZIONE DEI DRIVER") + " ===", effacer=True)
+        self.dp_ecrire("")
+        if r.returncode == 0:
+            self.dp_ecrire("✔ " + tr("Pilotes réinstallés depuis : ", "Drivers reinstalled from: ", "Treiber neu installiert aus: ", "Controladores reinstalados desde: ", "Driver reinstallati da: ") + dossier)
+        else:
+            self.dp_ecrire("⚠ " + tr("Import terminé avec des avertissements (détail ci-dessous).",
+                                          "Import finished with warnings (details below).",
+                                          "Import mit Warnungen abgeschlossen (Details unten).",
+                                          "Importación terminada con advertencias (detalles abajo).",
+                                          "Importazione terminata con avvisi (dettagli sotto)."))
+        if nb:
+            self.dp_ecrire("   " + tr(str(nb) + " paquet(s) .inf traité(s).", str(nb) + " .inf package(s) processed.",
+                                      str(nb) + " .inf-Paket(e) verarbeitet.", str(nb) + " paquete(s) .inf procesado(s).",
+                                      str(nb) + " pacchetto/i .inf elaborato/i."))
+        else:
+            self.dp_ecrire("ℹ\ufe0f " + tr("Aucun fichier .inf trouvé dans ce dossier (ni ses sous-dossiers).",
+                                                "No .inf file found in this folder (or its subfolders).",
+                                                "Keine .inf-Datei in diesem Ordner (oder Unterordnern) gefunden.",
+                                                "No se encontró ningún archivo .inf en esta carpeta (ni subcarpetas).",
+                                                "Nessun file .inf trovato in questa cartella (o sottocartelle)."))
+        self.dp_ecrire("")
+        self.dp_ecrire("🔁 " + tr("Redémarrez le PC pour finaliser l'installation des pilotes.",
+                                          "Restart the PC to finish installing the drivers.",
+                                          "Starten Sie den PC neu, um die Treiberinstallation abzuschließen.",
+                                          "Reinicie el PC para finalizar la instalación de los controladores.",
+                                          "Riavvia il PC per completare l'installazione dei driver."))
+        if sortie.strip():
+            self.dp_ecrire("")
+            self.dp_ecrire(sortie.strip())
+        self.noter_action(tr("Pilotes réimportés", "Drivers reimported", "Treiber reimportiert", "Controladores reimportados", "Driver reimportati"), dossier)
+
     def _dp_sante(self):
         tr = self.tr
         self.dp_ecrire(tr("⏳ Analyse de la santé de Windows (la recherche de mises à jour peut durer une minute)...",
@@ -5928,6 +6027,483 @@ def planifier_icone(fenetre):
         fenetre.after(1200, lambda: poser_icone(fenetre))
     except Exception:
         pass
+
+
+import struct as _atl_struct
+
+
+# ============================ PATCH v5.1 : moteur SAM hors ligne ============================
+# Lecteur minimal et ciblé du format de ruche "regf" (fichier SAM d'un disque hors ligne).
+# On ne parcourt que ce qui est utile : SAM\Domains\Account\Users.
+
+def _regf_valide(buf):
+    return len(buf) > 0x1000 and buf[0:4] == b"regf"
+
+def _regf_racine(buf):
+    return _atl_struct.unpack_from("<I", buf, 0x24)[0]
+
+def _cellule(buf, off_rel):
+    return 0x1000 + off_rel + 4
+
+def _nk_nom(buf, nk):
+    flags = _atl_struct.unpack_from("<H", buf, nk + 0x02)[0]
+    nlen = _atl_struct.unpack_from("<H", buf, nk + 0x48)[0]
+    brut = bytes(buf[nk + 0x4c: nk + 0x4c + nlen])
+    if flags & 0x0020:
+        return brut.decode("latin-1", "replace")
+    return brut.decode("utf-16-le", "replace")
+
+def _lister_sous_cles(buf, off_rel):
+    pos = _cellule(buf, off_rel)
+    sig = bytes(buf[pos:pos + 2])
+    res = []
+    if sig in (b"lf", b"lh"):
+        cnt = _atl_struct.unpack_from("<H", buf, pos + 2)[0]
+        for i in range(cnt):
+            nk_off = _atl_struct.unpack_from("<i", buf, pos + 4 + i * 8)[0]
+            nkpos = _cellule(buf, nk_off)
+            if bytes(buf[nkpos:nkpos + 2]) == b"nk":
+                res.append((_nk_nom(buf, nkpos), nkpos))
+    elif sig == b"li":
+        cnt = _atl_struct.unpack_from("<H", buf, pos + 2)[0]
+        for i in range(cnt):
+            nk_off = _atl_struct.unpack_from("<i", buf, pos + 4 + i * 4)[0]
+            nkpos = _cellule(buf, nk_off)
+            if bytes(buf[nkpos:nkpos + 2]) == b"nk":
+                res.append((_nk_nom(buf, nkpos), nkpos))
+    elif sig == b"ri":
+        cnt = _atl_struct.unpack_from("<H", buf, pos + 2)[0]
+        for i in range(cnt):
+            sub_off = _atl_struct.unpack_from("<i", buf, pos + 4 + i * 4)[0]
+            res.extend(_lister_sous_cles(buf, sub_off))
+    return res
+
+def _nk_sous_cles(buf, nk):
+    nb = _atl_struct.unpack_from("<I", buf, nk + 0x14)[0]
+    if nb == 0 or nb == 0xffffffff:
+        return []
+    lst_off = _atl_struct.unpack_from("<i", buf, nk + 0x1c)[0]
+    if lst_off == -1:
+        return []
+    return _lister_sous_cles(buf, lst_off)
+
+def _nk_enfant(buf, nk, nom_cible):
+    cible = nom_cible.lower()
+    for nom, pos in _nk_sous_cles(buf, nk):
+        if nom.lower() == cible:
+            return pos
+    return None
+
+def _nk_chemin(buf, chemin):
+    nk = _cellule(buf, _regf_racine(buf))
+    if bytes(buf[nk:nk + 2]) != b"nk":
+        return None
+    for nom in chemin:
+        nk = _nk_enfant(buf, nk, nom)
+        if nk is None:
+            return None
+    return nk
+
+def _nk_valeur(buf, nk, nom_valeur):
+    # Renvoie (position_data_absolue, longueur, type_dword) ou None. Valeur (defaut) = nom_valeur ''.
+    nbv = _atl_struct.unpack_from("<I", buf, nk + 0x24)[0]
+    if nbv == 0 or nbv == 0xffffffff:
+        return None
+    vlist_off = _atl_struct.unpack_from("<i", buf, nk + 0x28)[0]
+    if vlist_off == -1:
+        return None
+    base = _cellule(buf, vlist_off)
+    cible = nom_valeur.lower()
+    for i in range(nbv):
+        vk_off = _atl_struct.unpack_from("<i", buf, base + i * 4)[0]
+        vk = _cellule(buf, vk_off)
+        if bytes(buf[vk:vk + 2]) != b"vk":
+            continue
+        nlen = _atl_struct.unpack_from("<H", buf, vk + 0x02)[0]
+        vflags = _atl_struct.unpack_from("<H", buf, vk + 0x10)[0]
+        if nlen == 0:
+            nom = ""
+        elif vflags & 0x0001:
+            nom = bytes(buf[vk + 0x14:vk + 0x14 + nlen]).decode("latin-1", "replace")
+        else:
+            nom = bytes(buf[vk + 0x14:vk + 0x14 + nlen]).decode("utf-16-le", "replace")
+        if nom.lower() == cible:
+            dsize = _atl_struct.unpack_from("<I", buf, vk + 0x04)[0]
+            doff = _atl_struct.unpack_from("<i", buf, vk + 0x08)[0]
+            dtype = _atl_struct.unpack_from("<I", buf, vk + 0x0c)[0]
+            if dsize & 0x80000000:
+                return (vk + 0x08, dsize & 0x7fffffff, dtype)
+            return (_cellule(buf, doff), dsize, dtype)
+    return None
+
+
+def sam_enumerer_comptes(chemin_sam):
+    # Liste les comptes LOCAUX. RID = champ 'type' de la valeur (defaut) de Users\Names\<nom>.
+    with open(chemin_sam, "rb") as f:
+        buf = bytearray(f.read())
+    if not _regf_valide(buf):
+        raise ValueError("Fichier SAM invalide (en-tete 'regf' absent).")
+    names = _nk_chemin(buf, ["SAM", "Domains", "Account", "Users", "Names"])
+    users = _nk_chemin(buf, ["SAM", "Domains", "Account", "Users"])
+    comptes = []
+    if names is None or users is None:
+        return comptes
+    for nom, nkpos in _nk_sous_cles(buf, names):
+        if not nom:
+            continue
+        v = _nk_valeur(buf, nkpos, "")
+        if not v:
+            continue
+        rid = v[2]
+        if rid < 500:
+            continue
+        rid_hex = "%08X" % rid
+        a_mdp = None
+        desactive = None
+        unk = _nk_enfant(buf, users, rid_hex)
+        if unk is not None:
+            vv = _nk_valeur(buf, unk, "V")
+            if vv:
+                vpos, vlen, _ = vv
+                if vlen >= 0xb0:
+                    nt_len = _atl_struct.unpack_from("<I", buf, vpos + 0xac)[0]
+                    a_mdp = nt_len > 0
+            fv = _nk_valeur(buf, unk, "F")
+            if fv:
+                fpos, flen, _ = fv
+                if flen >= 0x3a:
+                    flags = _atl_struct.unpack_from("<H", buf, fpos + 0x38)[0]
+                    desactive = bool(flags & 0x0001)
+        comptes.append({"nom": nom, "rid": rid, "rid_hex": rid_hex,
+                        "a_mot_de_passe": a_mdp, "desactive": desactive})
+    comptes.sort(key=lambda c: c["rid"])
+    return comptes
+
+
+def sam_effacer_mot_de_passe(chemin_sam, rid_hex, activer_compte=False):
+    # Efface le mot de passe (longueurs LM et NT a 0 dans V). Sauvegarde + verification.
+    from datetime import datetime as _dt
+    bak = chemin_sam + ".atelier_" + _dt.now().strftime("%Y%m%d_%H%M%S") + ".bak"
+    shutil.copy2(chemin_sam, bak)
+    with open(chemin_sam, "rb") as f:
+        buf = bytearray(f.read())
+    if not _regf_valide(buf):
+        raise ValueError("Fichier SAM invalide (en-tete 'regf' absent).")
+    users = _nk_chemin(buf, ["SAM", "Domains", "Account", "Users"])
+    if users is None:
+        raise ValueError("Branche Users introuvable dans la SAM.")
+    unk = _nk_enfant(buf, users, rid_hex)
+    if unk is None:
+        raise ValueError("Compte (RID %s) introuvable." % rid_hex)
+    vv = _nk_valeur(buf, unk, "V")
+    if not vv:
+        raise ValueError("Valeur V du compte introuvable.")
+    vpos, vlen, _ = vv
+    if vlen < 0xb0:
+        raise ValueError("Structure V inattendue (taille %d octets)." % vlen)
+    lm_len = _atl_struct.unpack_from("<I", buf, vpos + 0xa0)[0]
+    nt_len = _atl_struct.unpack_from("<I", buf, vpos + 0xac)[0]
+    _atl_struct.pack_into("<I", buf, vpos + 0xa0, 0)
+    _atl_struct.pack_into("<I", buf, vpos + 0xac, 0)
+    compte_active = False
+    if activer_compte:
+        fv = _nk_valeur(buf, unk, "F")
+        if fv:
+            fpos, flen, _ = fv
+            if flen >= 0x3a:
+                flags = _atl_struct.unpack_from("<H", buf, fpos + 0x38)[0]
+                if flags & 0x0001:
+                    _atl_struct.pack_into("<H", buf, fpos + 0x38, flags & ~0x0001)
+                    compte_active = True
+    with open(chemin_sam, "wb") as f:
+        f.write(buf)
+    with open(chemin_sam, "rb") as f:
+        buf2 = bytearray(f.read())
+    verifie = False
+    users2 = _nk_chemin(buf2, ["SAM", "Domains", "Account", "Users"])
+    if users2 is not None:
+        unk2 = _nk_enfant(buf2, users2, rid_hex)
+        if unk2 is not None:
+            vv2 = _nk_valeur(buf2, unk2, "V")
+            if vv2:
+                vp2 = vv2[0]
+                verifie = (_atl_struct.unpack_from("<I", buf2, vp2 + 0xa0)[0] == 0 and
+                           _atl_struct.unpack_from("<I", buf2, vp2 + 0xac)[0] == 0)
+    return {"sauvegarde": bak, "lm_len_avant": lm_len, "nt_len_avant": nt_len,
+            "verifie": verifie, "compte_active": compte_active}
+
+
+class ComptePickerDialog(ctk.CTkToplevel):
+    def __init__(self, parent, comptes, tr):
+        super().__init__(parent)
+        planifier_icone(self)
+        self.resultat = None
+        self.tr = tr
+        self.title(tr("Comptes locaux Windows", "Windows local accounts", "Lokale Windows-Konten", "Cuentas locales de Windows", "Account locali di Windows"))
+        self.transient(parent)
+        self.grab_set()
+        self.attributes("-topmost", True)
+        self.configure(fg_color="#0A0F18")
+        centrer_fenetre(self, 580, 150 + 44 * min(max(len(comptes), 1), 7))
+        ctk.CTkLabel(
+            self,
+            text=tr("Choisissez le compte dont effacer le mot de passe :",
+                    "Choose the account whose password to clear:",
+                    "Waehlen Sie das Konto, dessen Kennwort geloescht werden soll:",
+                    "Elija la cuenta cuya contrasena desea borrar:",
+                    "Scegli l'account di cui cancellare la password:"),
+            font=ctk.CTkFont(size=13, weight="bold"), text_color="#7CC0FF",
+        ).pack(anchor="w", padx=16, pady=(14, 6))
+        self.var = ctk.StringVar(value=comptes[0]["rid_hex"] if comptes else "")
+        cadre = ctk.CTkScrollableFrame(self, fg_color="#0C121C", height=44 * min(max(len(comptes), 1), 7))
+        cadre.pack(fill="both", expand=True, padx=12, pady=4)
+        for c in comptes:
+            if c["desactive"]:
+                etat = tr("desactive", "disabled", "deaktiviert", "desactivada", "disattivato")
+            elif c["a_mot_de_passe"] is False:
+                etat = tr("sans mot de passe", "no password", "ohne Kennwort", "sin contrasena", "senza password")
+            elif c["a_mot_de_passe"] is True:
+                etat = tr("mot de passe defini", "password set", "Kennwort gesetzt", "con contrasena", "password impostata")
+            else:
+                etat = "RID %d" % c["rid"]
+            ctk.CTkRadioButton(
+                cadre, text=(c["nom"] + "    -    " + etat + "    (RID " + str(c["rid"]) + ")"),
+                variable=self.var, value=c["rid_hex"], font=ctk.CTkFont(size=12),
+            ).pack(anchor="w", padx=10, pady=5)
+        self.var_activer = ctk.BooleanVar(value=False)
+        ctk.CTkCheckBox(
+            self, variable=self.var_activer, font=ctk.CTkFont(size=11),
+            text=tr("Reactiver le compte s'il est desactive",
+                    "Re-enable the account if it is disabled",
+                    "Konto reaktivieren, falls deaktiviert",
+                    "Reactivar la cuenta si esta desactivada",
+                    "Riattiva l'account se e disattivato"),
+        ).pack(anchor="w", padx=16, pady=(6, 2))
+        barre = ctk.CTkFrame(self, fg_color="transparent")
+        barre.pack(fill="x", padx=12, pady=(4, 12))
+        ctk.CTkButton(
+            barre, text=tr("Annuler", "Cancel", "Abbrechen", "Cancelar", "Annulla"),
+            command=self.destroy, fg_color="#1C2A3D", hover_color="#26384F",
+            font=ctk.CTkFont(size=12, weight="bold"), width=120,
+        ).pack(side="right", padx=4)
+        ctk.CTkButton(
+            barre, text=tr("Effacer le mot de passe", "Clear the password", "Kennwort loeschen", "Borrar la contrasena", "Cancella la password"),
+            command=self._ok, fg_color="#D32F2F", hover_color="#9A0007",
+            font=ctk.CTkFont(size=12, weight="bold"), width=200,
+        ).pack(side="right", padx=4)
+
+    def _ok(self):
+        if self.var.get():
+            self.resultat = (self.var.get(), bool(self.var_activer.get()))
+        self.destroy()
+
+
+PS_PILOTES_LATENCES = r"""
+$ErrorActionPreference='SilentlyContinue'
+Get-CimInstance Win32_PnPEntity | Where-Object { $_.ConfigManagerErrorCode -and $_.ConfigManagerErrorCode -ne 0 } | ForEach-Object {
+  "ERR|$($_.Name)|$($_.ConfigManagerErrorCode)"
+}
+Get-CimInstance Win32_PnPSignedDriver | Where-Object { $_.DeviceName -and $_.IsSigned -eq $false } | ForEach-Object {
+  "UNS|$($_.DeviceName)|$($_.DriverVersion)"
+}
+$limite = (Get-Date).AddYears(-5)
+Get-CimInstance Win32_PnPSignedDriver | Where-Object { $_.DeviceName -and $_.DriverDate } | ForEach-Object {
+  try { $d = [Management.ManagementDateTimeConverter]::ToDateTime($_.DriverDate) } catch { $d = $null }
+  if ($d -and $d -lt $limite) { "OLD|$($_.DeviceName)|$($d.ToString('yyyy-MM'))" }
+}
+$dpc=@(); $isr=@()
+for ($i=0; $i -lt 12; $i++) {
+  $c = Get-CimInstance Win32_PerfFormattedData_PerfOS_Processor -Filter "Name='_Total'"
+  if ($c) { $dpc += [double]$c.PercentDPCTime; $isr += [double]$c.PercentInterruptTime }
+  Start-Sleep -Milliseconds 800
+}
+if ($dpc.Count) {
+  "DPC|$([math]::Round(($dpc|Measure-Object -Average).Average,2))|$([math]::Round(($dpc|Measure-Object -Maximum).Maximum,2))"
+  "ISR|$([math]::Round(($isr|Measure-Object -Average).Average,2))|$([math]::Round(($isr|Measure-Object -Maximum).Maximum,2))"
+}
+$b = Get-WinEvent -FilterHashtable @{LogName='Microsoft-Windows-Diagnostics-Performance/Operational'; Id=100} -MaxEvents 1
+if ($b) {
+  $x = [xml]$b.ToXml()
+  $mp = ($x.Event.EventData.Data | Where-Object { $_.Name -eq 'MainPathBootTime' }).'#text'
+  if ($mp) { "BOOT|$mp" }
+}
+"""
+
+PS_PERF_EXTRA = r"""
+$ErrorActionPreference='SilentlyContinue'
+$st = @(Get-CimInstance Win32_StartupCommand)
+"STARTCOUNT|$($st.Count)"
+$st | Select-Object -First 8 | ForEach-Object { "START|$($_.Name)|$($_.Location)" }
+Get-PhysicalDisk | ForEach-Object {
+  $pd = $_
+  $cnt = $pd | Get-StorageReliabilityCounter
+  $w = if ($cnt -and $cnt.Wear -ne $null) { $cnt.Wear } else { -1 }
+  $er = if ($cnt -and $cnt.ReadErrorsUncorrected -ne $null) { $cnt.ReadErrorsUncorrected } else { 0 }
+  $letters = @(); try { Get-Partition -DiskNumber $pd.DeviceId -ErrorAction SilentlyContinue | ForEach-Object { if ($_.DriveLetter) { $letters += ($_.DriveLetter + ':') } } } catch {}
+  $ls = if ($letters.Count -gt 0) { ($letters -join ',') } else { '-' }
+  "WEAR|$($pd.FriendlyName)|$w|$er|$ls|$($pd.MediaType)"
+}
+"""
+
+PS_OEM_KEY = r"""
+$ErrorActionPreference='SilentlyContinue'
+$k = (Get-CimInstance -ClassName SoftwareLicensingService).OA3xOriginalProductKey
+"OEM|$k"
+"""
+
+
+PS_RECOMMANDATIONS = r"""
+$ErrorActionPreference='SilentlyContinue'
+$lic=Get-CimInstance SoftwareLicensingProduct -Filter "ApplicationId='55c92734-d682-4d71-983e-d6ec3f16059f' AND PartialProductKey IS NOT NULL" | Select-Object -First 1
+if($lic -and $lic.LicenseStatus -ne 1){ "R|ACTIVATION" }
+$mp=Get-MpComputerStatus
+$av=Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiVirusProduct
+$tiers=@($av | Where-Object { $_.displayName -notmatch 'Defender' })
+if((-not ($mp -and $mp.AntivirusEnabled)) -and ($tiers.Count -eq 0)){ "R|NOAV" }
+if(@(Get-NetFirewallProfile | Where-Object { -not $_.Enabled }).Count -gt 0){ "R|FIREWALL" }
+$sd=$env:SystemDrive
+$sys=Get-CimInstance Win32_LogicalDisk -Filter "DeviceID='$sd'"
+if($sys -and $sys.Size -gt 0 -and ([math]::Round($sys.FreeSpace*100/$sys.Size,0) -lt 15)){ "R|LOWSPACE" }
+if((Test-Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending') -or (Test-Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired')){ "R|REBOOT" }
+$since=(Get-Date).AddDays(-30)
+if(@(Get-WinEvent -FilterHashtable @{LogName='System';Id=1001;StartTime=$since}).Count -gt 0){ "R|BSOD" }
+if(@(Get-WinEvent -FilterHashtable @{LogName='System';ProviderName='Microsoft-Windows-WHEA-Logger';StartTime=$since}).Count -gt 0){ "R|WHEA" }
+if(@(Get-WinEvent -FilterHashtable @{LogName='System';ProviderName='disk';Id=7,55;StartTime=$since}).Count -gt 0){ "R|DISKERR" }
+if(@(Get-CimInstance Win32_PnPSignedDriver | Where-Object { $_.DeviceName -and $_.IsSigned -eq $false }).Count -gt 0){ "R|UNSIGNED" }
+if(@(Get-CimInstance Win32_PnPEntity | Where-Object { $_.ConfigManagerErrorCode -and $_.ConfigManagerErrorCode -ne 0 -and $_.ConfigManagerErrorCode -ne 45 }).Count -gt 0){ "R|DEVERR" }
+Get-PhysicalDisk | ForEach-Object { $pd=$_; $cnt=$pd|Get-StorageReliabilityCounter; $letters=@(); try { Get-Partition -DiskNumber $pd.DeviceId -ErrorAction SilentlyContinue | ForEach-Object { if($_.DriveLetter){ $letters += ($_.DriveLetter + ':') } } } catch {}; $ls = if($letters.Count -gt 0){ ($letters -join ',') } else { '-' }; if($cnt){ if($cnt.Wear -ne $null -and $cnt.Wear -gt 10){ "RDISK|WEAR|$ls|$($pd.FriendlyName)|$($cnt.Wear)" }; if($cnt.ReadErrorsUncorrected -ne $null -and $cnt.ReadErrorsUncorrected -gt 0){ "RDISK|READERR|$ls|$($pd.FriendlyName)|$($cnt.ReadErrorsUncorrected)" } } }
+if(@(Get-CimInstance Win32_StartupCommand).Count -gt 15){ "R|STARTUP" }
+$dpc=@(); for($i=0;$i -lt 6;$i++){ $c=Get-CimInstance Win32_PerfFormattedData_PerfOS_Processor -Filter "Name='_Total'"; if($c){ $dpc+=[double]$c.PercentDPCTime }; Start-Sleep -Milliseconds 500 }
+if($dpc.Count -and (($dpc|Measure-Object -Average).Average -ge 2.5)){ "R|DPC" }
+"""
+
+RECO_ORDRE = ["DISKERR", "READERR", "WEAR", "BSOD", "WHEA", "NOAV", "ACTIVATION",
+              "DEVERR", "DPC", "UNSIGNED", "FIREWALL", "LOWSPACE", "STARTUP", "REBOOT"]
+
+RECO_NIVEAU = {
+    "DISKERR": "bad", "READERR": "bad", "WEAR": "bad", "BSOD": "bad", "WHEA": "bad",
+    "NOAV": "bad", "ACTIVATION": "bad", "DEVERR": "warn", "DPC": "warn",
+    "UNSIGNED": "warn", "FIREWALL": "warn", "LOWSPACE": "warn", "STARTUP": "warn", "REBOOT": "warn",
+}
+
+# Chaque conseil : (fr, en, de, es, it). Il nomme l'action et l'outil/onglet adequat.
+RECO_MAP = {
+    "DISKERR": (
+        "Erreurs disque detectees : sauvegardez d'abord les donnees (onglet Recuperation), controlez le disque avec CrystalDiskInfo (onglet Utilitaires), puis lancez CHKDSK : reparer (onglet Diagnostic Pro).",
+        "Disk errors detected: first back up the data (Recovery tab), check the drive with CrystalDiskInfo (Utilities tab), then run CHKDSK: repair (Pro Diagnostics tab).",
+        "Laufwerksfehler erkannt: Sichern Sie zuerst die Daten (Reiter Datenrettung), pruefen Sie das Laufwerk mit CrystalDiskInfo (Reiter Werkzeuge), dann CHKDSK: reparieren (Reiter Diagnose Pro).",
+        "Errores de disco detectados: primero copie los datos (pestana Recuperacion), compruebe el disco con CrystalDiskInfo (pestana Utilidades) y luego ejecute CHKDSK: reparar (pestana Diagnostico Pro).",
+        "Errori del disco rilevati: prima salvare i dati (scheda Recupero), controllare il disco con CrystalDiskInfo (scheda Utility), poi eseguire CHKDSK: ripara (scheda Diagnosi Pro).",
+    ),
+    "READERR": (
+        "Erreurs de lecture non corrigees : le disque faiblit. Sauvegardez immediatement les donnees (onglet Recuperation) et controlez-le avec CrystalDiskInfo (onglet Utilitaires).",
+        "Uncorrected read errors: the drive is failing. Back up the data immediately (Recovery tab) and check it with CrystalDiskInfo (Utilities tab).",
+        "Nicht korrigierte Lesefehler: das Laufwerk schwaechelt. Sichern Sie die Daten sofort (Reiter Datenrettung) und pruefen Sie es mit CrystalDiskInfo (Reiter Werkzeuge).",
+        "Errores de lectura no corregidos: el disco esta fallando. Copie los datos de inmediato (pestana Recuperacion) y compruebelo con CrystalDiskInfo (pestana Utilidades).",
+        "Errori di lettura non corretti: il disco sta cedendo. Salvare subito i dati (scheda Recupero) e controllarlo con CrystalDiskInfo (scheda Utility).",
+    ),
+    "WEAR": (
+        "Usure SSD elevee : prevoyez le remplacement du disque et sauvegardez les donnees (onglet Recuperation).",
+        "High SSD wear: plan to replace the drive and back up the data (Recovery tab).",
+        "Hoher SSD-Verschleiss: Planen Sie den Austausch des Laufwerks und sichern Sie die Daten (Reiter Datenrettung).",
+        "Desgaste alto del SSD: prevea el reemplazo del disco y copie los datos (pestana Recuperacion).",
+        "Usura elevata dell'SSD: prevedere la sostituzione del disco e salvare i dati (scheda Recupero).",
+    ),
+    "BSOD": (
+        "Ecrans bleus recents : ouvrez BlueScreenView (onglet Utilitaires) pour identifier le pilote .sys responsable, puis lancez un test memoire (onglet Diagnostic Pro).",
+        "Recent blue screens: open BlueScreenView (Utilities tab) to find the faulty .sys driver, then run a memory test (Pro Diagnostics tab).",
+        "Kuerzliche Bluescreens: oeffnen Sie BlueScreenView (Reiter Werkzeuge), um den fehlerhaften .sys-Treiber zu finden, dann einen Speichertest (Reiter Diagnose Pro).",
+        "Pantallazos azules recientes: abra BlueScreenView (pestana Utilidades) para identificar el controlador .sys culpable y ejecute una prueba de memoria (pestana Diagnostico Pro).",
+        "Schermate blu recenti: aprire BlueScreenView (scheda Utility) per individuare il driver .sys colpevole, poi eseguire un test di memoria (scheda Diagnosi Pro).",
+    ),
+    "WHEA": (
+        "Erreurs materielles (WHEA) : surveillez les temperatures avec HWMonitor (onglet Utilitaires) et controlez l'alimentation, le processeur et la memoire.",
+        "Hardware errors (WHEA): watch temperatures with HWMonitor (Utilities tab) and check the power supply, CPU and memory.",
+        "Hardwarefehler (WHEA): ueberwachen Sie die Temperaturen mit HWMonitor (Reiter Werkzeuge) und pruefen Sie Netzteil, CPU und Speicher.",
+        "Errores de hardware (WHEA): vigile las temperaturas con HWMonitor (pestana Utilidades) y revise la fuente, el procesador y la memoria.",
+        "Errori hardware (WHEA): monitorare le temperature con HWMonitor (scheda Utility) e controllare alimentatore, processore e memoria.",
+    ),
+    "NOAV": (
+        "Aucun antivirus actif : reactivez Microsoft Defender et passez un coup d'AdwCleaner (onglet Utilitaires).",
+        "No active antivirus: re-enable Microsoft Defender and run AdwCleaner (Utilities tab).",
+        "Kein aktiver Virenschutz: reaktivieren Sie Microsoft Defender und fuehren Sie AdwCleaner aus (Reiter Werkzeuge).",
+        "Ningun antivirus activo: reactive Microsoft Defender y pase AdwCleaner (pestana Utilidades).",
+        "Nessun antivirus attivo: riattivare Microsoft Defender ed eseguire AdwCleaner (scheda Utility).",
+    ),
+    "ACTIVATION": (
+        "Windows n'est pas active : recuperez la cle d'origine avec le bouton Cle Windows (OEM) (onglet Diagnostic Pro), puis reactivez Windows.",
+        "Windows is not activated: recover the original key with the Windows key (OEM) button (Pro Diagnostics tab), then reactivate Windows.",
+        "Windows ist nicht aktiviert: lesen Sie den Originalschluessel mit der Schaltflaeche Windows-Schluessel (OEM) aus (Reiter Diagnose Pro) und aktivieren Sie Windows erneut.",
+        "Windows no esta activado: recupere la clave original con el boton Clave de Windows (OEM) (pestana Diagnostico Pro) y reactive Windows.",
+        "Windows non e attivato: recuperare la chiave originale con il pulsante Chiave Windows (OEM) (scheda Diagnosi Pro), poi riattivare Windows.",
+    ),
+    "DEVERR": (
+        "Peripherique(s) en erreur : mettez a jour ou reinstallez le pilote concerne (detail via le bouton Pilotes & latences, onglet Diagnostic Pro).",
+        "Device(s) in error: update or reinstall the affected driver (details via the Drivers & latency button, Pro Diagnostics tab).",
+        "Geraet(e) mit Fehler: aktualisieren oder installieren Sie den betroffenen Treiber neu (Details ueber die Schaltflaeche Treiber & Latenz, Reiter Diagnose Pro).",
+        "Dispositivo(s) con error: actualice o reinstale el controlador afectado (detalle con el boton Controladores y latencias, pestana Diagnostico Pro).",
+        "Dispositivo/i in errore: aggiornare o reinstallare il driver interessato (dettaglio dal pulsante Driver e latenze, scheda Diagnosi Pro).",
+    ),
+    "DPC": (
+        "Latences DPC elevees : identifiez le pilote fautif avec BlueScreenView (onglet Utilitaires), mettez a jour le pilote reseau ou graphique, et utilisez DDU (onglet Utilitaires) si le GPU est en cause.",
+        "High DPC latency: find the faulty driver with BlueScreenView (Utilities tab), update the network or graphics driver, and use DDU (Utilities tab) if the GPU is to blame.",
+        "Hohe DPC-Latenz: finden Sie den fehlerhaften Treiber mit BlueScreenView (Reiter Werkzeuge), aktualisieren Sie den Netzwerk- oder Grafiktreiber und nutzen Sie DDU (Reiter Werkzeuge), wenn die GPU schuld ist.",
+        "Latencia DPC alta: identifique el controlador culpable con BlueScreenView (pestana Utilidades), actualice el controlador de red o grafico y use DDU (pestana Utilidades) si la GPU es la causa.",
+        "Latenza DPC alta: individuare il driver colpevole con BlueScreenView (scheda Utility), aggiornare il driver di rete o grafico e usare DDU (scheda Utility) se la colpa e della GPU.",
+    ),
+    "UNSIGNED": (
+        "Pilote(s) non signe(s) : mettez-les a jour ; pour un pilote graphique, nettoyez-le avec DDU (onglet Utilitaires) avant reinstallation.",
+        "Unsigned driver(s): update them; for a graphics driver, clean it with DDU (Utilities tab) before reinstalling.",
+        "Unsignierte(r) Treiber: aktualisieren Sie sie; einen Grafiktreiber vor der Neuinstallation mit DDU (Reiter Werkzeuge) bereinigen.",
+        "Controlador(es) no firmado(s): actualicelos; para un controlador grafico, limpielo con DDU (pestana Utilidades) antes de reinstalar.",
+        "Driver non firmato/i: aggiornarli; per un driver grafico, pulirlo con DDU (scheda Utility) prima di reinstallare.",
+    ),
+    "FIREWALL": (
+        "Pare-feu desactive : reactivez le pare-feu Windows pour proteger la machine.",
+        "Firewall disabled: re-enable the Windows firewall to protect the machine.",
+        "Firewall deaktiviert: aktivieren Sie die Windows-Firewall wieder, um den Rechner zu schuetzen.",
+        "Cortafuegos desactivado: reactive el cortafuegos de Windows para proteger la maquina.",
+        "Firewall disattivato: riattivare il firewall di Windows per proteggere la macchina.",
+    ),
+    "LOWSPACE": (
+        "Espace disque faible : nettoyez avec BleachBit (onglet Utilitaires) et le Nettoyage Temp & Caches (onglet Optimisation).",
+        "Low disk space: clean up with BleachBit (Utilities tab) and the Temp & Cache cleanup (Optimization tab).",
+        "Wenig Speicherplatz: bereinigen Sie mit BleachBit (Reiter Werkzeuge) und der Temp- & Cache-Bereinigung (Reiter Optimierung).",
+        "Poco espacio en disco: limpie con BleachBit (pestana Utilidades) y la Limpieza de Temp y caches (pestana Optimizacion).",
+        "Poco spazio su disco: pulire con BleachBit (scheda Utility) e la Pulizia di Temp e cache (scheda Ottimizzazione).",
+    ),
+    "STARTUP": (
+        "Beaucoup de programmes au demarrage : desactivez les inutiles avec Autoruns (onglet Utilitaires) pour accelerer le demarrage.",
+        "Many startup programs: disable the useless ones with Autoruns (Utilities tab) to speed up boot.",
+        "Viele Autostart-Programme: deaktivieren Sie unnoetige mit Autoruns (Reiter Werkzeuge), um den Start zu beschleunigen.",
+        "Muchos programas al inicio: desactive los inutiles con Autoruns (pestana Utilidades) para acelerar el arranque.",
+        "Molti programmi all'avvio: disattivare quelli inutili con Autoruns (scheda Utility) per velocizzare l'avvio.",
+    ),
+    "REBOOT": (
+        "Redemarrage en attente : redemarrez le PC pour finaliser des mises a jour ou installations.",
+        "Restart pending: reboot the PC to finish updates or installations.",
+        "Neustart ausstehend: starten Sie den PC neu, um Updates oder Installationen abzuschliessen.",
+        "Reinicio pendiente: reinicie el PC para finalizar actualizaciones o instalaciones.",
+        "Riavvio in sospeso: riavviare il PC per completare aggiornamenti o installazioni.",
+    ),
+}
+
+
+CODES_PERIPH = {
+    10: ("ne peut pas demarrer", "cannot start", "kann nicht starten", "no puede iniciarse", "non puo avviarsi"),
+    12: ("ressources insuffisantes", "not enough resources", "nicht genug Ressourcen", "recursos insuficientes", "risorse insufficienti"),
+    14: ("redemarrage necessaire", "restart required", "Neustart erforderlich", "reinicio necesario", "riavvio necessario"),
+    18: ("pilote a reinstaller", "driver must be reinstalled", "Treiber neu installieren", "reinstalar el controlador", "reinstallare il driver"),
+    22: ("peripherique desactive", "device disabled", "Geraet deaktiviert", "dispositivo desactivado", "dispositivo disattivato"),
+    28: ("aucun pilote installe", "no driver installed", "kein Treiber installiert", "sin controlador instalado", "nessun driver installato"),
+    31: ("ne fonctionne pas correctement", "not working properly", "funktioniert nicht richtig", "no funciona correctamente", "non funziona correttamente"),
+    37: ("echec d'initialisation du pilote", "driver init failed", "Treiberinitialisierung fehlgeschlagen", "fallo de inicializacion del controlador", "inizializzazione del driver non riuscita"),
+    39: ("pilote corrompu ou manquant", "driver corrupt or missing", "Treiber beschaedigt oder fehlt", "controlador danado o ausente", "driver danneggiato o mancante"),
+    43: ("arrete par Windows (probleme signale)", "stopped by Windows (reported a problem)", "von Windows gestoppt (Problem gemeldet)", "detenido por Windows (problema notificado)", "arrestato da Windows (problema segnalato)"),
+    45: ("non connecte (debranche)", "not connected (unplugged)", "nicht verbunden (abgezogen)", "no conectado (desenchufado)", "non connesso (scollegato)"),
+    52: ("pilote non signe bloque", "unsigned driver blocked", "unsignierter Treiber blockiert", "controlador no firmado bloqueado", "driver non firmato bloccato"),
+}
+# ========================== fin PATCH v5.1 moteur SAM / pilotes ==========================
 
 
 class AtelierBoosterApp(DiagnosticProMixin, ctk.CTk):
@@ -7315,20 +7891,23 @@ class AtelierBoosterApp(DiagnosticProMixin, ctk.CTk):
             "Write-Host '----------------------------------------------------------------------------------------';"
             "Write-Host '';"
             f"Write-Host '[+] {lbl_gpu}';"
-            "foreach ($g in $gpus) {"
-            "  $vram_val = '@@UNKNOWN@@';"
-            "  $gName = $g.Name;"
-            "  if ($gName -match '7900 XT') { $vram_val = '20 @@GB@@' }"
-            "  elseif ($gName -match '7900 XTX') { $vram_val = '24 @@GB@@' }"
-            "  elseif ($gName -match '4090') { $vram_val = '24 @@GB@@' }"
-            "  elseif ($gName -match '4080') { $vram_val = '16 @@GB@@' }"
-            "  elseif ($gName -match '4070') { $vram_val = '12 @@GB@@' }"
-            "  else {"
-            "    try {"
-            "      if ($g.AdapterRAM -and [int64]$g.AdapterRAM -gt 0) { $vram_val = [string][math]::Round([int64]$g.AdapterRAM / 1GB, 1) + ' @@GB@@' }"
-            "      else { $vram_val = 'N/A' }"
-            "    } catch { $vram_val = 'N/A' }"
+            "$vramMap = @{};"
+            "Get-ItemProperty 'HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Class\\{4d36e968-e325-11ce-bfc1-08002be10318}\\*' -ErrorAction SilentlyContinue | ForEach-Object {"
+            "  $desc = $_.DriverDesc;"
+            "  $raw = $_.'HardwareInformation.qwMemorySize';"
+            "  if ($desc -and $raw) {"
+            "    $val = 0;"
+            "    if ($raw -is [byte[]]) { if ($raw.Length -ge 8) { $val = [BitConverter]::ToInt64($raw, 0) } }"
+            "    else { try { $val = [int64]$raw } catch {} }"
+            "    if ($val -gt 0) { $vramMap[$desc] = $val }"
             "  }"
+            "};"
+            "foreach ($g in $gpus) {"
+            "  $gName = $g.Name;"
+            "  $bytes = 0;"
+            "  if ($vramMap.ContainsKey($gName)) { $bytes = $vramMap[$gName] }"
+            "  if ($bytes -le 0 -and $g.AdapterRAM) { try { $bytes = [int64]$g.AdapterRAM } catch {} }"
+            "  $vram_val = if ($bytes -gt 0) { [string][math]::Round($bytes / 1GB, 1) + ' @@GB@@' } else { 'N/A' };"
             "  Write-Host ('    > @@R_MODEL@@: ' + $gName + ' (' + $vram_val + ' VRAM)');"
             "};"
             "Write-Host '----------------------------------------------------------------------------------------';"
@@ -7655,9 +8234,6 @@ class AtelierBoosterApp(DiagnosticProMixin, ctk.CTk):
 
         self.after(0, lambda: self.btn_apply_dns.configure(state="normal"))
 
-    def _poser_icone(self):
-        poser_icone(self)
-
     # ------------------------------------------------------------------ DNS : fiches, état, annulation, réparation
     def maj_fiche_dns(self, choix=None):
         nom = choix or self.dns_combo.get()
@@ -7835,12 +8411,6 @@ class AtelierBoosterApp(DiagnosticProMixin, ctk.CTk):
         log(fin)
         self.noter_action(tr("Réparation de la connexion", "Connection repair", "Verbindungsreparatur", "Reparación de la conexión", "Riparazione della connessione"), resume + (" → " + ", ".join(done) if done else ""))
 
-    def open_network_connections(self):
-        try:
-            subprocess.Popen("ncpa.cpl", shell=True)
-        except Exception:
-            pass
-
     def browse_destination_folder(self):
         current_dest = self.rec_dest_entry.get().strip().strip('"')
         initial_dir = current_dest if os.path.exists(current_dest) else "D:\\"
@@ -7948,43 +8518,410 @@ class AtelierBoosterApp(DiagnosticProMixin, ctk.CTk):
             self.tooltip_rights.text = self.t("rec_btn_rights_green_tt")
             self.debloquer_boutons_taches_lourdes()
 
-    def start_account_reset_thread(self):
-        self.btn_reset_pwd.configure(state="disabled")
-        threading.Thread(target=self.run_account_reset, daemon=True).start()
-
-    def run_account_reset(self):
-        drive = self.rec_drive_entry.get().strip().upper()
-        if not drive:
-            self.rec_log(self.tr("❌ Erreur : Lettre de lecteur vide.", "❌ Error: Drive letter empty.", "❌ Fehler: Laufwerksbuchstabe ist leer.", "❌ Error: la letra de unidad está vacía.", "❌ Errore: la lettera dell'unità è vuota."))
-            self.after(0, lambda: self.btn_reset_pwd.configure(state="normal"))
-            return
-        self.rec_log(self.tr(f"\n=== RÉINITIALISATION MOT DE PASSE LOCAL (Lecteur {drive}:) ===",
-                             f"\n=== LOCAL PASSWORD RESET (Drive {drive}:) ===",
-                             f"\n=== LOKALES KENNWORT ZURÜCKSETZEN (Laufwerk {drive}:) ===",
-                             f"\n=== RESTABLECIMIENTO DE CONTRASEÑA LOCAL (Unidad {drive}:) ===",
-                             f"\n=== REIMPOSTAZIONE DELLA PASSWORD LOCALE (Unità {drive}:) ==="))
-        ps_reset = (
-            f"$drive = '{drive}';"
-            "try {"
-            "  $samHive = \"$drive`:\\Windows\\System32\\config\\SAM\";"
-            "  if (-not (Test-Path $samHive)) { $samHive = \"$drive`:\\WINNT\\System32\\config\\SAM\" }"
-            "  reg load HKLM\\TEMP_SAM $samHive | Out-Null;"
-            "  reg unload HKLM\\TEMP_SAM | Out-Null;"
-            "  Write-Host 'SUCCESS';"
-            "} catch {"
-            "  try { reg unload HKLM\\TEMP_SAM | Out-Null } catch {}"
-            "  Write-Host ('ERROR|' + $_.Exception.Message);"
-            "}"
-        )
-        try:
-            res = subprocess.run(f'powershell.exe -Command "{ps_reset}"', capture_output=True, text=True, shell=True, encoding="utf-8", errors="ignore", creationflags=CREATE_NO_WINDOW)
-            if "SUCCESS" in res.stdout:
-                self.rec_log(self.tr("🎉 [SUCCÈS] Mot de passe du compte local effacé !", "🎉 [SUCCESS] Local account password cleared!", "🎉 [ERFOLG] Kennwort des lokalen Kontos gelöscht!", "🎉 [ÉXITO] ¡Contraseña de la cuenta local eliminada!", "🎉 [SUCCESSO] Password dell'account locale cancellata!"))
+    def _dp_pilotes_latences(self):
+        tr = self.tr
+        rap = []
+        def emit(niveau, texte):
+            rap.append((niveau, texte))
+            self.dp_ecrire((ICONES_NIVEAU.get(niveau, "") + " " + texte) if texte else "")
+        self.dp_ecrire("\u23f3 " + tr("Analyse des pilotes, du démarrage et des disques (~12 s)...",
+                                      "Analyzing drivers, startup and disks (~12 s)...",
+                                      "Analyse der Treiber, des Starts und der Datenträger (~12 s)...",
+                                      "Análisis de controladores, arranque y discos (~12 s)...",
+                                      "Analisi dei driver, dell'avvio e dei dischi (~12 s)..."), effacer=True)
+        code, sortie = executer_powershell(PS_PILOTES_LATENCES, 90)
+        err, uns, old = [], [], []
+        dpc = isr = None
+        boot = None
+        for brut in (sortie or "").splitlines():
+            p = brut.strip().split("|")
+            if p[0] == "ERR" and len(p) >= 3:
+                try:
+                    code_err = int(p[2])
+                except Exception:
+                    code_err = 0
+                err.append((p[1], code_err))
+            elif p[0] == "UNS" and len(p) >= 2:
+                uns.append(p[1])
+            elif p[0] == "OLD" and len(p) >= 3:
+                old.append((p[1], p[2]))
+            elif p[0] == "DPC" and len(p) >= 3:
+                dpc = (p[1], p[2])
+            elif p[0] == "ISR" and len(p) >= 3:
+                isr = (p[1], p[2])
+            elif p[0] == "BOOT" and len(p) >= 2:
+                try:
+                    boot = int(p[1])
+                except Exception:
+                    boot = None
+        code2, sortie2 = executer_powershell(PS_PERF_EXTRA, 60)
+        startcount = None
+        starts = []
+        wear = []
+        for brut in (sortie2 or "").splitlines():
+            p = brut.strip().split("|")
+            if p[0] == "STARTCOUNT" and len(p) >= 2:
+                try:
+                    startcount = int(p[1])
+                except Exception:
+                    startcount = None
+            elif p[0] == "START" and len(p) >= 3:
+                starts.append((p[1], p[2]))
+            elif p[0] == "WEAR" and len(p) >= 4:
+                try:
+                    w = int(float(p[2]))
+                except Exception:
+                    w = -1
+                try:
+                    er = int(p[3])
+                except Exception:
+                    er = 0
+                lettres = p[4] if len(p) >= 5 else "-"
+                mtype = p[5] if len(p) >= 6 else ""
+                wear.append((p[1], w, er, lettres, mtype))
+        self.dp_ecrire("=== " + tr("PILOTES & PERFORMANCES", "DRIVERS & PERFORMANCE", "TREIBER & LEISTUNG", "CONTROLADORES Y RENDIMIENTO", "DRIVER E PRESTAZIONI") + " ===", effacer=True)
+        self.dp_ecrire("")
+        graves = [(n, c) for (n, c) in err if c != 45]
+        debranches = [(n, c) for (n, c) in err if c == 45]
+        if graves:
+            emit("bad", tr(str(len(graves)) + " périphérique(s) en erreur :",
+                           str(len(graves)) + " device(s) in error:",
+                           str(len(graves)) + " Gerät(e) mit Fehler:",
+                           str(len(graves)) + " dispositivo(s) con error:",
+                           str(len(graves)) + " dispositivo/i in errore:"))
+            for nom, c in graves:
+                libelle = choisir(self.lang, *CODES_PERIPH[c]) if c in CODES_PERIPH else ("code " + str(c))
+                emit("info", "   \u2022 " + nom + " - " + libelle + " (code " + str(c) + ")")
+        else:
+            emit("ok", tr("Aucun périphérique en erreur.", "No device in error.", "Kein Gerät mit Fehler.", "Ningún dispositivo con error.", "Nessun dispositivo in errore."))
+        if debranches:
+            emit("info", tr(str(len(debranches)) + " périphérique(s) simplement débranché(s) (sans gravité).",
+                            str(len(debranches)) + " device(s) just unplugged (harmless).",
+                            str(len(debranches)) + " Gerät(e) nur abgezogen (harmlos).",
+                            str(len(debranches)) + " dispositivo(s) solo desenchufado(s) (sin gravedad).",
+                            str(len(debranches)) + " dispositivo/i solo scollegato/i (innocuo)."))
+        if uns:
+            emit("warn", tr(str(len(uns)) + " pilote(s) non signé(s) :",
+                            str(len(uns)) + " unsigned driver(s):",
+                            str(len(uns)) + " unsignierte(r) Treiber:",
+                            str(len(uns)) + " controlador(es) no firmado(s):",
+                            str(len(uns)) + " driver non firmato/i:"))
+            for n in uns[:12]:
+                emit("info", "   \u2022 " + n)
+        if old:
+            emit("warn", tr(str(len(old)) + " pilote(s) ancien(s) (> 5 ans) :",
+                            str(len(old)) + " old driver(s) (> 5 years):",
+                            str(len(old)) + " alte(r) Treiber (> 5 Jahre):",
+                            str(len(old)) + " controlador(es) antiguo(s) (> 5 años):",
+                            str(len(old)) + " driver vecchio/i (> 5 anni):"))
+            for n, d in old[:12]:
+                emit("info", "   \u2022 " + n + " (" + d + ")")
+        if dpc and isr:
+            try:
+                d_avg = float(dpc[0].replace(",", "."))
+            except Exception:
+                d_avg = 0.0
+            if d_avg < 1:
+                niv = "ok"
+                pic = tr("faible", "low", "niedrig", "baja", "bassa")
+            elif d_avg < 2.5:
+                niv = "warn"
+                pic = tr("à surveiller", "watch", "beobachten", "a vigilar", "da tenere d'occhio")
             else:
-                self.rec_log(self.tr(f"❌ Échec : {res.stdout}", f"❌ Failed: {res.stdout}", f"❌ Fehlgeschlagen: {res.stdout}", f"❌ Fallo: {res.stdout}", f"❌ Operazione non riuscita: {res.stdout}"))
+                niv = "bad"
+                pic = tr("élevée (grésillements audio, micro-saccades probables)",
+                         "high (audio crackles, stutters likely)",
+                         "hoch (Audio-Knistern, Ruckler wahrscheinlich)",
+                         "alta (crujidos de audio, microcortes probables)",
+                         "alta (fruscii audio, microscatti probabili)")
+            emit(niv, tr("Latence DPC : " + dpc[0] + " % en moyenne, " + dpc[1] + " % au pic - " + pic + ".",
+                         "DPC latency: " + dpc[0] + "% average, " + dpc[1] + "% peak - " + pic + ".",
+                         "DPC-Latenz: " + dpc[0] + " % Durchschnitt, " + dpc[1] + " % Spitze - " + pic + ".",
+                         "Latencia DPC: " + dpc[0] + " % de media, " + dpc[1] + " % de pico - " + pic + ".",
+                         "Latenza DPC: " + dpc[0] + " % in media, " + dpc[1] + " % di picco - " + pic + "."))
+            emit("info", "   " + tr("Interruptions (ISR) : " + isr[0] + " % en moyenne, " + isr[1] + " % au pic.",
+                                    "Interrupts (ISR): " + isr[0] + "% average, " + isr[1] + "% peak.",
+                                    "Interrupts (ISR): " + isr[0] + " % Durchschnitt, " + isr[1] + " % Spitze.",
+                                    "Interrupciones (ISR): " + isr[0] + " % de media, " + isr[1] + " % de pico.",
+                                    "Interruzioni (ISR): " + isr[0] + " % in media, " + isr[1] + " % di picco."))
+            if d_avg >= 2.5:
+                emit("info", "   -> " + tr("Pistes : pilote réseau/Wi-Fi, carte graphique, chipset ou stockage. BlueScreenView aide à isoler le .sys fautif.",
+                                           "Leads: network/Wi-Fi, graphics, chipset or storage driver. BlueScreenView helps isolate the faulty .sys.",
+                                           "Spuren: Netzwerk-/WLAN-, Grafik-, Chipsatz- oder Speichertreiber. BlueScreenView hilft, die fehlerhafte .sys zu finden.",
+                                           "Pistas: controlador de red/Wi-Fi, gráfica, chipset o almacenamiento. BlueScreenView ayuda a aislar el .sys culpable.",
+                                           "Piste: driver di rete/Wi-Fi, grafica, chipset o archiviazione. BlueScreenView aiuta a isolare il .sys difettoso."))
+        else:
+            emit("info", tr("Mesure des latences indisponible sur ce PC.", "Latency measurement unavailable on this PC.",
+                            "Latenzmessung auf diesem PC nicht verfügbar.", "Medición de latencias no disponible en este PC.",
+                            "Misura delle latenze non disponibile su questo PC."))
+        if boot:
+            sec = boot / 1000.0
+            niv = "ok" if sec < 30 else ("warn" if sec < 60 else "bad")
+            emit(niv, tr("Dernier démarrage de Windows : %.0f s." % sec, "Last Windows boot: %.0f s." % sec,
+                         "Letzter Windows-Start: %.0f s." % sec, "Último arranque de Windows: %.0f s." % sec,
+                         "Ultimo avvio di Windows: %.0f s." % sec))
+        if startcount is not None:
+            niv = "ok" if startcount <= 8 else ("warn" if startcount <= 15 else "bad")
+            emit(niv, tr(str(startcount) + " programme(s) lancé(s) au démarrage.", str(startcount) + " program(s) launched at startup.",
+                         str(startcount) + " Programm(e) beim Start.", str(startcount) + " programa(s) al inicio.",
+                         str(startcount) + " programma/i all'avvio."))
+            for n, loc in starts[:8]:
+                emit("info", "   \u2022 " + n)
+        anomalie_disque = False
+        for nom, w, er, lettres, mtype in wear:
+            ident = (lettres + " (" + nom + ")") if (lettres and lettres != "-") else nom
+            est_ssd = "ssd" in (mtype or "").lower()
+            if er > 0:
+                anomalie_disque = True
+                txt = tr("Disque " + ident + " : " + str(er) + " erreur(s) de lecture non corrigée(s)",
+                         "Drive " + ident + ": " + str(er) + " uncorrected read error(s)",
+                         "Laufwerk " + ident + ": " + str(er) + " nicht korrigierte Lesefehler",
+                         "Disco " + ident + ": " + str(er) + " error(es) de lectura no corregido(s)",
+                         "Disco " + ident + ": " + str(er) + " errore/i di lettura non corretto/i")
+                if est_ssd and w >= 0:
+                    txt = txt + " - " + tr("usure " + str(w) + " %", "wear " + str(w) + "%", "Verschleiß " + str(w) + " %", "desgaste " + str(w) + " %", "usura " + str(w) + " %")
+                emit("bad", txt)
+            elif est_ssd and w >= 0:
+                if w > 10:
+                    anomalie_disque = True
+                niv = "bad" if w > 10 else "ok"
+                emit(niv, tr("Disque " + ident + " : usure " + str(w) + " %", "Drive " + ident + ": wear " + str(w) + "%",
+                             "Laufwerk " + ident + ": Verschleiß " + str(w) + " %", "Disco " + ident + ": desgaste " + str(w) + " %",
+                             "Disco " + ident + ": usura " + str(w) + " %"))
+            else:
+                emit("ok", tr("Disque " + ident + " : aucune erreur de lecture non corrigée",
+                              "Drive " + ident + ": no uncorrected read error",
+                              "Laufwerk " + ident + ": keine nicht korrigierten Lesefehler",
+                              "Disco " + ident + ": sin errores de lectura no corregidos",
+                              "Disco " + ident + ": nessun errore di lettura non corretto"))
+        if anomalie_disque:
+            emit("info", tr("Rappel : l'usure ne concerne que les SSD (cycles d'écriture) ; sur un disque dur elle n'est pas pertinente (0 % ne signifie pas « bonne santé »). Les erreurs de lecture non corrigées signalent des secteurs défectueux sur tout type de disque : c'est l'alerte à prendre au sérieux.",
+                            "Reminder: wear only applies to SSDs (write cycles); on a hard drive it is irrelevant (0% does not mean healthy). Uncorrected read errors indicate bad sectors on any drive type: that is the alert to take seriously.",
+                            "Hinweis: Verschleiß betrifft nur SSDs (Schreibzyklen); bei einer Festplatte ist er irrelevant (0 % bedeutet nicht gesund). Nicht korrigierte Lesefehler weisen auf defekte Sektoren bei jedem Laufwerkstyp hin: das ist der ernst zu nehmende Alarm.",
+                            "Recordatorio: el desgaste solo afecta a los SSD (ciclos de escritura); en un disco duro no es pertinente (0 % no significa buena salud). Los errores de lectura no corregidos indican sectores defectuosos en cualquier tipo de disco: esa es la alerta importante.",
+                            "Promemoria: l'usura riguarda solo gli SSD (cicli di scrittura); su un disco rigido non è pertinente (0 % non significa in salute). Gli errori di lettura non corretti indicano settori danneggiati su qualsiasi tipo di disco: è questo l'allarme da prendere sul serio."))
+        self.rapport_data["pilotes"] = rap
+        self.noter_action(tr("Diagnostic pilotes & performances", "Drivers & performance diagnostic", "Diagnose Treiber & Leistung",
+                             "Diagnóstico de controladores y rendimiento", "Diagnosi driver e prestazioni"))
+
+    def _dp_cle_oem(self):
+        tr = self.tr
+        self.dp_ecrire("\u23f3 " + tr("Lecture de la clé Windows d'origine (OEM)...", "Reading the original Windows key (OEM)...",
+                                      "Lesen des originalen Windows-Schlüssels (OEM)...", "Leyendo la clave original de Windows (OEM)...",
+                                      "Lettura della chiave Windows originale (OEM)..."), effacer=True)
+        code, sortie = executer_powershell(PS_OEM_KEY, 30)
+        cle = ""
+        for l in (sortie or "").splitlines():
+            if l.startswith("OEM|"):
+                cle = l[4:].strip()
+        self.dp_ecrire("=== " + tr("CLÉ WINDOWS (OEM)", "WINDOWS KEY (OEM)", "WINDOWS-SCHLÜSSEL (OEM)", "CLAVE DE WINDOWS (OEM)", "CHIAVE WINDOWS (OEM)") + " ===", effacer=True)
+        self.dp_ecrire("")
+        if cle:
+            self.dp_ecrire("\u2714 " + tr("Clé d'origine (BIOS/UEFI) : ", "Original key (BIOS/UEFI): ", "Originalschlüssel (BIOS/UEFI): ", "Clave original (BIOS/UEFI): ", "Chiave originale (BIOS/UEFI): ") + cle)
+            self.dp_ecrire("   " + tr("Cette clé est gravée dans la carte mère : elle sert à réactiver Windows après réinstallation.",
+                                      "This key is embedded in the motherboard: it reactivates Windows after a reinstall.",
+                                      "Dieser Schlüssel ist im Mainboard hinterlegt: er reaktiviert Windows nach einer Neuinstallation.",
+                                      "Esta clave está grabada en la placa base: sirve para reactivar Windows tras una reinstalación.",
+                                      "Questa chiave è incisa nella scheda madre: serve a riattivare Windows dopo una reinstallazione."))
+            self.rapport_data["oem"] = cle
+            self.noter_action(tr("Clé Windows OEM récupérée", "Windows OEM key recovered", "Windows-OEM-Schlüssel ausgelesen", "Clave OEM de Windows recuperada", "Chiave OEM di Windows recuperata"), cle)
+        else:
+            self.dp_ecrire("\u2139\ufe0f " + tr("Aucune clé OEM intégrée (PC assemblé, licence Retail/numérique, ou non applicable).",
+                                                "No embedded OEM key (custom PC, Retail/digital license, or not applicable).",
+                                                "Kein eingebetteter OEM-Schlüssel (Eigenbau-PC, Retail-/digitale Lizenz oder nicht zutreffend).",
+                                                "Ninguna clave OEM integrada (PC ensamblado, licencia Retail/digital o no aplicable).",
+                                                "Nessuna chiave OEM integrata (PC assemblato, licenza Retail/digitale o non applicabile)."))
+
+    def _dp_export_pilotes(self, dossier=None):
+        tr = self.tr
+        if dossier is None:
+            dossier = filedialog.askdirectory(parent=self, title=tr("Dossier où exporter les pilotes", "Folder to export drivers to", "Ordner für den Treiberexport", "Carpeta donde exportar los controladores", "Cartella in cui esportare i driver"))
+        if not dossier:
+            return
+        self.dp_ecrire("\u23f3 " + tr("Export des pilotes tiers en cours...", "Exporting third-party drivers...", "Treiber von Drittanbietern werden exportiert...", "Exportando los controladores de terceros...", "Esportazione dei driver di terze parti..."), effacer=True)
+        try:
+            r = subprocess.run('pnputil /export-driver * "' + dossier + '"', shell=True, capture_output=True, text=True, encoding=page_oem(), errors="ignore", creationflags=CREATE_NO_WINDOW)
+            sortie = (r.stdout or "") + (r.stderr or "")
         except Exception as e:
-            self.rec_log(self.tr(f"❌ Erreur : {e}", f"❌ Error: {e}", f"❌ Fehler: {e}", f"❌ Error: {e}", f"❌ Errore: {e}"))
-        self.after(0, lambda: self.btn_reset_pwd.configure(state="normal"))
+            self.dp_ecrire("\u274c " + str(e))
+            return
+        nb = len(re.findall(r"\.inf", sortie, re.IGNORECASE))
+        self.dp_ecrire("=== " + tr("EXPORT DES PILOTES", "DRIVER EXPORT", "TREIBEREXPORT", "EXPORTACIÓN DE CONTROLADORES", "ESPORTAZIONE DEI DRIVER") + " ===", effacer=True)
+        self.dp_ecrire("")
+        self.dp_ecrire("\u2714 " + tr("Pilotes tiers exportés vers : ", "Third-party drivers exported to: ", "Treiber von Drittanbietern exportiert nach: ", "Controladores de terceros exportados a: ", "Driver di terze parti esportati in: ") + dossier)
+        if nb:
+            self.dp_ecrire("   " + tr(str(nb) + " paquet(s) de pilote exporté(s).", str(nb) + " driver package(s) exported.",
+                                      str(nb) + " Treiberpaket(e) exportiert.", str(nb) + " paquete(s) de controlador exportado(s).",
+                                      str(nb) + " pacchetto/i di driver esportato/i."))
+        try:
+            os.startfile(dossier)
+        except Exception:
+            pass
+        self.noter_action(tr("Pilotes exportés", "Drivers exported", "Treiber exportiert", "Controladores exportados", "Driver esportati"), dossier)
+
+    def _dp_tout_analyser(self):
+        tr = self.tr
+        self.dp_ecrire("\u23f3 " + tr("Analyse complète en cours (santé, plantages, pilotes, clé)...",
+                                      "Full analysis in progress (health, crashes, drivers, key)...",
+                                      "Vollständige Analyse läuft (Zustand, Abstürze, Treiber, Schlüssel)...",
+                                      "Análisis completo en curso (estado, fallos, controladores, clave)...",
+                                      "Analisi completa in corso (stato, crash, driver, chiave)..."), effacer=True)
+        for fn in (self._dp_sante, self._dp_plantages, self._dp_pilotes_latences, self._dp_cle_oem, self._dp_recommandations):
+            try:
+                fn()
+            except Exception as e:
+                self.dp_ecrire("\u26a0 " + str(e))
+        self.dp_rapport_client()
+        self.dp_ecrire("")
+        self.dp_ecrire("\u2714 " + tr("Analyse complète terminée : le rapport client s'est ouvert dans le navigateur.",
+                                      "Full analysis done: the customer report opened in the browser.",
+                                      "Vollständige Analyse fertig: der Kundenbericht wurde im Browser geöffnet.",
+                                      "Análisis completo terminado: el informe del cliente se ha abierto en el navegador.",
+                                      "Analisi completa terminata: il report del cliente si è aperto nel browser."))
+
+    def _dp_recommandations(self):
+        tr = self.tr
+        self.dp_ecrire("\u23f3 " + tr("Analyse des problèmes et recommandations (~10 s)...",
+                                      "Scanning problems and recommendations (~10 s)...",
+                                      "Analyse der Probleme und Empfehlungen (~10 s)...",
+                                      "Análisis de problemas y recomendaciones (~10 s)...",
+                                      "Analisi dei problemi e raccomandazioni (~10 s)..."), effacer=True)
+        code, sortie = executer_powershell(PS_RECOMMANDATIONS, 120)
+        codes = []
+        disques_pb = []
+        for l in (sortie or "").splitlines():
+            l = l.strip()
+            if l.startswith("R|"):
+                k = l[2:].strip()
+                if k and k not in codes:
+                    codes.append(k)
+            elif l.startswith("RDISK|"):
+                parts = l.split("|")
+                if len(parts) >= 5:
+                    disques_pb.append((parts[1], parts[2], parts[3], parts[4]))
+        self.dp_ecrire("=== " + tr("RECOMMANDATIONS", "RECOMMENDATIONS", "EMPFEHLUNGEN", "RECOMENDACIONES", "RACCOMANDAZIONI") + " ===", effacer=True)
+        self.dp_ecrire("")
+        reco = []
+        for typ, lettres, nom, val in disques_pb:
+            ident = (lettres + " (" + nom + ")") if (lettres and lettres != "-") else (nom + " " + tr("(sans lettre de lecteur)", "(no drive letter)", "(ohne Laufwerksbuchstabe)", "(sin letra de unidad)", "(senza lettera di unità)"))
+            if typ == "READERR":
+                texte = tr("Disque " + ident + " : " + val + " erreur(s) de lecture non corrigée(s). Ce disque faiblit : sauvegardez IMMÉDIATEMENT les données (onglet Récupération & Comptes), puis contrôlez-le avec CrystalDiskInfo (onglet Utilitaires). Ne lancez pas CHKDSK /r avant la sauvegarde.",
+                           "Drive " + ident + ": " + val + " uncorrected read error(s). This drive is failing: back up the data IMMEDIATELY (Recovery tab), then check it with CrystalDiskInfo (Utilities tab). Do not run CHKDSK /r before the backup.",
+                           "Laufwerk " + ident + ": " + val + " nicht korrigierte Lesefehler. Dieses Laufwerk versagt: sichern Sie die Daten SOFORT (Reiter Datenrettung), dann mit CrystalDiskInfo prüfen (Reiter Werkzeuge). Kein CHKDSK /r vor der Sicherung.",
+                           "Disco " + ident + ": " + val + " error(es) de lectura no corregido(s). Este disco está fallando: copie los datos DE INMEDIATO (pestaña Recuperación), luego compruébelo con CrystalDiskInfo (pestaña Utilidades). No ejecute CHKDSK /r antes de la copia.",
+                           "Disco " + ident + ": " + val + " errore/i di lettura non corretto/i. Questo disco sta cedendo: salvare SUBITO i dati (scheda Recupero), poi controllarlo con CrystalDiskInfo (scheda Utility). Non eseguire CHKDSK /r prima del backup.")
+            else:
+                texte = tr("Disque " + ident + " : usure " + val + " %. Prévoyez le remplacement du disque et sauvegardez les données (onglet Récupération & Comptes).",
+                           "Drive " + ident + ": wear " + val + "%. Plan to replace the drive and back up the data (Recovery tab).",
+                           "Laufwerk " + ident + ": Verschleiß " + val + " %. Austausch des Laufwerks einplanen und Daten sichern (Reiter Datenrettung).",
+                           "Disco " + ident + ": desgaste " + val + " %. Prevea el reemplazo del disco y copie los datos (pestaña Recuperación).",
+                           "Disco " + ident + ": usura " + val + " %. Prevedere la sostituzione del disco e salvare i dati (scheda Recupero).")
+            reco.append(("bad", texte))
+            self.dp_ecrire(ICONES_NIVEAU.get("bad", "") + " " + texte)
+        if not codes and not disques_pb:
+            texte = tr("Aucun problème nécessitant une action détecté : le PC est sain.",
+                       "No problem requiring action detected: the PC is healthy.",
+                       "Kein Problem erkannt, das eine Aktion erfordert: der PC ist gesund.",
+                       "Ningún problema que requiera acción: el PC está sano.",
+                       "Nessun problema che richieda un'azione: il PC è sano.")
+            reco.append(("ok", texte))
+            self.dp_ecrire("\u2705 " + texte)
+        else:
+            for k in RECO_ORDRE:
+                if k in codes:
+                    niv = RECO_NIVEAU.get(k, "warn")
+                    texte = choisir(self.lang, *RECO_MAP[k])
+                    reco.append((niv, texte))
+                    self.dp_ecrire(ICONES_NIVEAU.get(niv, "") + " " + texte)
+        self.rapport_data["reco"] = reco
+        self.noter_action(tr("Recommandations générées", "Recommendations generated", "Empfehlungen erstellt", "Recomendaciones generadas", "Raccomandazioni generate"),
+                          str(len([r for r in reco if r[0] != "ok"])))
+
+    def start_account_reset_thread(self):
+        tr = self.tr
+        self.btn_reset_pwd.configure(state="disabled")
+        try:
+            drive = self.rec_drive_entry.get().strip().upper()
+            if not drive:
+                self.rec_log("\u274c " + tr("Lettre de lecteur vide.", "Drive letter empty.", "Laufwerksbuchstabe leer.", "Letra de unidad vacia.", "Lettera dell'unita vuota."))
+                self.btn_reset_pwd.configure(state="normal")
+                return
+            config_dir = drive + ":\\Windows\\System32\\config"
+            sam_path = os.path.join(config_dir, "SAM")
+            if not os.path.exists(sam_path):
+                config_dir = drive + ":\\WINNT\\System32\\config"
+                sam_path = os.path.join(config_dir, "SAM")
+            if not os.path.exists(sam_path):
+                self.rec_log("\u274c " + tr("Aucune installation Windows trouvee sur " + drive + ":.",
+                                            "No Windows installation found on " + drive + ":.",
+                                            "Keine Windows-Installation auf " + drive + ": gefunden.",
+                                            "No se ha encontrado Windows en " + drive + ":.",
+                                            "Nessuna installazione di Windows su " + drive + ":."))
+                self.btn_reset_pwd.configure(state="normal")
+                return
+            self.rec_log("\n=== " + tr("REINITIALISATION DU MOT DE PASSE (SAM hors ligne)",
+                                       "PASSWORD RESET (offline SAM)",
+                                       "KENNWORT ZURUECKSETZEN (Offline-SAM)",
+                                       "RESTABLECIMIENTO DE CONTRASENA (SAM sin conexion)",
+                                       "REIMPOSTAZIONE PASSWORD (SAM offline)") + " - " + drive + ": ===")
+            subprocess.run('takeown /f "' + sam_path + '" /a', shell=True, capture_output=True, creationflags=CREATE_NO_WINDOW)
+            subprocess.run('icacls "' + sam_path + '" /grant *S-1-5-32-544:F', shell=True, capture_output=True, creationflags=CREATE_NO_WINDOW)
+            try:
+                comptes = sam_enumerer_comptes(sam_path)
+            except Exception as e:
+                self.rec_log("\u274c " + str(e))
+                self.btn_reset_pwd.configure(state="normal")
+                return
+            if not comptes:
+                self.rec_log("\u2139\ufe0f " + tr("Aucun compte local detecte dans la SAM.", "No local account found in the SAM.",
+                                                  "Kein lokales Konto in der SAM gefunden.", "No se ha encontrado ninguna cuenta local en la SAM.",
+                                                  "Nessun account locale trovato nella SAM."))
+                self.btn_reset_pwd.configure(state="normal")
+                return
+            dlg = ComptePickerDialog(self, comptes, self.tr)
+            self.wait_window(dlg)
+            if not dlg.resultat:
+                self.rec_log(tr("Operation annulee.", "Operation cancelled.", "Vorgang abgebrochen.", "Operacion cancelada.", "Operazione annullata."))
+                self.btn_reset_pwd.configure(state="normal")
+                return
+            rid_hex, activer = dlg.resultat
+            nom = next((c["nom"] for c in comptes if c["rid_hex"] == rid_hex), rid_hex)
+            threading.Thread(target=self._worker_blank_pwd, args=(sam_path, rid_hex, nom, activer), daemon=True).start()
+        except Exception as e:
+            self.rec_log("\u274c " + str(e))
+            self.btn_reset_pwd.configure(state="normal")
+
+    def _worker_blank_pwd(self, sam_path, rid_hex, nom, activer):
+        tr = self.tr
+        try:
+            res = sam_effacer_mot_de_passe(sam_path, rid_hex, activer)
+            self.rec_log("" + tr("Sauvegarde de la SAM :", "SAM backup:", "SAM-Sicherung:", "Copia de la SAM:", "Backup della SAM:") + " " + res["sauvegarde"])
+            if res["verifie"]:
+                self.rec_log("\u2714 " + tr("Mot de passe du compte \u00ab " + nom + " \u00bb efface. Au remontage du disque, ce compte ouvre sa session sans mot de passe.",
+                                                "Password of account \"" + nom + "\" cleared. Once the disk is back, this account opens its session with no password.",
+                                                "Kennwort des Kontos \u201e" + nom + "\u201c geloescht. Nach dem Wiedereinbau meldet sich dieses Konto ohne Kennwort an.",
+                                                "Contrasena de la cuenta \u00ab" + nom + "\u00bb borrada. Al volver a montar el disco, esta cuenta inicia sesion sin contrasena.",
+                                                "Password dell'account \u00ab" + nom + "\u00bb cancellata. Al rimontaggio del disco, questo account accede senza password."))
+                if res["compte_active"]:
+                    self.rec_log("\u2714 " + tr("Le compte etait desactive : il a ete reactive.", "The account was disabled: it has been re-enabled.",
+                                                "Das Konto war deaktiviert: es wurde reaktiviert.", "La cuenta estaba desactivada: se ha reactivado.",
+                                                "L'account era disattivato: e stato riattivato."))
+                self.noter_action(tr("Mot de passe local efface", "Local password cleared", "Lokales Kennwort geloescht", "Contrasena local borrada", "Password locale cancellata"), nom)
+            else:
+                self.rec_log("\u26a0 " + tr("Ecriture effectuee mais verification en echec. En cas de probleme d'ouverture de session, restaurez la sauvegarde ci-dessus.",
+                                            "Write done but verification failed. If login fails, restore the backup above.",
+                                            "Schreibvorgang erfolgt, aber Pruefung fehlgeschlagen. Bei Anmeldeproblemen die obige Sicherung wiederherstellen.",
+                                            "Escritura realizada pero la verificacion fallo. Si falla el inicio de sesion, restaure la copia de arriba.",
+                                            "Scrittura eseguita ma verifica fallita. In caso di problemi di accesso, ripristina il backup sopra."))
+            self.rec_log("\u2139\ufe0f " + tr("Si Windows etait en veille prolongee ou en demarrage rapide, eteignez-le completement avant de retirer le disque, sinon la modification sera perdue.",
+                                              "If Windows was hibernated or in fast startup, shut it down completely before removing the disk, otherwise the change is lost.",
+                                              "War Windows im Ruhezustand oder im Schnellstart, fahren Sie es vollstaendig herunter, bevor Sie den Datentraeger entfernen, sonst geht die Aenderung verloren.",
+                                              "Si Windows estaba en hibernacion o en inicio rapido, apaguelo por completo antes de retirar el disco; de lo contrario, el cambio se pierde.",
+                                              "Se Windows era in ibernazione o in avvio rapido, spegnilo completamente prima di rimuovere il disco, altrimenti la modifica va persa."))
+        except Exception as e:
+            self.rec_log("\u274c " + tr("Echec :", "Failed:", "Fehlgeschlagen:", "Fallo:", "Operazione non riuscita:") + " " + str(e))
+        finally:
+            self.after(0, lambda: self.btn_reset_pwd.configure(state="normal"))
 
     def start_runtimes_install_thread(self):
         if not self.verifier_action_en_cours("Install Runtimes"):
@@ -8061,47 +8998,7 @@ class AtelierBoosterApp(DiagnosticProMixin, ctk.CTk):
                                                  f"❌ Fehler bei {display_name}: {e}", f"❌ Error en {display_name}: {e}", f"❌ Errore su {display_name}: {e}"))
                 continue
 
-            if r_id == "arcade_assets" or winget_id == "LOCAL_ASSETS":
-                try:
-                    assets_dir = get_assets_path()
-                    target_root = "C:\\"
-                    
-                    typex_src = os.path.join(assets_dir, "TypeX3Temp.dat")
-                    if os.path.exists(typex_src):
-                        shutil.copy2(typex_src, os.path.join(target_root, "TypeX3Temp.dat"))
-                        self.runtime_log(self.tr("   ✔ Fichier de licence 'TypeX3Temp.dat' déployé sur C:\\",
-                                                 "   ✔ License file 'TypeX3Temp.dat' deployed to C:\\",
-                                                 "   ✔ Lizenzdatei 'TypeX3Temp.dat' nach C:\\ kopiert",
-                                                 "   ✔ Archivo de licencia 'TypeX3Temp.dat' desplegado en C:\\",
-                                                 "   ✔ File di licenza 'TypeX3Temp.dat' distribuito in C:\\"))
-
-                    # On ne lance jamais les outils portables (onglet Utilitaires) ni l'installeur Epic (case dédiée)
-                    exclus = set()
-                    for u in UTILITIES_LIST:
-                        exclus.add(os.path.normcase(u["filename"].split(os.sep)[0]))
-                    exclus.add(os.path.normcase(EPIC_INSTALLER))
-                    for root, _, files in os.walk(assets_dir):
-                        for file in files:
-                            rel_top = os.path.normcase(os.path.relpath(os.path.join(root, file), assets_dir).split(os.sep)[0])
-                            if rel_top in exclus or os.path.normcase(file) in exclus:
-                                continue
-                            if file.endswith((".exe", ".msi")) and not file.startswith("booster"):
-                                full_installer = os.path.join(root, file)
-                                self.runtime_log(self.tr(f"   ⚙️ Exécution de l'installeur embarqué : {file}",
-                                                         f"   ⚙️ Running embedded installer: {file}",
-                                                         f"   ⚙️ Eingebettetes Installationsprogramm wird ausgeführt: {file}",
-                                                         f"   ⚙️ Ejecutando el instalador integrado: {file}",
-                                                         f"   ⚙️ Esecuzione del programma di installazione incorporato: {file}"))
-                                subprocess.run(f'"{full_installer}" /quiet /norestart', shell=True, startupinfo=startupinfo)
-
-                    self.runtime_log(self.tr("🎉 Pack Local Arcade déployé avec succès.", "🎉 Local Arcade Pack deployed successfully.", "🎉 Lokales Arcade-Paket erfolgreich bereitgestellt.", "🎉 Paquete Local Arcade desplegado correctamente.", "🎉 Pacchetto Arcade locale distribuito con successo."))
-                except Exception as e:
-                    self.runtime_log(self.tr(f"❌ Erreur lors du déploiement du Pack Arcade : {e}",
-                                             f"❌ Error while deploying the Arcade Pack: {e}",
-                                             f"❌ Fehler bei der Bereitstellung des Arcade-Pakets: {e}",
-                                             f"❌ Error al desplegar el Paquete Arcade: {e}",
-                                             f"❌ Errore durante la distribuzione del Pacchetto Arcade: {e}"))
-            elif not winget_disponible:
+            if not winget_disponible:
                 self.runtime_log(self.tr(f"   ⏭️ {display_name} ignoré ('winget' indisponible).",
                                          f"   ⏭️ {display_name} skipped ('winget' unavailable).",
                                          f"   ⏭️ {display_name} übersprungen ('winget' nicht verfügbar).",
@@ -8154,6 +9051,7 @@ class AtelierBoosterApp(DiagnosticProMixin, ctk.CTk):
             try:
                 subprocess.run('del /q /f /s "%TEMP%\\*"' , shell=True, capture_output=True, creationflags=CREATE_NO_WINDOW)
                 subprocess.run('del /q /f /s "C:\\Windows\\Temp\\*"', shell=True, capture_output=True, creationflags=CREATE_NO_WINDOW)
+                subprocess.run('del /q /f /s "C:\\Windows\\Prefetch\\*"', shell=True, capture_output=True, creationflags=CREATE_NO_WINDOW)
             except Exception as e:
                 self.log_info(self.tr(f"⚠ Erreur Temp : {e}", f"⚠ Temp Error: {e}", f"⚠ Temp-Fehler: {e}", f"⚠ Error de Temp: {e}", f"⚠ Errore Temp: {e}"))
 
@@ -8712,6 +9610,9 @@ class AtelierBoosterApp(DiagnosticProMixin, ctk.CTk):
             self.after(0, lambda: self.rec_client_combo.set(self.t("all_disk_profile")))
             self.update_folder_dropdown(drive_path)
 
+        sam_check = os.path.join(drive_path, "Windows", "System32", "config", "SAM")
+        if os.path.exists(sam_check):
+            self.after(0, lambda: self.btn_reset_pwd.configure(state="normal"))
         self.rec_log(self.tr("\n✔ Analyse terminée avec succès.", "\n✔ Scan finished.", "\n✔ Analyse erfolgreich abgeschlossen.", "\n✔ Análisis completado con éxito.", "\n✔ Analisi completata con successo."))
 
     def run_recovery_copy(self, drive, client_name, chosen_folder_label, dest_path):

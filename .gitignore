@@ -1,0 +1,10 @@
+# Fichiers de compilation et executables : jamais dans le depot
+build/
+dist/
+*.spec
+*.exe
+*.zip
+__pycache__/
+*.pyc
+# Sauvegardes des patchs
+*.avant_*
