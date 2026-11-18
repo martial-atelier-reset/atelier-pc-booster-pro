@@ -33,8 +33,12 @@ Le logiciel ne collecte ni n'envoie aucune donnée.
 
 ## Compiler (facultatif)
 
+Le dossier `assets_arcade` contient l'icône, l'écran de démarrage et les notices en 5 langues.
+Le guide **[COMPILER.md](COMPILER.md)** explique pas à pas comment recréer le logiciel complet,
+où télécharger les utilitaires d'autres éditeurs de l'onglet 7, et la commande de compilation :
+
 ```
-pyinstaller --onedir --windowed booster_atelier_5.py
+pyinstaller --onedir --noconsole --icon=assets_arcade\Atelier_PC_Booster.ico --add-data "assets_arcade;assets_arcade" booster_atelier_5.py
 ```
 
 Les exécutables compilés ne sont pas publiés dans ce dépôt, seul le code source y est hébergé.
