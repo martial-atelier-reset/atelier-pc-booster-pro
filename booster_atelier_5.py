@@ -1874,6 +1874,8 @@ class NoticeWindow(ctk.CTkToplevel):
                 "\n"
                 "Each tool in this tab has a very precise, surgical role during a troubleshooting intervention:\n"
                 "\n"
+                "📥 Tool missing? When you click \"Launch\", if the program is not yet in the assets_arcade folder, the software offers to download it from the publisher's official website (always the latest version), then launches it. For publishers that offer no direct link (GPU-Z, CrystalDiskInfo, BleachBit, DDU, WirelessKeyView, MiniTool), it opens the official page and tells you where to place the file. Nothing is downloaded without your consent.\n"
+                "\n"
                 "🛡️ Malwarebytes AdwCleaner\n"
                 "  • What is it for: A utility specialized in hunting down and removing unwanted advertising software (adware), potentially unwanted programs (PUPs), advertising toolbars and browser hijackers.\n"
                 "  • What it brings to the system: Instantly restores smoothness to web browsers polluted by intrusive pop-ups and cleans up the shortcuts corrupted by advertising networks.\n"
@@ -1921,6 +1923,10 @@ class NoticeWindow(ctk.CTkToplevel):
                 "🧩 MiniTool Partition Wizard\n"
                 "  • What is it for: An advanced partition management tool, for everything beyond simple S.M.A.R.T. monitoring and optimization: creating, resizing, moving, merging or deleting partitions, formatting a drive, or converting a disk between MBR and GPT.\n"
                 "  • What it brings to the system: Lets you prepare a brand-new drive, reorganize space on a customer's disk, or recover a disk whose partition table has become unusable. Structural operations (resizing, deleting, converting) carry a real risk of data loss if interrupted: always back up the customer's important data first (see the 🛟 Recovery & Accounts tab).\n"
+                "\n"
+                "💥 BlueScreenView (NirSoft)\n"
+                "  • What is it for: A small free NirSoft utility that reads the \"minidump\" files Windows saves at each blue screen (BSOD) and shows, for every crash, the error code and the driver (.sys) most likely responsible.\n"
+                "  • What it brings to the system: Pinpoints the faulty driver (graphics, network, storage…) in seconds instead of guessing. It complements the \"Crash analysis\" of the Diagnostics Pro tab: that check tells you blue screens happened, BlueScreenView shows which driver caused them. Portable version, no installation.\n"
                 "\n"
                 "------------------------------------------------------------------------------------\n"
                 "\n"
@@ -2386,6 +2392,8 @@ class NoticeWindow(ctk.CTkToplevel):
                 "\n"
                 "Jedes Tool in diesem Tab hat bei einem Reparatureinsatz eine ganz präzise, chirurgische Aufgabe:\n"
                 "\n"
+                "📥 Werkzeug fehlt? Beim Klick auf „Starten“ bietet die Software, falls das Programm noch nicht im Ordner assets_arcade liegt, an, es von der offiziellen Website des Herstellers herunterzuladen (immer die neueste Version) und startet es dann. Bei Herstellern ohne direkten Link (GPU-Z, CrystalDiskInfo, BleachBit, DDU, WirelessKeyView, MiniTool) öffnet sie die offizielle Seite und zeigt, wohin die Datei gehört. Ohne Ihre Zustimmung wird nichts heruntergeladen.\n"
+                "\n"
                 "🛡️ Malwarebytes AdwCleaner\n"
                 "  • Wofür es gut ist: Ein Hilfsprogramm, das auf das Aufspüren und Entfernen unerwünschter Werbesoftware (Adware), potenziell unerwünschter Programme (PUPs), Werbe-Symbolleisten und Browser-Hijacker spezialisiert ist.\n"
                 "  • Nutzen für das System: Gibt Webbrowsern, die durch aufdringliche Pop-ups verseucht sind, sofort wieder Flüssigkeit zurück und bereinigt die von Werbenetzwerken manipulierten Verknüpfungen.\n"
@@ -2433,6 +2441,10 @@ class NoticeWindow(ctk.CTkToplevel):
                 "🧩 MiniTool Partition Wizard\n"
                 "  • Wofür es gut ist: Ein Tool für die erweiterte Partitionsverwaltung, für alles, was über die reine S.M.A.R.T.-Überwachung und Optimierung hinausgeht: Partitionen erstellen, vergrößern, verkleinern, verschieben, zusammenführen oder löschen, ein Laufwerk formatieren oder eine Festplatte zwischen MBR und GPT konvertieren.\n"
                 "  • Nutzen für das System: Ermöglicht die Vorbereitung eines neuen Laufwerks, die Neuordnung des Speicherplatzes auf der Festplatte eines Kunden oder die Rettung einer Festplatte, deren Partitionstabelle unbrauchbar geworden ist. Strukturelle Eingriffe (Vergrößern, Löschen, Konvertieren) bergen ein echtes Risiko des Datenverlusts bei Unterbrechung: Sichern Sie daher immer zuerst die wichtigen Kundendaten (siehe den Tab 🛟 Datenrettung & Konten).\n"
+                "\n"
+                "💥 BlueScreenView (NirSoft)\n"
+                "  • Wofür es gut ist: Ein kleines kostenloses Werkzeug von NirSoft, das die „Minidump“-Dateien liest, die Windows bei jedem Bluescreen (BSOD) speichert, und für jeden Absturz den Fehlercode und den wahrscheinlich verantwortlichen Treiber (.sys) anzeigt.\n"
+                "  • Nutzen für das System: Findet den fehlerhaften Treiber (Grafik, Netzwerk, Speicher …) in Sekunden, statt auf gut Glück zu suchen. Es ergänzt die „Absturzanalyse“ im Reiter Diagnose Pro: Diese zeigt, dass Bluescreens aufgetreten sind, BlueScreenView zeigt, welcher Treiber sie verursacht hat. Portable Version, ohne Installation.\n"
                 "\n"
                 "------------------------------------------------------------------------------------\n"
                 "\n"
@@ -2898,6 +2910,8 @@ class NoticeWindow(ctk.CTkToplevel):
                 "\n"
                 "Cada herramienta de esta pestaña tiene una función quirúrgica muy precisa durante una intervención de reparación:\n"
                 "\n"
+                "📥 ¿Falta una herramienta? Al hacer clic en «Iniciar», si el programa aún no está en la carpeta assets_arcade, el software ofrece descargarlo desde el sitio oficial del editor (siempre la última versión) y luego lo ejecuta. Para los editores que no ofrecen un enlace directo (GPU-Z, CrystalDiskInfo, BleachBit, DDU, WirelessKeyView, MiniTool), abre la página oficial e indica dónde colocar el archivo. No se descarga nada sin su consentimiento.\n"
+                "\n"
                 "🛡️ Malwarebytes AdwCleaner\n"
                 "  • Para qué sirve: una utilidad especializada en rastrear y eliminar el software publicitario no deseado (adware), los programas potencialmente no deseados (PUP), las barras de herramientas publicitarias y los secuestradores de navegador.\n"
                 "  • Aportación al sistema: devuelve al instante la fluidez a los navegadores web contaminados por ventanas emergentes inoportunas y limpia los accesos directos corrompidos por redes publicitarias.\n"
@@ -2945,6 +2959,10 @@ class NoticeWindow(ctk.CTkToplevel):
                 "🧩 MiniTool Partition Wizard\n"
                 "  • Para qué sirve: una herramienta de gestión avanzada de particiones, para todo lo que va más allá de la simple supervisión S.M.A.R.T. y la optimización: crear, redimensionar, mover, fusionar o eliminar particiones, formatear una unidad, o convertir un disco entre MBR y GPT.\n"
                 "  • Aportación al sistema: permite preparar un disco nuevo, reorganizar el espacio en el disco de un cliente, o recuperar un disco cuya tabla de particiones se ha vuelto inutilizable. Las operaciones estructurales (redimensionar, eliminar, convertir) conllevan un riesgo real de pérdida de datos en caso de interrupción: haga siempre una copia de seguridad de los datos importantes del cliente primero (vea la pestaña 🛟 Recuperación y cuentas).\n"
+                "\n"
+                "💥 BlueScreenView (NirSoft)\n"
+                "  • Para qué sirve: una pequeña utilidad gratuita de NirSoft que lee los archivos «minidump» que Windows guarda en cada pantallazo azul (BSOD) y muestra, para cada fallo, el código de error y el controlador (.sys) probablemente responsable.\n"
+                "  • Aportación al sistema: permite identificar en segundos el controlador culpable (gráfica, red, almacenamiento…) en lugar de buscar al azar. Completa el «Análisis de fallos» de la pestaña Diagnóstico Pro: este indica que ha habido pantallazos azules y BlueScreenView muestra qué controlador los ha causado. Versión portable, sin instalación.\n"
                 "\n"
                 "------------------------------------------------------------------------------------\n"
                 "\n"
@@ -3410,6 +3428,8 @@ class NoticeWindow(ctk.CTkToplevel):
                 "\n"
                 "Ogni strumento presente in questa scheda ha un ruolo chirurgico ben preciso durante un intervento di assistenza:\n"
                 "\n"
+                "📥 Strumento mancante? Facendo clic su «Avvia», se il programma non è ancora nella cartella assets_arcade, il software propone di scaricarlo dal sito ufficiale dell'editore (sempre l'ultima versione) e poi lo avvia. Per gli editori che non offrono un link diretto (GPU-Z, CrystalDiskInfo, BleachBit, DDU, WirelessKeyView, MiniTool), apre la pagina ufficiale e indica dove posizionare il file. Nulla viene scaricato senza il tuo consenso.\n"
+                "\n"
                 "🛡️ Malwarebytes AdwCleaner\n"
                 "  • A cosa serve: un'utility specializzata nella ricerca e nella rimozione di software pubblicitario indesiderato (adware), programmi potenzialmente indesiderati (PUP), barre degli strumenti pubblicitarie e dirottatori del browser.\n"
                 "  • Contributo al sistema: restituisce subito fluidità ai browser web inquinati da pop-up fastidiosi e ripulisce i collegamenti corrotti dalle concessionarie pubblicitarie.\n"
@@ -3457,6 +3477,10 @@ class NoticeWindow(ctk.CTkToplevel):
                 "🧩 MiniTool Partition Wizard\n"
                 "  • A cosa serve: uno strumento di gestione avanzata delle partizioni, per tutto ciò che va oltre il semplice monitoraggio S.M.A.R.T. e l'ottimizzazione: creare, ridimensionare, spostare, unire o eliminare partizioni, formattare un'unità, oppure convertire un disco tra MBR e GPT.\n"
                 "  • Contributo al sistema: permette di preparare un disco nuovo, riorganizzare lo spazio sul disco di un cliente, oppure recuperare un disco la cui tabella delle partizioni è diventata inutilizzabile. Le operazioni strutturali (ridimensionare, eliminare, convertire) comportano un rischio reale di perdita di dati in caso di interruzione: eseguire sempre prima un backup dei dati importanti del cliente (vedere la scheda 🛟 Recupero e account).\n"
+                "\n"
+                "💥 BlueScreenView (NirSoft)\n"
+                "  • A cosa serve: una piccola utility gratuita di NirSoft che legge i file « minidump » salvati da Windows a ogni schermata blu (BSOD) e mostra, per ogni crash, il codice di errore e il driver (.sys) probabilmente responsabile.\n"
+                "  • Contributo al sistema: permette di individuare in pochi secondi il driver difettoso (grafica, rete, archiviazione…) invece di cercare a caso. Completa l'« Analisi dei crash » della scheda Diagnosi Pro: questa indica che ci sono state schermate blu, BlueScreenView mostra quale driver le ha causate. Versione portable, senza installazione.\n"
                 "\n"
                 "------------------------------------------------------------------------------------\n"
                 "\n"
@@ -3774,6 +3798,7 @@ class NoticeWindow(ctk.CTkToplevel):
                 "------------------------------------------------------------------------------------\n\n"
                 "2. Rôle et description de chaque logiciel de la boîte à outils\n\n"
                 "Chaque outil présent dans cet onglet a un rôle chirurgical bien précis lors d'une intervention de dépannage :\n\n"
+                "📥 Outil absent ? Au clic sur « Lancer », si le programme n'est pas encore dans le dossier assets_arcade, le logiciel propose de le télécharger depuis le site officiel de l'éditeur (toujours la dernière version), puis le lance. Pour les éditeurs qui n'offrent pas de lien direct (GPU-Z, CrystalDiskInfo, BleachBit, DDU, WirelessKeyView, MiniTool), il ouvre la page officielle et indique où placer le fichier. Rien n'est téléchargé sans votre accord.\n\n"
                 "🛡️ Malwarebytes AdwCleaner\n"
                 "  • À quoi ça sert : Un utilitaire spécialisé dans la traque et la suppression des logiciels publicitaires indésirables (adwares), des programmes potentiellement indésirables (PUPs), des barres d'outils publicitaires et des pirates de navigateurs.\n"
                 "  • Apport au système : Redonne instantanément de la fluidité aux navigateurs web pollués par des pop-ups intempestifs et nettoie les raccourcis corrompus par des régies publicitaires.\n\n"
@@ -3813,6 +3838,10 @@ class NoticeWindow(ctk.CTkToplevel):
                 "🧩 MiniTool Partition Wizard\n"
                 "  • À quoi ça sert : Un outil de gestion avancée des partitions, pour tout ce qui dépasse la simple surveillance S.M.A.R.T. et l'optimisation : créer, redimensionner, déplacer, fusionner ou supprimer des partitions, formater un disque, ou convertir un disque entre MBR et GPT.\n"
                 "  • Apport au système : Permet de préparer un disque neuf, de réorganiser l'espace sur le disque d'un client, ou de récupérer un disque dont la table des partitions est devenue inutilisable. Les opérations structurelles (redimensionner, supprimer, convertir) comportent un vrai risque de perte de données en cas d'interruption : sauvegardez toujours les données importantes du client au préalable (voir l'onglet 🛟 Récupération & Comptes).\n"
+                "\n"
+                "💥 BlueScreenView (NirSoft)\n"
+                "  • À quoi ça sert : Un petit utilitaire gratuit de NirSoft qui lit les fichiers « minidump » enregistrés par Windows à chaque écran bleu (BSOD) et affiche, pour chaque plantage, le code d'erreur et le pilote (.sys) probablement responsable.\n"
+                "  • Apport au système : Permet d'identifier en quelques secondes le pilote fautif (carte graphique, réseau, stockage…) au lieu de chercher au hasard. Il complète l'« Analyse des plantages » de l'onglet Diagnostic Pro : celle-ci indique qu'il y a eu des écrans bleus, BlueScreenView montre quel pilote en est la cause. Version portable, sans installation.\n"
                 "------------------------------------------------------------------------------------\n\n"
                 "3. Module de Redémarrage en Mode Sans Échec (Windows 10 / 11)\n\n"
                 "❓ À quoi ça sert exactement ?\n"
@@ -3930,20 +3959,24 @@ class LanguageSelectionWindow(ctk.CTkToplevel):
         }
 
         try:
-            pil_img = Image.open(image_path)
-            img_w, img_h = pil_img.size
-            ratio = 720 / img_w
-            new_w, new_h = int(img_w * ratio), int(img_h * ratio)
-            
-            self.bg_image = ctk.CTkImage(light_image=pil_img, dark_image=pil_img, size=(new_w, new_h))
-            
+            try:
+                pil_img = Image.open(image_path)
+                img_w, img_h = pil_img.size
+                ratio = 720 / img_w
+                new_w, new_h = int(img_w * ratio), int(img_h * ratio)
+                self.bg_image = ctk.CTkImage(light_image=pil_img, dark_image=pil_img, size=(new_w, new_h))
+            except Exception:
+                # Image d'accueil absente ou illisible : la fenetre s'ouvre quand meme, sans image
+                self.bg_image, new_w, new_h = None, 720, 0
+
             centrer_fenetre(self, new_w, new_h + 215)
 
             main_frame = ctk.CTkFrame(self, fg_color="#070B12", corner_radius=0)
             main_frame.pack(fill="both", expand=True)
 
-            img_label = ctk.CTkLabel(main_frame, image=self.bg_image, text="")
-            img_label.pack(fill="x", padx=0, pady=0)
+            if self.bg_image is not None:
+                img_label = ctk.CTkLabel(main_frame, image=self.bg_image, text="")
+                img_label.pack(fill="x", padx=0, pady=0)
 
             ctrl_frame = ctk.CTkFrame(main_frame, fg_color="transparent")
             ctrl_frame.pack(fill="both", expand=True, padx=20, pady=10)
@@ -4375,6 +4408,144 @@ UTILITIES_LIST = [
     {"name": "MiniTool Partition Wizard", "filename": os.path.join("MiniTool Partition Magic", "partitionwizard.exe"), "desc_key": "u12_desc", "icon": "🧩"},
     {"name": "BlueScreenView (NirSoft)", "filename": os.path.join("BlueScreenView", "BlueScreenView.exe"), "desc_key": "u13_desc", "icon": "💥"}
 ]
+
+
+# ---------- Utilitaires externes (onglet 7) : recherche souple + telechargement depuis le site officiel ----------
+# Cle = premier element du chemin attendu dans assets_arcade (nom du dossier, ou du fichier s'il est seul).
+#   zip      : archive officielle a lien fixe (toujours la derniere version)
+#   zip_page : (page officielle, motif) -> le lien de la derniere version est lu sur la page de l'editeur
+#   exe      : executable officiel a lien fixe
+#   page     : page officielle (ouverte quand aucun telechargement direct n'est possible)
+SOURCES_UTILITAIRES = {
+    "Autoruns": {"page": "https://learn.microsoft.com/sysinternals/downloads/autoruns",
+                 "zip": "https://download.sysinternals.com/files/Autoruns.zip"},
+    "ProcessExplorer": {"page": "https://learn.microsoft.com/sysinternals/downloads/process-explorer",
+                        "zip": "https://download.sysinternals.com/files/ProcessExplorer.zip"},
+    "tcpview": {"page": "https://learn.microsoft.com/sysinternals/downloads/tcpview",
+                "zip": "https://download.sysinternals.com/files/TCPView.zip"},
+    "BlueScreenView": {"page": "https://www.nirsoft.net/utils/blue_screen_view.html",
+                       "zip": "https://www.nirsoft.net/utils/bluescreenview-x64.zip"},
+    "cpuz": {"page": "https://www.cpuid.com/softwares/cpu-z.html",
+             "zip_page": ("https://www.cpuid.com/softwares/cpu-z.html",
+                          r"cpu-z_(\d+(?:\.\d+)*)-en\.zip", "https://download.cpuid.com/cpu-z/cpu-z_{v}-en.zip")},
+    "HWMonitor": {"page": "https://www.cpuid.com/softwares/hwmonitor.html",
+                  "zip_page": ("https://www.cpuid.com/softwares/hwmonitor.html",
+                               r"hwmonitor_(\d+(?:\.\d+)*)\.zip", "https://download.cpuid.com/hwmonitor/hwmonitor_{v}.zip")},
+    "Malwarebytes AdwCleaner.exe": {"page": "https://www.malwarebytes.com/adwcleaner",
+                                    "exe": "https://adwcleaner.malwarebytes.com/adwcleaner?channel=release"},
+    "CrystalDiskInfo": {"page": "https://portableapps.com/apps/utilities/crystaldiskinfo_portable"},
+    "BleachBit": {"page": "https://www.bleachbit.org/download/windows"},
+    "GPU-Z.2.71.0.exe": {"page": "https://www.techpowerup.com/gpuz/", "motif": "GPU-Z*.exe"},
+    "Display Driver Uninstaller": {"page": "https://www.wagnardsoft.com/display-driver-uninstaller-DDU-"},
+    "WirelessKeyView": {"page": "https://www.nirsoft.net/utils/wireless_key.html"},
+    "MiniTool Partition Magic": {"page": "https://www.partitionwizard.com/free-partition-manager.html"},
+}
+_UA_UTILITAIRES = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AtelierPCBooster/" + "5.1"
+
+
+def cle_utilitaire(filename):
+    return filename.replace("/", "\\").split("\\")[0]
+
+
+def dossiers_utilitaires():
+    """Ou chercher/ranger les utilitaires : assets_arcade, puis un dossier utilisateur (si assets_arcade
+    n'est pas modifiable, par exemple dans Program Files)."""
+    perso = os.path.join(os.environ.get("LOCALAPPDATA") or os.path.expanduser("~"), "AtelierPCBooster", "utilitaires")
+    return [get_assets_path(), perso]
+
+
+def trouver_utilitaire(filename):
+    """Chemin de l'outil s'il est present (nom exact, ou meme outil dans une autre version), sinon None."""
+    import glob as _g
+    bases = dossiers_utilitaires() + [get_resource_path("")]
+    for base in bases:
+        p = os.path.join(base, filename)
+        if os.path.isfile(p):
+            return p
+    cle = cle_utilitaire(filename)
+    motif = SOURCES_UTILITAIRES.get(cle, {}).get("motif")
+    if not motif:
+        motif = os.path.join(cle, "**", os.path.basename(filename)) if cle != filename else os.path.basename(filename)
+    for base in dossiers_utilitaires():
+        trouves = sorted(_g.glob(os.path.join(_g.escape(base), motif), recursive=True))
+        if trouves:
+            return trouves[-1]
+    # dernier recours : meme programme range dans un dossier au nom different
+    # (ex. CrystalDiskInfoPortable\ cree par l'installeur PortableApps au lieu de CrystalDiskInfo\)
+    if not SOURCES_UTILITAIRES.get(cle, {}).get("motif"):
+        for base in dossiers_utilitaires():
+            trouves = sorted(_g.glob(os.path.join(_g.escape(base), "**", os.path.basename(filename)), recursive=True))
+            if trouves:
+                return trouves[-1]
+    return None
+
+
+def utilitaire_telechargeable(filename):
+    s = SOURCES_UTILITAIRES.get(cle_utilitaire(filename), {})
+    return any(k in s for k in ("zip", "zip_page", "exe"))
+
+
+def _http_get(url, timeout=60):
+    import urllib.request
+    req = urllib.request.Request(url, headers={"User-Agent": _UA_UTILITAIRES})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return r.read()
+
+
+def _dossier_ecriture_utilitaires():
+    for d in dossiers_utilitaires():
+        try:
+            os.makedirs(d, exist_ok=True)
+            test = os.path.join(d, ".test_ecriture")
+            with open(test, "w") as f:
+                f.write("ok")
+            os.remove(test)
+            return d
+        except OSError:
+            continue
+    raise OSError("Aucun dossier accessible en ecriture pour ranger l'outil.")
+
+
+def telecharger_utilitaire(filename):
+    """Telecharge l'outil depuis le site officiel et le range a sa place. Renvoie le chemin de l'executable."""
+    import io as _io
+    import re as _re
+    import zipfile as _zip
+    cle = cle_utilitaire(filename)
+    src = SOURCES_UTILITAIRES.get(cle, {})
+    base = _dossier_ecriture_utilitaires()
+    if "exe" in src:
+        data = _http_get(src["exe"], timeout=180)
+        if data[:2] != b"MZ":
+            raise ValueError("Le fichier recu n'est pas un programme Windows.")
+        cible = os.path.join(base, filename)
+        os.makedirs(os.path.dirname(cible), exist_ok=True)
+        with open(cible, "wb") as f:
+            f.write(data)
+    else:
+        if "zip" in src:
+            url = src["zip"]
+        else:
+            page, motif, modele = src["zip_page"]
+            html_page = _http_get(page).decode("utf-8", "ignore")
+            versions = set(_re.findall(motif, html_page))
+            if not versions:
+                raise ValueError("Lien de la derniere version introuvable sur la page de l'editeur.")
+            v = max(versions, key=lambda s: tuple(int(x) for x in s.split(".")))
+            url = modele.format(v=v)
+        data = _http_get(url, timeout=180)
+        dossier = os.path.join(base, cle)
+        os.makedirs(dossier, exist_ok=True)
+        with _zip.ZipFile(_io.BytesIO(data)) as z:
+            for m in z.infolist():   # extraction protegee (pas de chemin qui sorte du dossier)
+                cible = os.path.realpath(os.path.join(dossier, m.filename))
+                if not cible.startswith(os.path.realpath(dossier) + os.sep):
+                    continue
+                z.extract(m, dossier)
+    chemin = trouver_utilitaire(filename)
+    if not chemin:
+        raise FileNotFoundError(os.path.basename(filename))
+    return chemin
 
 
 APP_VERSION = "v5.1.0"
@@ -7333,6 +7504,18 @@ class AtelierBoosterApp(DiagnosticProMixin, ctk.CTk):
         self.utils_scroll_frame.pack(fill="both", expand=True, padx=10, pady=5)
 
         self.labels_desc_utils = []
+        self.widgets_utils = {}
+        ctk.CTkLabel(
+            self.utils_scroll_frame,
+            text=self.tr("✅ Présent    ·    📥 Téléchargement automatique depuis le site officiel    ·    🌐 À récupérer sur la page officielle",
+                         "✅ Installed    ·    📥 Automatic download from the official website    ·    🌐 Get it from the official page",
+                         "✅ Vorhanden    ·    📥 Automatischer Download von der offiziellen Website    ·    🌐 Auf der offiziellen Seite holen",
+                         "✅ Presente    ·    📥 Descarga automática desde el sitio oficial    ·    🌐 Obtener en la página oficial",
+                         "✅ Presente    ·    📥 Download automatico dal sito ufficiale    ·    🌐 Da scaricare dalla pagina ufficiale"),
+            font=ctk.CTkFont(size=11),
+            text_color="gray65",
+            anchor="w"
+        ).pack(fill="x", padx=10, pady=(2, 0))
         for util in UTILITIES_LIST:
             item_frame = ctk.CTkFrame(self.utils_scroll_frame, corner_radius=6)
             item_frame.pack(fill="x", padx=5, pady=6)
@@ -7376,6 +7559,8 @@ class AtelierBoosterApp(DiagnosticProMixin, ctk.CTk):
                 width=165
             )
             btn_launch.grid(row=0, column=2, rowspan=2, padx=10, pady=8, sticky="e")
+            self.widgets_utils[util['filename']] = (lbl_title, btn_launch, util['name'])
+        self.after(400, self.rafraichir_etat_utilitaires)
 
         # ==========================================
         # ONGLET 8 : GAMERS & RUNTIMES
@@ -8101,20 +8286,101 @@ class AtelierBoosterApp(DiagnosticProMixin, ctk.CTk):
             self.runtime_textbox.see("end")
         self.after(0, _do)
 
-    def lancer_utilitaire_externe(self, filename, name):
-        assets_dir = get_assets_path()
-        target_path = os.path.join(assets_dir, filename)
-        if not os.path.exists(target_path):
-            target_path = get_resource_path(filename)
-        if os.path.exists(target_path):
+    def rafraichir_etat_utilitaires(self):
+        """Colore chaque ligne de l'onglet 7 selon que l'outil est present ou non dans assets_arcade."""
+        if not getattr(self, "widgets_utils", None):
+            return
+        try:
+            normal = ctk.ThemeManager.theme["CTkLabel"]["text_color"]
+        except Exception:
+            normal = ("gray10", "#DCE4EE")
+        for filename, (lbl_title, btn, name) in self.widgets_utils.items():
             try:
-                subprocess.Popen(f'"{target_path}"', shell=True, cwd=os.path.dirname(target_path))
-            except Exception as e:
-                messagebox.showerror(self.tr("Erreur", "Error", "Fehler", "Error", "Errore"),
-                                     self.tr(f"Impossible de lancer {name} :\n{e}", f"Could not launch {name}:\n{e}", f"{name} konnte nicht gestartet werden:\n{e}", f"No se pudo iniciar {name}:\n{e}", f"Impossibile avviare {name}:\n{e}"))
-        else:
-            messagebox.showwarning(self.tr("Fichier manquant", "File Missing", "Datei fehlt", "Archivo ausente", "File mancante"),
-                                   self.tr(f"{filename} introuvable.", f"{filename} not found.", f"{filename} wurde nicht gefunden.", f"No se ha encontrado {filename}.", f"{filename} non trovato."))
+                if trouver_utilitaire(filename):
+                    lbl_title.configure(text="✅ " + name, text_color="#4CD07D")
+                    btn.configure(text=self.t("btn_launch_util"), fg_color="#2680D8", hover_color="#1A5FA8")
+                elif utilitaire_telechargeable(filename):
+                    lbl_title.configure(text=name, text_color="gray60")
+                    btn.configure(text=self.tr("📥 Télécharger", "📥 Download", "📥 Herunterladen", "📥 Descargar", "📥 Scarica"),
+                                  fg_color="#EE5A24", hover_color="#C9461A")
+                else:
+                    lbl_title.configure(text=name, text_color="gray60")
+                    btn.configure(text=self.tr("🌐 Page officielle", "🌐 Official page", "🌐 Offizielle Seite", "🌐 Página oficial", "🌐 Pagina ufficiale"),
+                                  fg_color="#5A6B7D", hover_color="#46535F")
+            except Exception:
+                lbl_title.configure(text=name, text_color=normal)
+
+    def lancer_utilitaire_externe(self, filename, name):
+        """Lance l'outil s'il est present ; sinon propose de le telecharger depuis le site officiel
+        (ou d'ouvrir la page officielle quand l'editeur ne propose pas de lien direct)."""
+        chemin = trouver_utilitaire(filename)
+        self.rafraichir_etat_utilitaires()
+        if chemin:
+            self._executer_utilitaire(chemin, name)
+            return
+        if not hasattr(self, "_utilitaires_en_cours"):
+            self._utilitaires_en_cours = set()
+        if filename in self._utilitaires_en_cours:
+            return
+        page = SOURCES_UTILITAIRES.get(cle_utilitaire(filename), {}).get("page", "")
+        titre = self.tr("Outil absent", "Tool missing", "Werkzeug fehlt", "Herramienta ausente", "Strumento mancante")
+        if utilitaire_telechargeable(filename):
+            if messagebox.askyesno(titre, self.tr(
+                    f"{name} n'est pas encore présent.\n\nLe télécharger maintenant depuis le site officiel de l'éditeur, puis le lancer ?",
+                    f"{name} is not installed yet.\n\nDownload it now from the publisher's official website, then launch it?",
+                    f"{name} ist noch nicht vorhanden.\n\nJetzt von der offiziellen Website des Herstellers herunterladen und starten?",
+                    f"{name} aún no está presente.\n\n¿Descargarlo ahora desde el sitio oficial del editor y ejecutarlo?",
+                    f"{name} non è ancora presente.\n\nScaricarlo ora dal sito ufficiale dell'editore e avviarlo?")):
+                self._utilitaires_en_cours.add(filename)
+                try:
+                    self.configure(cursor="watch")
+                except Exception:
+                    pass
+                threading.Thread(target=self._telecharger_puis_lancer, args=(filename, name, page), daemon=True).start()
+            return
+        dossier = os.path.join(get_assets_path(), filename)
+        if page and messagebox.askyesno(titre, self.tr(
+                f"{name} n'est pas présent, et son éditeur ne propose pas de lien de téléchargement direct.\n\nOuvrir sa page officielle ?\n\nPlacez ensuite le programme ici :\n{dossier}",
+                f"{name} is not installed, and its publisher offers no direct download link.\n\nOpen its official page?\n\nThen place the program here:\n{dossier}",
+                f"{name} ist nicht vorhanden, und der Hersteller bietet keinen direkten Download-Link.\n\nOffizielle Seite öffnen?\n\nLegen Sie das Programm danach hier ab:\n{dossier}",
+                f"{name} no está presente y su editor no ofrece un enlace de descarga directa.\n\n¿Abrir su página oficial?\n\nLuego coloque el programa aquí:\n{dossier}",
+                f"{name} non è presente e il suo editore non offre un link di download diretto.\n\nAprire la pagina ufficiale?\n\nPoi posiziona il programma qui:\n{dossier}")):
+            webbrowser.open(page)
+
+    def _telecharger_puis_lancer(self, filename, name, page):
+        try:
+            chemin = telecharger_utilitaire(filename)
+            err = None
+        except Exception as e:
+            chemin, err = None, e
+
+        def _fin():
+            self._utilitaires_en_cours.discard(filename)
+            try:
+                self.configure(cursor="")
+            except Exception:
+                pass
+            if chemin:
+                self.rafraichir_etat_utilitaires()
+                self._executer_utilitaire(chemin, name)
+                return
+            titre = self.tr("Téléchargement impossible", "Download failed", "Download fehlgeschlagen",
+                            "Descarga imposible", "Download non riuscito")
+            if messagebox.askyesno(titre, self.tr(
+                    f"Impossible de télécharger {name} :\n{err}\n\nOuvrir la page officielle pour le télécharger manuellement ?",
+                    f"Could not download {name}:\n{err}\n\nOpen the official page to download it manually?",
+                    f"{name} konnte nicht heruntergeladen werden:\n{err}\n\nOffizielle Seite öffnen, um es manuell herunterzuladen?",
+                    f"No se pudo descargar {name}:\n{err}\n\n¿Abrir la página oficial para descargarlo manualmente?",
+                    f"Impossibile scaricare {name}:\n{err}\n\nAprire la pagina ufficiale per scaricarlo manualmente?")) and page:
+                webbrowser.open(page)
+        self.after(0, _fin)
+
+    def _executer_utilitaire(self, target_path, name):
+        try:
+            subprocess.Popen(f'"{target_path}"', shell=True, cwd=os.path.dirname(target_path))
+        except Exception as e:
+            messagebox.showerror(self.tr("Erreur", "Error", "Fehler", "Error", "Errore"),
+                                 self.tr(f"Impossible de lancer {name} :\n{e}", f"Could not launch {name}:\n{e}", f"{name} konnte nicht gestartet werden:\n{e}", f"No se pudo iniciar {name}:\n{e}", f"Impossibile avviare {name}:\n{e}"))
 
     def start_process_thread(self):
         if not self.verifier_action_en_cours("Maintenance"):
