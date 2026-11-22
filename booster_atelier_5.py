@@ -1874,7 +1874,7 @@ class NoticeWindow(ctk.CTkToplevel):
                 "\n"
                 "Each tool in this tab has a very precise, surgical role during a troubleshooting intervention:\n"
                 "\n"
-                "📥 Tool missing? When you click \"Launch\", if the program is not yet in the assets_arcade folder, the software offers to download it from the publisher's official website (always the latest version), then launches it. For publishers that offer no direct link (GPU-Z, CrystalDiskInfo, BleachBit, DDU, WirelessKeyView, MiniTool), it opens the official page and tells you where to place the file. Nothing is downloaded without your consent.\n"
+                "📥 Tool missing? When you click \"Launch\", if the program is not yet in the assets_arcade folder, the software offers to download it from the publisher's official website (always the latest version), then launches it. For publishers that offer no direct link (GPU-Z, WirelessKeyView), it opens the official page and tells you where to place the file. Nothing is downloaded without your consent.\n"
                 "\n"
                 "🛡️ Malwarebytes AdwCleaner\n"
                 "  • What is it for: A utility specialized in hunting down and removing unwanted advertising software (adware), potentially unwanted programs (PUPs), advertising toolbars and browser hijackers.\n"
@@ -2392,7 +2392,7 @@ class NoticeWindow(ctk.CTkToplevel):
                 "\n"
                 "Jedes Tool in diesem Tab hat bei einem Reparatureinsatz eine ganz präzise, chirurgische Aufgabe:\n"
                 "\n"
-                "📥 Werkzeug fehlt? Beim Klick auf „Starten“ bietet die Software, falls das Programm noch nicht im Ordner assets_arcade liegt, an, es von der offiziellen Website des Herstellers herunterzuladen (immer die neueste Version) und startet es dann. Bei Herstellern ohne direkten Link (GPU-Z, CrystalDiskInfo, BleachBit, DDU, WirelessKeyView, MiniTool) öffnet sie die offizielle Seite und zeigt, wohin die Datei gehört. Ohne Ihre Zustimmung wird nichts heruntergeladen.\n"
+                "📥 Werkzeug fehlt? Beim Klick auf „Starten“ bietet die Software, falls das Programm noch nicht im Ordner assets_arcade liegt, an, es von der offiziellen Website des Herstellers herunterzuladen (immer die neueste Version) und startet es dann. Bei Herstellern ohne direkten Link (GPU-Z, WirelessKeyView) öffnet sie die offizielle Seite und zeigt, wohin die Datei gehört. Ohne Ihre Zustimmung wird nichts heruntergeladen.\n"
                 "\n"
                 "🛡️ Malwarebytes AdwCleaner\n"
                 "  • Wofür es gut ist: Ein Hilfsprogramm, das auf das Aufspüren und Entfernen unerwünschter Werbesoftware (Adware), potenziell unerwünschter Programme (PUPs), Werbe-Symbolleisten und Browser-Hijacker spezialisiert ist.\n"
@@ -2910,7 +2910,7 @@ class NoticeWindow(ctk.CTkToplevel):
                 "\n"
                 "Cada herramienta de esta pestaña tiene una función quirúrgica muy precisa durante una intervención de reparación:\n"
                 "\n"
-                "📥 ¿Falta una herramienta? Al hacer clic en «Iniciar», si el programa aún no está en la carpeta assets_arcade, el software ofrece descargarlo desde el sitio oficial del editor (siempre la última versión) y luego lo ejecuta. Para los editores que no ofrecen un enlace directo (GPU-Z, CrystalDiskInfo, BleachBit, DDU, WirelessKeyView, MiniTool), abre la página oficial e indica dónde colocar el archivo. No se descarga nada sin su consentimiento.\n"
+                "📥 ¿Falta una herramienta? Al hacer clic en «Iniciar», si el programa aún no está en la carpeta assets_arcade, el software ofrece descargarlo desde el sitio oficial del editor (siempre la última versión) y luego lo ejecuta. Para los editores que no ofrecen un enlace directo (GPU-Z, WirelessKeyView), abre la página oficial e indica dónde colocar el archivo. No se descarga nada sin su consentimiento.\n"
                 "\n"
                 "🛡️ Malwarebytes AdwCleaner\n"
                 "  • Para qué sirve: una utilidad especializada en rastrear y eliminar el software publicitario no deseado (adware), los programas potencialmente no deseados (PUP), las barras de herramientas publicitarias y los secuestradores de navegador.\n"
@@ -3428,7 +3428,7 @@ class NoticeWindow(ctk.CTkToplevel):
                 "\n"
                 "Ogni strumento presente in questa scheda ha un ruolo chirurgico ben preciso durante un intervento di assistenza:\n"
                 "\n"
-                "📥 Strumento mancante? Facendo clic su «Avvia», se il programma non è ancora nella cartella assets_arcade, il software propone di scaricarlo dal sito ufficiale dell'editore (sempre l'ultima versione) e poi lo avvia. Per gli editori che non offrono un link diretto (GPU-Z, CrystalDiskInfo, BleachBit, DDU, WirelessKeyView, MiniTool), apre la pagina ufficiale e indica dove posizionare il file. Nulla viene scaricato senza il tuo consenso.\n"
+                "📥 Strumento mancante? Facendo clic su «Avvia», se il programma non è ancora nella cartella assets_arcade, il software propone di scaricarlo dal sito ufficiale dell'editore (sempre l'ultima versione) e poi lo avvia. Per gli editori che non offrono un link diretto (GPU-Z, WirelessKeyView), apre la pagina ufficiale e indica dove posizionare il file. Nulla viene scaricato senza il tuo consenso.\n"
                 "\n"
                 "🛡️ Malwarebytes AdwCleaner\n"
                 "  • A cosa serve: un'utility specializzata nella ricerca e nella rimozione di software pubblicitario indesiderato (adware), programmi potenzialmente indesiderati (PUP), barre degli strumenti pubblicitarie e dirottatori del browser.\n"
@@ -3798,7 +3798,7 @@ class NoticeWindow(ctk.CTkToplevel):
                 "------------------------------------------------------------------------------------\n\n"
                 "2. Rôle et description de chaque logiciel de la boîte à outils\n\n"
                 "Chaque outil présent dans cet onglet a un rôle chirurgical bien précis lors d'une intervention de dépannage :\n\n"
-                "📥 Outil absent ? Au clic sur « Lancer », si le programme n'est pas encore dans le dossier assets_arcade, le logiciel propose de le télécharger depuis le site officiel de l'éditeur (toujours la dernière version), puis le lance. Pour les éditeurs qui n'offrent pas de lien direct (GPU-Z, CrystalDiskInfo, BleachBit, DDU, WirelessKeyView, MiniTool), il ouvre la page officielle et indique où placer le fichier. Rien n'est téléchargé sans votre accord.\n\n"
+                "📥 Outil absent ? Au clic sur « Lancer », si le programme n'est pas encore dans le dossier assets_arcade, le logiciel propose de le télécharger depuis le site officiel de l'éditeur (toujours la dernière version), puis le lance. Pour les éditeurs qui n'offrent pas de lien direct (GPU-Z, WirelessKeyView), il ouvre la page officielle et indique où placer le fichier. Rien n'est téléchargé sans votre accord.\n\n"
                 "🛡️ Malwarebytes AdwCleaner\n"
                 "  • À quoi ça sert : Un utilitaire spécialisé dans la traque et la suppression des logiciels publicitaires indésirables (adwares), des programmes potentiellement indésirables (PUPs), des barres d'outils publicitaires et des pirates de navigateurs.\n"
                 "  • Apport au système : Redonne instantanément de la fluidité aux navigateurs web pollués par des pop-ups intempestifs et nettoie les raccourcis corrompus par des régies publicitaires.\n\n"
@@ -4337,7 +4337,7 @@ RUNTIMES_LIST = [
     {"section_key": "runtimes_section_optional"},
     {"id": "steam", "name": "Steam (Plateforme de jeux Valve)", "winget_id": "Valve.Steam", "default": False},
     {"id": "ea_app", "name": "EA App (Application EA / Origin pour les jeux EA)", "winget_id": "ElectronicArts.EAApp", "default": False},
-    {"id": "ue4prereq", "name": "Epic Games Launcher (inclut les prérequis Unreal Engine 4)", "winget_id": "LOCAL_EXE:EpicInstaller-20.3.3-unrealEngine.exe", "default": False},
+    {"id": "ue4prereq", "name": "Epic Games Launcher (inclut les prérequis Unreal Engine 4)", "winget_id": "EpicGames.EpicGamesLauncher", "default": False},
     {"id": "roblox", "name": "Roblox (Plateforme de jeux en ligne)", "winget_id": "Roblox.Roblox", "default": False},
     {"id": "discord", "name": "Discord (Chat vocal & Communautés Gaming)", "winget_id": "Discord.Discord", "default": False},
     {"id": "ds4windows", "name": "DS4Windows (Gestionnaire de manettes PS4/PS5)", "winget_id": "Ryochan7.DS4Windows", "default": False},
@@ -4433,12 +4433,31 @@ SOURCES_UTILITAIRES = {
                                r"hwmonitor_(\d+(?:\.\d+)*)\.zip", "https://download.cpuid.com/hwmonitor/hwmonitor_{v}.zip")},
     "Malwarebytes AdwCleaner.exe": {"page": "https://www.malwarebytes.com/adwcleaner",
                                     "exe": "https://adwcleaner.malwarebytes.com/adwcleaner?channel=release"},
-    "CrystalDiskInfo": {"page": "https://portableapps.com/apps/utilities/crystaldiskinfo_portable"},
-    "BleachBit": {"page": "https://www.bleachbit.org/download/windows"},
+    "CrystalDiskInfo": {"page": "https://crystalmark.info/en/download/#CrystalDiskInfo",
+                        # le bouton ZIP passe par des pages d'attente : on va directement au fichier sur SourceForge
+                        "zip_page": ("https://crystalmark.info/en/download/",
+                                     r"CrystalDiskInfo\s+(\d+\.\d+\.\d+)",
+                                     "https://downloads.sourceforge.net/project/crystaldiskinfo/{v}/CrystalDiskInfo{v_}.zip"),
+                        "zip_secours": "https://sourceforge.net/projects/crystaldiskinfo/files/latest/download",
+                        "motif": ["**/DiskInfo64.exe", "**/CrystalDiskInfoPortable.exe"]},
+    "BleachBit": {"page": "https://www.bleachbit.org/download/windows",
+                  "zip_page": ("https://www.bleachbit.org/download/windows",
+                               r"BleachBit-(\d+(?:\.\d+)+)-portable\.zip",
+                               "https://download.bleachbit.org/BleachBit-{v}-portable.zip")},
     "GPU-Z.2.71.0.exe": {"page": "https://www.techpowerup.com/gpuz/", "motif": "GPU-Z*.exe"},
-    "Display Driver Uninstaller": {"page": "https://www.wagnardsoft.com/display-driver-uninstaller-DDU-"},
+    "Display Driver Uninstaller": {"page": "https://www.wagnardsoft.com/display-driver-uninstaller-DDU-",
+                                   # archive 7-Zip auto-extractible officielle : decompressee en silence (-o<dossier> -y)
+                                   "sfx_page": ("https://www.wagnardsoft.com/display-driver-uninstaller-DDU-",
+                                                [r"DDU(?:%20|\s)v(\d+(?:\.\d+){3})\.exe",
+                                                 r"(?:DDU|Uninstaller)[^0-9<]{0,30}[Vv]?\s?(1\d\.\d+\.\d+\.\d+)",
+                                                 r"\b[Vv]?(1[89]\.\d+\.\d+\.\d+)\b"],
+                                                "https://download.wagnardsoft.com/DDU/DDU%20v{v}.exe")},
     "WirelessKeyView": {"page": "https://www.nirsoft.net/utils/wireless_key.html"},
-    "MiniTool Partition Magic": {"page": "https://www.partitionwizard.com/free-partition-manager.html"},
+    "MiniTool Partition Magic": {"page": "https://www.partitionwizard.com/free-partition-manager.html",
+                                 "zip": "https://cdn2.minitool.com/download-center/release/products/pw/current-release/pwfree-64bit-portable.zip",
+                                 "systeme": [r"%ProgramFiles%\MiniTool Partition Wizard*\partitionwizard.exe",
+                                             r"%ProgramFiles(x86)%\MiniTool Partition Wizard*\partitionwizard.exe",
+                                             r"%ProgramFiles%\MiniTool*\partitionwizard.exe"]},
 }
 _UA_UTILITAIRES = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AtelierPCBooster/" + "5.1"
 
@@ -4463,16 +4482,27 @@ def trouver_utilitaire(filename):
         if os.path.isfile(p):
             return p
     cle = cle_utilitaire(filename)
-    motif = SOURCES_UTILITAIRES.get(cle, {}).get("motif")
-    if not motif:
-        motif = os.path.join(cle, "**", os.path.basename(filename)) if cle != filename else os.path.basename(filename)
-    for base in dossiers_utilitaires():
-        trouves = sorted(_g.glob(os.path.join(_g.escape(base), motif), recursive=True))
+    motifs = SOURCES_UTILITAIRES.get(cle, {}).get("motif")
+    if not motifs:
+        motifs = os.path.join(cle, "**", os.path.basename(filename)) if cle != filename else os.path.basename(filename)
+    if isinstance(motifs, str):
+        motifs = [motifs]
+    for motif in motifs:
+        for base in dossiers_utilitaires():
+            trouves = sorted(_g.glob(os.path.join(_g.escape(base), motif), recursive=True))
+            if trouves:
+                return trouves[-1]
+    # outil installe normalement sur le PC (ex. MiniTool dans Program Files)
+    for modele in SOURCES_UTILITAIRES.get(cle, {}).get("systeme", []):
+        chemin_sys = os.path.expandvars(modele)
+        if "%" in chemin_sys:
+            continue
+        trouves = sorted(_g.glob(chemin_sys))
         if trouves:
             return trouves[-1]
     # dernier recours : meme programme range dans un dossier au nom different
     # (ex. CrystalDiskInfoPortable\ cree par l'installeur PortableApps au lieu de CrystalDiskInfo\)
-    if not SOURCES_UTILITAIRES.get(cle, {}).get("motif"):
+    if True:
         for base in dossiers_utilitaires():
             trouves = sorted(_g.glob(os.path.join(_g.escape(base), "**", os.path.basename(filename)), recursive=True))
             if trouves:
@@ -4482,12 +4512,14 @@ def trouver_utilitaire(filename):
 
 def utilitaire_telechargeable(filename):
     s = SOURCES_UTILITAIRES.get(cle_utilitaire(filename), {})
-    return any(k in s for k in ("zip", "zip_page", "exe"))
+    return any(k in s for k in ("zip", "zip_page", "exe", "sfx_page"))
 
 
 def _http_get(url, timeout=60):
     import urllib.request
-    req = urllib.request.Request(url, headers={"User-Agent": _UA_UTILITAIRES})
+    # SourceForge sert une page d'attente aux navigateurs, et le fichier directement aux programmes
+    ua = "AtelierPCBooster/5.1" if "sourceforge.net" in url else _UA_UTILITAIRES
+    req = urllib.request.Request(url, headers={"User-Agent": ua})
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read()
 
@@ -4514,7 +4546,40 @@ def telecharger_utilitaire(filename):
     cle = cle_utilitaire(filename)
     src = SOURCES_UTILITAIRES.get(cle, {})
     base = _dossier_ecriture_utilitaires()
-    if "exe" in src:
+    if "sfx_page" in src:
+        import subprocess as _sp
+        page, motif, modele = src["sfx_page"]
+        html_page = _http_get(page).decode("utf-8", "ignore")
+        versions = set()
+        for m in (motif if isinstance(motif, list) else [motif]):   # du motif le plus precis au plus large
+            versions = set(_re.findall(m, html_page))
+            if versions:
+                break
+        if not versions:
+            raise ValueError("Lien de la derniere version introuvable sur la page de l'editeur.")
+        v = max(versions, key=lambda s: tuple(int(x) for x in s.split(".")))
+        data = _http_get(modele.format(v=v), timeout=600)
+        if data[:2] != b"MZ":
+            raise ValueError("Le fichier recu n'est pas un programme Windows.")
+        # empreintes SHA-256 publiees sur la page officielle : si la page en affiche, le fichier doit correspondre
+        import hashlib as _hl
+        empreintes = {h.upper() for h in _re.findall(r"\b[0-9A-Fa-f]{64}\b", html_page)}
+        if empreintes and _hl.sha256(data).hexdigest().upper() not in empreintes:
+            raise ValueError("Empreinte SHA-256 differente de celle publiee par l'editeur : fichier refuse.")
+        dossier = os.path.join(base, cle)
+        os.makedirs(dossier, exist_ok=True)
+        archive = os.path.join(dossier, "_archive_temporaire.exe")
+        with open(archive, "wb") as f:
+            f.write(data)
+        try:
+            _sp.run([archive, "-o" + dossier, "-y"], timeout=300,
+                    creationflags=getattr(_sp, "CREATE_NO_WINDOW", 0))
+        finally:
+            try:
+                os.remove(archive)
+            except OSError:
+                pass
+    elif "exe" in src:
         data = _http_get(src["exe"], timeout=180)
         if data[:2] != b"MZ":
             raise ValueError("Le fichier recu n'est pas un programme Windows.")
@@ -4523,17 +4588,34 @@ def telecharger_utilitaire(filename):
         with open(cible, "wb") as f:
             f.write(data)
     else:
-        if "zip" in src:
-            url = src["zip"]
-        else:
+        def _zip_par_page():
             page, motif, modele = src["zip_page"]
             html_page = _http_get(page).decode("utf-8", "ignore")
             versions = set(_re.findall(motif, html_page))
             if not versions:
                 raise ValueError("Lien de la derniere version introuvable sur la page de l'editeur.")
             v = max(versions, key=lambda s: tuple(int(x) for x in s.split(".")))
-            url = modele.format(v=v)
-        data = _http_get(url, timeout=180)
+            return modele.format(v=v, v_=v.replace(".", "_"))
+
+        # zip_page (version exacte) en priorite, puis zip_secours / zip (lien fixe) si besoin
+        essais = []
+        if "zip_page" in src:
+            essais.append(_zip_par_page)
+        for k in ("zip", "zip_secours"):
+            if k in src:
+                essais.append(lambda u=src[k]: u)
+        data, derniere_erreur = None, None
+        for essai in essais:
+            try:
+                d = _http_get(essai(), timeout=600)
+                if d[:2] != b"PK":
+                    raise ValueError("Le fichier reçu n'est pas une archive ZIP.")
+                data = d
+                break
+            except Exception as e:
+                derniere_erreur = e
+        if data is None:
+            raise derniere_erreur or ValueError("Téléchargement impossible.")
         dossier = os.path.join(base, cle)
         os.makedirs(dossier, exist_ok=True)
         with _zip.ZipFile(_io.BytesIO(data)) as z:
@@ -8339,6 +8421,15 @@ class AtelierBoosterApp(DiagnosticProMixin, ctk.CTk):
                 threading.Thread(target=self._telecharger_puis_lancer, args=(filename, name, page), daemon=True).start()
             return
         dossier = os.path.join(get_assets_path(), filename)
+        if page and SOURCES_UTILITAIRES.get(cle_utilitaire(filename), {}).get("installe"):
+            if messagebox.askyesno(titre, self.tr(
+                    f"{name} n'est pas installé.\n\nOuvrir sa page officielle ?\n\nInstallez-le à l'emplacement proposé par son installateur (Program Files), sans le mettre dans assets_arcade : le logiciel le retrouvera tout seul.",
+                    f"{name} is not installed.\n\nOpen its official page?\n\nInstall it in the location suggested by its installer (Program Files), not in assets_arcade: the software will find it automatically.",
+                    f"{name} ist nicht installiert.\n\nOffizielle Seite öffnen?\n\nInstallieren Sie es am vom Installationsprogramm vorgeschlagenen Ort (Program Files), nicht in assets_arcade: Die Software findet es automatisch.",
+                    f"{name} no está instalado.\n\n¿Abrir su página oficial?\n\nInstálelo en la ubicación propuesta por su instalador (Program Files), no en assets_arcade: el software lo encontrará automáticamente.",
+                    f"{name} non è installato.\n\nAprire la pagina ufficiale?\n\nInstallalo nel percorso proposto dal suo programma di installazione (Program Files), non in assets_arcade: il software lo troverà automaticamente.")):
+                webbrowser.open(page)
+            return
         if page and messagebox.askyesno(titre, self.tr(
                 f"{name} n'est pas présent, et son éditeur ne propose pas de lien de téléchargement direct.\n\nOuvrir sa page officielle ?\n\nPlacez ensuite le programme ici :\n{dossier}",
                 f"{name} is not installed, and its publisher offers no direct download link.\n\nOpen its official page?\n\nThen place the program here:\n{dossier}",
