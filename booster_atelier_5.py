@@ -4632,6 +4632,32 @@ def telecharger_utilitaire(filename):
 
 APP_VERSION = "v5.1.0"
 
+# ---------- Verification des mises a jour (Releases GitHub) ----------
+DEPOT_GITHUB = "martial-atelier-reset/atelier-pc-booster-pro"
+
+
+def _version_tuple(v):
+    import re as _re
+    return tuple(int(x) for x in _re.findall(r"\d+", v or "")[:4]) or (0,)
+
+
+def derniere_version_github(timeout=8):
+    """(tag, page, notes) de la derniere Release publiee, ou None (pas d'Internet, aucune Release...)."""
+    import json as _json
+    import urllib.request
+    try:
+        req = urllib.request.Request(
+            f"https://api.github.com/repos/{DEPOT_GITHUB}/releases/latest",
+            headers={"User-Agent": "AtelierPCBooster/" + APP_VERSION, "Accept": "application/vnd.github+json"})
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            d = _json.loads(r.read().decode("utf-8", "ignore"))
+        tag = d.get("tag_name") or ""
+        if d.get("draft") or d.get("prerelease") or not tag:
+            return None
+        return tag, d.get("html_url") or f"https://github.com/{DEPOT_GITHUB}/releases/latest", (d.get("body") or "").strip()
+    except Exception:
+        return None
+
 # ==========================================================
 #  V5 : DIAGNOSTIC PRO, SÉCURITÉ ET TRAÇABILITÉ
 # ==========================================================
@@ -6869,6 +6895,8 @@ class AtelierBoosterApp(DiagnosticProMixin, ctk.CTk):
         )
         self.btn_contact_link.pack(side="top", pady=(0, 0))
         ToolTip(self.btn_contact_link, self.t("btn_contact_tt"))
+        self._header_droite = header_right_frame
+        self.after(3000, self._verifier_mise_a_jour)
 
         # Onglets principaux de l'application (Exactement 8)
         self.tabview = ctk.CTkTabview(
@@ -8367,6 +8395,48 @@ class AtelierBoosterApp(DiagnosticProMixin, ctk.CTk):
             self.runtime_textbox.insert("end", ts + message + "\n")
             self.runtime_textbox.see("end")
         self.after(0, _do)
+
+    def _verifier_mise_a_jour(self):
+        """Consulte discretement GitHub ; un bouton n'apparait que si une version plus recente existe."""
+        def _tache():
+            info = derniere_version_github()
+            if info and _version_tuple(info[0]) > _version_tuple(APP_VERSION):
+                self.after(0, lambda: self._afficher_mise_a_jour(*info))
+        threading.Thread(target=_tache, daemon=True).start()
+
+    def _afficher_mise_a_jour(self, tag, page, notes):
+        if getattr(self, "btn_maj", None) is not None:
+            return
+        self.btn_maj = ctk.CTkButton(
+            self._header_droite,
+            text=self.tr(f"⬆ Mise à jour {tag}", f"⬆ Update {tag}", f"⬆ Update {tag}",
+                         f"⬆ Actualización {tag}", f"⬆ Aggiornamento {tag}"),
+            command=lambda: self._proposer_mise_a_jour(tag, page, notes),
+            fg_color="#EE5A24", hover_color="#C9461A",
+            font=ctk.CTkFont(size=11, weight="bold"), height=22, width=160)
+        self.btn_maj.pack(side="top", pady=(3, 0))
+        ToolTip(self.btn_maj, self.tr(
+            f"Une nouvelle version est disponible (vous avez {APP_VERSION}).",
+            f"A new version is available (you have {APP_VERSION}).",
+            f"Eine neue Version ist verfügbar (Sie haben {APP_VERSION}).",
+            f"Hay una nueva versión disponible (tiene {APP_VERSION}).",
+            f"È disponibile una nuova versione (hai {APP_VERSION})."))
+
+    def _proposer_mise_a_jour(self, tag, page, notes):
+        extrait = notes if len(notes) <= 900 else notes[:900].rsplit("\n", 1)[0] + "\n…"
+        if messagebox.askyesno(
+                self.tr("Mise à jour disponible", "Update available", "Update verfügbar",
+                        "Actualización disponible", "Aggiornamento disponibile"),
+                self.tr(f"Atelier PC Booster Pro {tag} est disponible (vous avez {APP_VERSION}).",
+                        f"Atelier PC Booster Pro {tag} is available (you have {APP_VERSION}).",
+                        f"Atelier PC Booster Pro {tag} ist verfügbar (Sie haben {APP_VERSION}).",
+                        f"Atelier PC Booster Pro {tag} está disponible (tiene {APP_VERSION}).",
+                        f"Atelier PC Booster Pro {tag} è disponibile (hai {APP_VERSION}).")
+                + ("\n\n" + extrait if extrait else "") + "\n\n"
+                + self.tr("Ouvrir la page de téléchargement ?", "Open the download page?",
+                          "Download-Seite öffnen?", "¿Abrir la página de descarga?",
+                          "Aprire la pagina di download?")):
+            webbrowser.open(page)
 
     def rafraichir_etat_utilitaires(self):
         """Colore chaque ligne de l'onglet 7 selon que l'outil est present ou non dans assets_arcade."""
